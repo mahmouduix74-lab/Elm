@@ -53,9 +53,12 @@ All four libraries are published and reachable through `search_design_system`.
   placeholders such as YYYY/MM/DD dates). Don't invent new patterns straight from the design-system library.
 - Screen conventions: 1440 wide, `nav_bar` 268 on the right, `top_bar`, breadcrumbs + title, cards row, table card.
   Wide tables are allowed to overflow to the left of the frame (the team's way of showing horizontal scroll).
-- Font gotchas: `statistics_card` numbers, `status_chip` defaults and `items_number` use **Gotham**, and some titles use
-  **29LT Zarid Serif**. Neither font is available to the plugin API, so set `fontName` to IBM Plex Sans Arabic
-  before editing that text, or apply a DS text style.
+- Fonts: screens mix in **Gotham** (numbers, dates, paginator, `statistics_card`, `items_number`), **29LT Zarid**
+  (titles, some top-bar labels) and **Inter** (donut tooltips). None of them are available to the plugin API.
+  - **Rule (user):** convert any non-IBM text to IBM Plex Sans Arabic at a size that looks the same.
+  - Measured: Arabic IBM is about 22% larger than Zarid, so use ×0.82 (Zarid 20 → IBM 16, Zarid Serif title
+    36/54 → IBM Medium 30/54). Gotham digits and Latin text keep the same size in IBM.
+  - Book/Regular → `IBM Plex Sans Arabic` Regular; Medium → `IBM Plex Sans Arabic Medium` Regular.
 
 ## Tokens (Nusuk Masar)
 
