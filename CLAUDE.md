@@ -71,6 +71,8 @@ All four libraries are published and reachable through `search_design_system`.
     - Convention in this file: save/submit buttons sit at the bottom (primary on the left, tertiary link on the
       right). The title-row button slot is only for page actions such as «إنشاء إشعار».
     - DS keys: Switch `4515a13b…`, checkbox `7e286833…`, dropdown `97f9a18b…`, input `75cbda2e…`.
+  - Rules: «N معلّقة» (pending count, `pend` in the HTML data) was removed from both options. Its meaning is unclear
+    (ح-2 is instant yet shows 1 pending), so it's an open question for the business before it returns.
   - Delivery log: the user hid the actions column.
   - Selected tab needs an SA600 override on its label and indicator; the library default is brown.
   - Mapping: حرج → status_chip `rejected`, عالٍ → `awaiting_Payment`, متوسط → `active`,
