@@ -51,6 +51,11 @@ All four libraries are published and reachable through `search_design_system`.
     Tab «التفاصيل» is frame `4478:1113` with two info cards (بيانات المعتمر · البرنامج والتحرك; days shown as red
     text, no bar). Tab «سجل التحديثات» is frame `4478:14096` (التحديث · المستخدم · التاريخ · الوقت).
     User decision: no cards for reason, company read status or delivery channels.
+  - Done: delivery log (NTF-06), frame `4491:1446`, below the list. It is a clone of the list screen without cards,
+    filters or explanatory text. Each row is one delivery attempt on one channel. Rows are grouped per notification:
+    number and case appear on the group's first row only, and the zebra background alternates per group.
+    Columns: القناة (chip) · الوجهة · المحاولة · النتيجة (chip) · سبب الفشل · date/time placeholders · eye action.
+    Result chips: مُرسل `active`, ظهر `in_Progress`, قيد الإعادة `awaiting_Payment`, فشل نهائي `rejected`.
   - Selected tab needs an SA600 override on its label and indicator; the library default is brown.
   - Mapping: حرج → status_chip `rejected`, عالٍ → `awaiting_Payment`, متوسط → `active`,
     غير مقروء → `in_Progress`, مقروء → `draft` (chip text overridden).
