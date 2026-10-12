@@ -64,7 +64,11 @@ All four libraries are published and reachable through `search_design_system`.
     - **A (table)** `4500:2233`: built from our table columns. Control cells are detached from the column
       template and hold DS Switch, dropdown (label=no), checkbox and input instances.
     - **B (cards)** `4502:2097`: accordion cards cloned from the add-role card `4204:40751`, with DS switch,
-      dropdowns (label=yes), checkboxes, input with helper text and a tertiary «معاينة الإشعار» button.
+      dropdowns (label=yes), checkboxes and an input with helper text. Each open card ends with a footer:
+      «حفظ» primary on the bottom-left and a tertiary «معاينة الإشعار» on the bottom-right. There are no
+      buttons in the title row (user decision).
+    - Convention in this file: save/submit buttons sit at the bottom (primary on the left, tertiary link on the
+      right). The title-row button slot is only for page actions such as «إنشاء إشعار».
     - DS keys: Switch `4515a13b…`, checkbox `7e286833…`, dropdown `97f9a18b…`, input `75cbda2e…`.
   - Delivery log: the user hid the actions column.
   - Selected tab needs an SA600 override on its label and indicator; the library default is brown.
