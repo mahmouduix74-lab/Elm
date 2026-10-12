@@ -58,6 +58,15 @@ All four libraries are published and reachable through `search_design_system`.
     in one cell, per HTML v6) · سبب الفشل · eye action. User removed المحاولة and kept سبب الفشل.
     HTML v6 also has merged rows, internal send references, full IDs and per-column filters; the user did NOT adopt these.
     Result chips: مُرسل `active`, ظهر `in_Progress`, قيد الإعادة `awaiting_Payment`, فشل نهائي `rejected`.
+  - Page layout (set up by the user): one section per screen group (قائمة · سجل الإرسال · قواعد إشعارات التحركات).
+    Put new frames inside the matching inner section.
+  - Rules (NTF-01): two options in the rules section, with no case codes (ح-1…) and no cards under the table.
+    - **A (table)** `4500:2233`: built from our table columns. Control cells are detached from the column
+      template and hold DS Switch, dropdown (label=no), checkbox and input instances.
+    - **B (cards)** `4502:2097`: accordion cards cloned from the add-role card `4204:40751`, with DS switch,
+      dropdowns (label=yes), checkboxes, input with helper text and a tertiary «معاينة الإشعار» button.
+    - DS keys: Switch `4515a13b…`, checkbox `7e286833…`, dropdown `97f9a18b…`, input `75cbda2e…`.
+  - Delivery log: the user hid the actions column.
   - Selected tab needs an SA600 override on its label and indicator; the library default is brown.
   - Mapping: حرج → status_chip `rejected`, عالٍ → `awaiting_Payment`, متوسط → `active`,
     غير مقروء → `in_Progress`, مقروء → `draft` (chip text overridden).
