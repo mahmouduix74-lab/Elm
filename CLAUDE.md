@@ -47,6 +47,11 @@ All four libraries are published and reachable through `search_design_system`.
   - Done: list screen, frame `4461:8`. Nav: الإشعارات › إشعارات التحركات › قائمة الإشعارات.
   - Cards are clones of the reference: two `rating_card_first` donut cards (by criticality, by read state)
     plus `statistics_card` for the total.
+  - Done: details screen (NTF-05) for NTF-2026-000412, cloned from the green Details frame `4393:18164`.
+    Tab «التفاصيل» is frame `4478:1113` with two info cards (بيانات المعتمر · البرنامج والتحرك; days shown as red
+    text, no bar). Tab «سجل التحديثات» is frame `4478:14096` (التحديث · المستخدم · التاريخ · الوقت).
+    User decision: no cards for reason, company read status or delivery channels.
+  - Selected tab needs an SA600 override on its label and indicator; the library default is brown.
   - Mapping: حرج → status_chip `rejected`, عالٍ → `awaiting_Payment`, متوسط → `active`,
     غير مقروء → `in_Progress`, مقروء → `draft` (chip text overridden).
 - **Rule (user):** copy how the existing screens are built (clone their cards, table header, columns, and
