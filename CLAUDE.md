@@ -83,6 +83,12 @@ All four libraries are published and reachable through `search_design_system`.
     - Modal screen `4507:43874` has a 30% black overlay. Its `modal_window` `4507:44077` is cloned from the cancel
       modal `3573:57104`, and its two list panels are cloned from the add-receivers story `2056:114448/114514`
       (MOHU page). The panels are recolored green and use DS checkbox/button and IBM fonts.
+    - Modal header/footer and the two panel headers are Nusuk Masar `modal_header` (`8b9e8bb8…`, title IBM Headline/M 22)
+      and `modal_footer` (`d879015e…`); the old-library header (Zarid 28) made titles too big.
+    - Data is realistic (users such as سارة العتيبي — وزارة الحج والعمرة, خالد الشهري — شركة دار الإيمان للعمرة, initials in avatars).
+  - Page titles measured: green screens Zarid Serif 36/54 (≈ IBM 30), old brown Zarid Sans 40 (Headline/XL),
+    Umrah Individuals list IBM Regular 28/54, details DS `Headline/XL` 32/56. DS `headerSection` uses Headline/L 24.
+  - **Rule (user):** use real-looking data, not placeholders like «مستخدم 3» or «XX»; use DS components over old-library ones.
   - **Rule (user):** ignore brown entirely; always use primary green (SA600) for anything cloned from old screens.
     Tag set key `d0f3a464…`, icon/add `017f4710…`.
   - Selected tab needs an SA600 override on its label and indicator; the library default is brown.
