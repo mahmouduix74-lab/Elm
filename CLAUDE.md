@@ -74,6 +74,17 @@ All four libraries are published and reachable through `search_design_system`.
   - Rules: «N معلّقة» (pending count, `pend` in the HTML data) was removed from both options. Its meaning is unclear
     (ح-2 is instant yet shows 1 pending), so it's an open question for the business before it returns.
   - Delivery log: the user hid the actions column.
+  - Permissions (NTF-02), section `4507:14631` (inner `4507:14632`). The user picked option 5 (two-list modal) out of
+    three previews (`previews/mock-perm-option3/4/5.png`).
+    - Screen `4507:14633` is a clone of rules A. Columns: حالة التحرك · مدراء حسابات الشركات (checkbox) ·
+      شركة العمرة (checkbox) · مستخدم إضافي (DS Tag chips plus a secondary «+ إضافة» button).
+    - Row «الدخول خارج نطاق البرنامج» is disabled with the description «معطّلة في قواعد الإشعارات».
+    - «حفظ» and «إلغاء» sit at the bottom-left of the table card. There is no paginator or eye column.
+    - Modal screen `4507:43874` has a 30% black overlay. Its `modal_window` `4507:44077` is cloned from the cancel
+      modal `3573:57104`, and its two list panels are cloned from the add-receivers story `2056:114448/114514`
+      (MOHU page). The panels are recolored green and use DS checkbox/button and IBM fonts.
+  - **Rule (user):** ignore brown entirely; always use primary green (SA600) for anything cloned from old screens.
+    Tag set key `d0f3a464…`, icon/add `017f4710…`.
   - Selected tab needs an SA600 override on its label and indicator; the library default is brown.
   - Mapping: حرج → status_chip `rejected`, عالٍ → `awaiting_Payment`, متوسط → `active`,
     غير مقروء → `in_Progress`, مقروء → `draft` (chip text overridden).
