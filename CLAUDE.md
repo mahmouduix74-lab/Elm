@@ -65,7 +65,8 @@ All four libraries are published and reachable through `search_design_system`.
       template and hold DS Switch, dropdown (label=no), checkbox and input instances.
     - **B (cards)** `4502:2097`: accordion cards cloned from the add-role card `4204:40751`, with DS switch,
       dropdowns (label=yes), checkboxes and an input with helper text. Each open card ends with a footer:
-      «حفظ» primary on the bottom-left and a tertiary «معاينة الإشعار» on the bottom-right. There are no
+      «حفظ» primary and «إلغاء» secondary on the bottom-left, and a tertiary «معاينة الإشعار» on the bottom-right.
+      «استعادة الافتراضي» was dropped in B. There are no
       buttons in the title row (user decision).
     - Convention in this file: save/submit buttons sit at the bottom (primary on the left, tertiary link on the
       right). The title-row button slot is only for page actions such as «إنشاء إشعار».
