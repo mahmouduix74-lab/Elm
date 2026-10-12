@@ -54,7 +54,9 @@ All four libraries are published and reachable through `search_design_system`.
   - Done: delivery log (NTF-06), frame `4491:1446`, below the list. It is a clone of the list screen without cards,
     filters or explanatory text. Each row is one delivery attempt on one channel. Number and case repeat on every
     row with normal per-row zebra (user rejected grouping by notification).
-    Columns: القناة (chip) · الوجهة · المحاولة · النتيجة (chip) · سبب الفشل · date/time placeholders · eye action.
+    Columns: القناة (chip) · الوجهة · النتيجة (chip) · تاريخ إرسال الإشعار (real «17/09/2026 06:49», date and time
+    in one cell, per HTML v6) · سبب الفشل · eye action. User removed المحاولة and kept سبب الفشل.
+    HTML v6 also has merged rows, internal send references, full IDs and per-column filters; the user did NOT adopt these.
     Result chips: مُرسل `active`, ظهر `in_Progress`, قيد الإعادة `awaiting_Payment`, فشل نهائي `rejected`.
   - Selected tab needs an SA600 override on its label and indicator; the library default is brown.
   - Mapping: حرج → status_chip `rejected`, عالٍ → `awaiting_Payment`, متوسط → `active`,
