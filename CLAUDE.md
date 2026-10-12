@@ -45,9 +45,12 @@ All four libraries are published and reachable through `search_design_system`.
 - Page `إشعارات التحركات (Backoffice)` (`4461:6`) holds the **movement-notifications** work, built from a business HTML
   prototype (NTF-01 rules, NTF-02 permissions, NTF-04 list, NTF-05 details, NTF-06 delivery log).
   - Done: list screen, frame `4461:8`. Nav: الإشعارات › إشعارات التحركات › قائمة الإشعارات.
-  - Local component `movement_counter_card` (`4464:910`) for the criticality / unread counters.
+  - Cards are clones of the reference: two `rating_card_first` donut cards (by criticality, by read state)
+    plus `statistics_card` for the total.
   - Mapping: حرج → status_chip `rejected`, عالٍ → `awaiting_Payment`, متوسط → `active`,
     غير مقروء → `in_Progress`, مقروء → `draft` (chip text overridden).
+- **Rule (user):** copy how the existing screens are built (clone their cards, table header, columns, and
+  placeholders such as YYYY/MM/DD dates). Don't invent new patterns straight from the design-system library.
 - Screen conventions: 1440 wide, `nav_bar` 268 on the right, `top_bar`, breadcrumbs + title, cards row, table card.
   Wide tables are allowed to overflow to the left of the frame (the team's way of showing horizontal scroll).
 - Font gotchas: `statistics_card` numbers, `status_chip` defaults and `items_number` use **Gotham**, and some titles use
