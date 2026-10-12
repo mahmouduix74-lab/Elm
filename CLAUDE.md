@@ -36,6 +36,24 @@ All four libraries are published and reachable through `search_design_system`.
 - **Rule:** this is the team's shared file. Put new designs in a new section or page; only touch existing
   screens when explicitly asked.
 
+## Notifications file
+
+- [Notifications](https://www.figma.com/design/T2j2zyxa8w6V2ZwknThcDq/Notifications) — key `T2j2zyxa8w6V2ZwknThcDq`, edit access confirmed.
+- Pages: `Notification - add role` · `Notifications (MOHU)` · `Notifications (Backoffice)` · `Notifications (UO and EA)` ·
+  `Notification General` · `Notification Management`. Brown screens are the old palette; the green **Notifications**
+  section on the Backoffice page (157033 / 157039, e.g. frame `4387:24000`) is the reference for the current system.
+- Page `إشعارات التحركات (Backoffice)` (`4461:6`) holds the **movement-notifications** work, built from a business HTML
+  prototype (NTF-01 rules, NTF-02 permissions, NTF-04 list, NTF-05 details, NTF-06 delivery log).
+  - Done: list screen, frame `4461:8`. Nav: الإشعارات › إشعارات التحركات › قائمة الإشعارات.
+  - Local component `movement_counter_card` (`4464:910`) for the criticality / unread counters.
+  - Mapping: حرج → status_chip `rejected`, عالٍ → `awaiting_Payment`, متوسط → `active`,
+    غير مقروء → `in_Progress`, مقروء → `draft` (chip text overridden).
+- Screen conventions: 1440 wide, `nav_bar` 268 on the right, `top_bar`, breadcrumbs + title, cards row, table card.
+  Wide tables are allowed to overflow to the left of the frame (the team's way of showing horizontal scroll).
+- Font gotchas: `statistics_card` numbers, `status_chip` defaults and `items_number` use **Gotham**, and some titles use
+  **29LT Zarid Serif**. Neither font is available to the plugin API, so set `fontName` to IBM Plex Sans Arabic
+  before editing that text, or apply a DS text style.
+
 ## Tokens (Nusuk Masar)
 
 ### Colors
