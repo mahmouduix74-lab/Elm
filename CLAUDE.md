@@ -114,7 +114,8 @@ All four libraries are published and reachable through `search_design_system`.
     التعاميم/الإنذارات/الاستدعاءات (brown, old). Movement notifications are a new 4th tab «إشعارات التحركات» (user agreed:
     tab only, no separate side-menu item; no case codes ج-1…; classification حرج/عادي as in the HTML).
   - Frames left → right: UO 1 list `4525:22511` (clone of our green list; nav «إشعارات الوزارة»; tabs cloned from UO
-    and the selected tab recolored SA600; cards: total + donut by classification + donut by read state; columns
+    and the selected tab recolored SA600; cards follow the UO screens and the HTML: `statistics_card` total 12 + three DS `rating_card` gauges (key set `ed3d739e…`;
+    arc = Ellipse 8 arcData from 3.4203 by 2.5836×ratio; الحرجة 5/12 ruby100, المقروءة 7/12 green, غير المقروءة 5/12 straw100) — not donuts; columns
     رقم · التصنيف · النوع · التاريخ (date+time) · الحالة · eye; unread rows use Body/Bold/M) · UO 2 details critical unread
     `4527:5190` (DS `infobox` error, key `f6df6b50…`; البيانات الأساسية 10 fields; تفاصيل الإشعار with notice text,
     pilgrims table built from request_no columns, «تم الاطلاع» primary + «تصدير قائمة المعتمرين») · UO 3 after
