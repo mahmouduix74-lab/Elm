@@ -107,6 +107,22 @@ All four libraries are published and reachable through `search_design_system`.
   - Selected tab needs an SA600 override on its label and indicator; the library default is brown.
   - Mapping: حرج → status_chip `rejected`, عالٍ → `awaiting_Payment`, متوسط → `active`,
     غير مقروء → `in_Progress`, مقروء → `draft` (chip text overridden).
+- **UO side (company) of movement notifications**, from a second business HTML (`previews/uo/` renders). The user asked
+  to redesign only the first 3 screens (list, details, critical modal) and keep them separate from the Backoffice work:
+  outer section `4525:22509` «إشعارات التحركات — شركة العمرة (UO)» to the right of the Backoffice sections, inner `4525:22510`.
+  - Reference: page `Notifications (UO and EA)` (`2003:73196`), UO list «إشعارات الوزارة» `2277:63585` with tabs
+    التعاميم/الإنذارات/الاستدعاءات (brown, old). Movement notifications are a new 4th tab «إشعارات التحركات» (user agreed:
+    tab only, no separate side-menu item; no case codes ج-1…; classification حرج/عادي as in the HTML).
+  - Frames left → right: UO 1 list `4525:22511` (clone of our green list; nav «إشعارات الوزارة»; tabs cloned from UO
+    and the selected tab recolored SA600; cards: total + donut by classification + donut by read state; columns
+    رقم · التصنيف · النوع · التاريخ (date+time) · الحالة · eye; unread rows use Body/Bold/M) · UO 2 details critical unread
+    `4527:5190` (DS `infobox` error, key `f6df6b50…`; البيانات الأساسية 10 fields; تفاصيل الإشعار with notice text,
+    pilgrims table built from request_no columns, «تم الاطلاع» primary + «تصدير قائمة المعتمرين») · UO 3 after
+    acknowledge `4528:4255` (chip مقروء, fields المطّلع/وقت الاطلاع, success snackbar) · UO 4 normal unread
+    `4528:4744` (2058, primary «تحديد كمقروء») · UO 5 locked critical modal `4528:5294` (no close X, «(1 من 2)»,
+    over the UO list because no UO home screen exists).
+  - Mapping: عادي → status_chip `active`; حرج → `rejected`; غير مقروء `in_Progress`; مقروء `draft`.
+  - Not built (user decision): home ticker strip, daily entry/exit report, ministry read-tracking screen and send modal.
 - **Rule (user):** copy how the existing screens are built (clone their cards, table header, columns, and
   placeholders such as YYYY/MM/DD dates). Don't invent new patterns straight from the design-system library.
 - Screen conventions: 1440 wide, `nav_bar` 268 on the right, `top_bar`, breadcrumbs + title, cards row, table card.
