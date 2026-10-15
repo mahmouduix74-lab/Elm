@@ -133,6 +133,7 @@ All four libraries are published and reachable through `search_design_system`.
   قائمة الإشعارات · سجل الإرسال · قواعد الإشعارات · صلاحيات الاستقبال (current page Selected) and 2nd level
   «قائمة الإشعارات»; other sections hidden. UO frames: «الإشعارات» → «إشعارات التحركات» only (3rd Level=No, Selected).
   Nav is resized to the frame height and kept under modal overlays. Slot children (2nd/3rd level items) are edited in place.
+  The `star` and `drag-drop-vertical` icons on nav items are hidden on every frame (user decision).
 - **Rule (user):** copy how the existing screens are built (clone their cards, table header, columns, and
   placeholders such as YYYY/MM/DD dates). Don't invent new patterns straight from the design-system library.
 - Screen conventions: 1440 wide, `nav_bar` 268 on the right, `top_bar`, breadcrumbs + title, cards row, table card.
