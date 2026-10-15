@@ -137,6 +137,13 @@ All four libraries are published and reachable through `search_design_system`.
   «قائمة الإشعارات»; other sections hidden. UO frames: «الإشعارات» → «إشعارات التحركات» only (3rd Level=No, Selected).
   Nav is resized to the frame height and kept under modal overlays. Slot children (2nd/3rd level items) are edited in place.
   The `star` and `drag-drop-vertical` icons on nav items are hidden on every frame (user decision).
+- **Settings stepper flow (user, 2026-10-15):** entry is the button «اعدادات اشعارات التحركات» (`4579:88592`) on the
+  user's new list frame `4579:87714`. New section `4582:9724` «إعدادات إشعارات التحركات — Stepper» (x4800 y2300), frames
+  cloned from the user's green stepper reference `4579:88762` (old-library `top_bar` version=stepper + `stepper` instance,
+  `step_item` step=current/next/done): 1 قواعد الإشعارات `4582:9725` (rules B cards without per-card footers; «التالي» +
+  tertiary «إلغاء») · 2 صلاحيات الاستقبال `4583:11368` (permissions table without its footer; «التالي» + «السابق») ·
+  3 المراجعة `4583:12170` (two summary cards from the UO details card: rules per case and recipients per case;
+  «حفظ الإعدادات» + «السابق») · 4 success `4583:12791` (list + snackbar «تم حفظ إعدادات إشعارات التحركات بنجاح» under the button).
 - **Rule (user):** copy how the existing screens are built (clone their cards, table header, columns, and
   placeholders such as YYYY/MM/DD dates). Don't invent new patterns straight from the design-system library.
 - Screen conventions: 1440 wide, `nav_bar` 268 on the right, `top_bar`, breadcrumbs + title, cards row, table card.
