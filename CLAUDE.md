@@ -138,15 +138,14 @@ All four libraries are published and reachable through `search_design_system`.
   Nav is resized to the frame height and kept under modal overlays. Slot children (2nd/3rd level items) are edited in place.
   The `star` and `drag-drop-vertical` icons on nav items are hidden on every frame (user decision).
 - **Settings stepper flow (user, 2026-10-15):** entry is the button «اعدادات اشعارات التحركات» (`4579:88592`) on the
-  user's new list frame `4579:87714`. Section `4582:9724` «إعدادات إشعارات التحركات — Stepper» (x4800 y2300). The user asked
-  to build the steps on that list page itself (new Nav Bar + top bar + breadcrumbs «… / قائمة الإشعارات / إعدادات إشعارات
-  التحركات», title «إعدادات إشعارات التحركات», title button hidden), with a horizontal DS `stepper` (set `64e10e27…`,
-  variant platform=tablet, language=arabic; 3 steps, labels «الخطوة n» + name; step_item step=done/current/next) in a
-  white card under the title. Frames left → right: 1 قواعد الإشعارات `4585:19772` (rules B cards, no per-card footers;
-  «التالي» + «إلغاء» link) · 2 صلاحيات الاستقبال `4585:20342` (permissions table; «التالي» + «السابق») · 2b add extra
-  user `4585:21817` — the user asked to use the side window from `4572:27643` (Side Panel `4572:27907`, 800 wide, from the
-  left over a 30% overlay) holding the two-list picker; footer «إضافة» + «إلغاء» · 3 المراجعة `4585:20944` (summary
-  cards; «حفظ الإعدادات» + «السابق») · 4 success `4583:12791` (list + snackbar under the button).
+  user's list frame `4579:87714`. Section `4582:9724` «إعدادات إشعارات التحركات — Stepper» (x4800 y2300). Built on the
+  user's stepper template `4572:17557` (green `stepper` panel on the right, `top_bar` version=stepper with headline
+  «إعدادات إشعارات التحركات», infobox, content, «Buttons» row). Two steps only (user): 1 قواعد الإشعارات `4586:12055`
+  = the rules A table `4500:2233` (no paginator, overflows left like other wide tables; «التالي» + «إلغاء» link) ·
+  2 صلاحيات الاستقبال `4586:13144` = the permissions table `4507:14633` (its footer hidden; «حفظ» + «السابق») ·
+  2b `4586:14015` «+ إضافة» opens the side window (Side Panel `4572:27907` from `4572:27643`, 800 wide from the left,
+  30% overlay, two-list picker, «إضافة» + «إلغاء») · 2c `4586:79602` user added (tag «سارة العتيبي» in row 1) ·
+  3 success `4583:12791` (list + snackbar «تم حفظ إعدادات إشعارات التحركات بنجاح»). No review step (user: save directly).
 - **Rule (user):** copy how the existing screens are built (clone their cards, table header, columns, and
   placeholders such as YYYY/MM/DD dates). Don't invent new patterns straight from the design-system library.
 - Screen conventions: 1440 wide, `nav_bar` 268 on the right, `top_bar`, breadcrumbs + title, cards row, table card.
