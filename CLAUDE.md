@@ -125,6 +125,14 @@ All four libraries are published and reachable through `search_design_system`.
     over the UO list because no UO home screen exists).
   - Mapping: عادي → status_chip `active`; حرج → `rejected`; غير مقروء `in_Progress`; مقروء `draft`.
   - Not built (user decision): home ticker strip, daily entry/exit report, ministry read-tracking screen and send modal.
+- **New shell (user, 2026-10-15):** all movement-notification frames (Backoffice + UO) now use the new library
+  `Nav Bar` (set key from instance `4557:5715`, main `bd13124e…`, State=Expanded, built with slots) and the new
+  `top_bar` (main `a06b2c4e…`, the user's reference instance `4556:80534`). Top bar breadcrumb product reads «العمرة»
+  (user: not «الحج»). Nav content: Section «عام» → «الصفحة الرئيسية» (home-01 icon) · «الإشعارات» (notification-02
+  icon, State=Selected, 2nd Level=Yes) → 2nd level «إشعارات التحركات» (3rd Level=Yes, Selected) with 3rd level
+  قائمة الإشعارات · سجل الإرسال · قواعد الإشعارات · صلاحيات الاستقبال (current page Selected) and 2nd level
+  «قائمة الإشعارات»; other sections hidden. UO frames: «الإشعارات» → «إشعارات التحركات» only (3rd Level=No, Selected).
+  Nav is resized to the frame height and kept under modal overlays. Slot children (2nd/3rd level items) are edited in place.
 - **Rule (user):** copy how the existing screens are built (clone their cards, table header, columns, and
   placeholders such as YYYY/MM/DD dates). Don't invent new patterns straight from the design-system library.
 - Screen conventions: 1440 wide, `nav_bar` 268 on the right, `top_bar`, breadcrumbs + title, cards row, table card.
