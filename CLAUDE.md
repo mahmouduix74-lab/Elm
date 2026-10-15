@@ -49,7 +49,10 @@ All four libraries are published and reachable through `search_design_system`.
     plus `statistics_card` for the total.
   - Done: details screen (NTF-05) for NTF-2026-000412, cloned from the green Details frame `4393:18164`.
     Tab «التفاصيل» is frame `4478:1113` with two info cards (بيانات المعتمر · البرنامج والتحرك; days shown as red
-    text, no bar). Tab «سجل التحديثات» is frame `4478:14096` (التحديث · المستخدم · التاريخ · الوقت).
+    text, no bar). Tab «سجل التحديثات» is frame `4478:14096`: the table is hidden and replaced (user request) by DS `historyTimeline`
+    items (set key `c0af75b4…`, Type First/Middle/Last, «Show reason» for failures) — 000412 history: created by the system
+    06:04 → sent to شركة الرحاب للعمرة (نافذة + بريد) 06:04 → SMS failed after 3 attempts 06:49 (reason «رقم الجوال المسجّل غير صالح»)
+    → read by مهدي فاضل 09:12, all on 17/09/2026 · 06/04/1448; system rows use an initials avatar «ن».
     User decision: no cards for reason, company read status or delivery channels.
   - Done: delivery log (NTF-06), frame `4491:1446`, below the list. It is a clone of the list screen without cards,
     filters or explanatory text. Each row is one delivery attempt on one channel. Number and case repeat on every
