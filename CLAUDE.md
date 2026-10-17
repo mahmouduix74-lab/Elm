@@ -210,7 +210,10 @@ All four libraries are published and reachable through `search_design_system`.
     DGA component default padding 32 (all three aligned). Page sections stay on the 112/1216 grid.
   - User: «انا عايز زي الكمبوننت اللي موجود في dga» → all DGA instances (Digital Stamp, Second Nav Header, Nav Header, Footer)
     use their main component's padding/spacing (32; footer Content max 1280). Only content overrides remain (real texts,
-    logos, icons) plus the «كيف تتحقق» link colour (text-primary-sa-flag, for AA contrast). Useful tokens: Link/link-primary-visited `4d2b021f…`,
+    logos, icons) plus the «كيف تتحقق» link colour (text-primary-sa-flag, for AA contrast).
+  - The user deleted board items «عنوان الهيرو والزرار», «أيقونة كفاءة تشغيلية» and the «عام» row (with their pins). Remaining
+    12 items renumbered 1–12: stamp · top bar · nav · hero · hero spacing · hero stats · grid · services section ·
+    services title · cards · FAQ · footer. Useful tokens: Link/link-primary-visited `4d2b021f…`,
     text-primary-sa-flag `b3519ee6…`, alpha-black-0 `32ccf4a8…`, alpha-black-80 `ffd636ba…`, icon-default `e041e3f2…`.
   - Removed: gold pattern (1,133 vectors), #f8f7f5 dots, hidden pagination, hidden footer nav links, Swap Placeholders.
   - Copy: استكشف خدماتنا · نظام نقل المصلين · منشآت · الأسئلة الشائعة · التزام بالأنظمة · «نقود مستقبل النقل» (no kashida/ellipsis)
