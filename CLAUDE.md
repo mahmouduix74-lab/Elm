@@ -157,6 +157,19 @@ All four libraries are published and reachable through `search_design_system`.
     36/54 → IBM Medium 30/54). Gotham digits and Latin text keep the same size in IBM.
   - Book/Regular → `IBM Plex Sans Arabic` Regular; Medium → `IBM Plex Sans Arabic Medium` Regular.
 
+## Transport Information Center homepage (DGA review)
+
+- File `cAMY504gWaSItUzw4yJevl` («Untitled»), frame `1:18455` «homepage» 1440×2827: public site of مركز معلومات النقل
+  (النقابة العامة للسيارات). Built mostly with **Components Library - Platforms Code** (Nav Header, Header Menu Item,
+  Button, Card, Featured icon, Tag, Accordion, Pagination, Link) and its text styles (Display/Text …) and «Themes» variables.
+- User asked (2026-10-17) whether a 100% DGA-compliant version is possible and what to fix first. Audit findings:
+  no gov masthead (`Second Nav Header`) and a custom footer frame instead of the DGA `Footer` component; accessibility
+  tools text hidden; ~1,110 unbound colours (1,084 are the gold #9e925f decorative pattern; also #000/#1a1a1a text,
+  #074d31 footer, #f8f7f5); 4 fills bound to a «Delete» variable collection; 6 hidden stray layers at the frame root
+  (old hero, «نبذة وخبرات» in «The Year of The Camel»); hidden «12 reviews» ratings and «عنوان مجموعة» footer placeholders;
+  Swap Placeholder instances and a crypto icon (huobi-token) in cards; 44 groups; an image named «ChatGPT Image…»;
+  copy typos (خدامتنا، المصليين، منشأت، الاسئلة، kashida stretching) and mixed digits; footer «2026 © 2024».
+
 ## Tokens (Nusuk Masar)
 
 ### Colors
