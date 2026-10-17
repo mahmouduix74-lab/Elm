@@ -179,7 +179,21 @@ All four libraries are published and reachable through `search_design_system`.
     Hero content 1216 = two 6-column halves (596 + 24 + 596); title column gap 24 (was 22).
   - Sections: padding 64/112, radius 0, no gap between sections. About `8:1476` white (two halves of 596; image card
     `8:1481` text 32 from the edges), Services `8:1500` neutral-50 (4 cards × 286 + 3 × 24 = 1216, equal heights),
-    FAQ `8:1516` white (gold 6% fill removed), Footer `8:1525` padding 112, fill = DGA Footer token `Background/background-SA-Flag`.
+    FAQ `8:1516` white (gold 6% fill removed).
+  - **Footer = DGA `Footer` instance** `12:6666` (set `aa4c5b3f…`, RTL=True, Dark green, 600+; fill `background-SA-Flag`),
+    padding 112, Content FILL 1216. Old custom footer deleted. Groups (right → left): روابط سريعة (nav items) · خدماتنا
+    (the 4 services) · تواصل معنا (phone, email, address) · المساعدة والدعم (الأسئلة الشائعة, الدعم الفني, خريطة الموقع);
+    5th placeholder group hidden. Social group renamed «تابعنا» with X / LinkedIn / YouTube / Instagram icons; accessibility
+    tools = view / zoom-in-area / zoom-out-area. Bottom links: تواصل معنا · الدعم الفني · الأسئلة الشائعة · خريطة الموقع.
+    Caption «جميع الحقوق محفوظة لمركز معلومات النقل © 2026».
+  - Footer logos: nested `Logo Placeholder` instances are locked at 98×42 (size can't be overridden), so the real lockup
+    was split into two local components on the page (`12:7117` مركز معلومات النقل, `12:7119` النقابة العامة للسيارات;
+    cropped image fills) and swapped in. Vision 2030 has no third slot, so it is not shown.
+  - Tip: set `figma.skipInvisibleInstanceChildren=false` before reaching hidden instance sublayers by id.
+- **Before/after board** (user asked for it): section `16:749` «قبل وبعد — توافق الصفحة الرئيسية مع DGA» at y3400 under both frames.
+  Snapshots of the original and v2 (after-snapshot `18:1743`, refresh it if v2 changes), 12 numbered pins (red = before, green = after)
+  and a 13-row table «الفروقات بالترتيب» (`16:2175`) with قبل/بعد per item. The user rearranged it (before on the left).
+  Preview `previews/dga-homepage/3-before-after.png`.
   - Removed: gold pattern (1,133 vectors), #f8f7f5 dots, hidden pagination, hidden footer nav links, Swap Placeholders.
   - Copy: استكشف خدماتنا · نظام نقل المصلين · منشآت · الأسئلة الشائعة · التزام بالأنظمة · «نقود مستقبل النقل» (no kashida/ellipsis)
     · stats 98% / 100% / 24/7 · «جميع الحقوق محفوظة لمركز معلومات النقل © 2026». Crypto icon → `chart-increase`.
