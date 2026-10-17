@@ -159,7 +159,7 @@ All four libraries are published and reachable through `search_design_system`.
 
 ## Transport Information Center homepage (DGA review)
 
-- File `cAMY504gWaSItUzw4yJevl` («Untitled»), frame `1:18455` «homepage» 1440×2827: public site of مركز معلومات النقل
+- File `cAMY504gWaSItUzw4yJevl` («Untitled»), frame `1:16870` «homepage» 1440×2827 (the user's link said 1-18455): public site of مركز معلومات النقل
   (النقابة العامة للسيارات). Built mostly with **Components Library - Platforms Code** (Nav Header, Header Menu Item,
   Button, Card, Featured icon, Tag, Accordion, Pagination, Link) and its text styles (Display/Text …) and «Themes» variables.
 - User asked (2026-10-17) whether a 100% DGA-compliant version is possible and what to fix first. Audit findings:
@@ -169,6 +169,22 @@ All four libraries are published and reachable through `search_design_system`.
   (old hero, «نبذة وخبرات» in «The Year of The Camel»); hidden «12 reviews» ratings and «عنوان مجموعة» footer placeholders;
   Swap Placeholder instances and a crypto icon (huobi-token) in cards; 44 groups; an image named «ChatGPT Image…»;
   copy typos (خدامتنا، المصليين، منشأت، الاسئلة، kashida stretching) and mixed digits; footer «2026 © 2024».
+- **DGA v2 built (user: «خد بالك من الارقام»):** frame `8:315` «homepage — DGA v2», 1640 to the right of the original
+  (main column `8:316`, gap 0). Hidden layers deleted. Previews: `previews/dga-homepage/1-before.png`, `2-dga-v2.png`.
+  - Grid: DGA Foundations `Grid desktop` style (key `147991e9…`): 12 columns, gutter 24, margin 112, content 1216
+    (1 column ≈ 79.3; 3 columns = 286; 6 columns = 596).
+  - Stack: masthead `Second Nav Header` RTL=Yes Gray (40, instance `9:22863`, date «17-أكتوبر-2026») → Nav Header 1440×72
+    (padding 112) → **Hero `9:22936` 1440×640 full-bleed**, radius 0, padding 64/112, content aligned to the bottom
+    (image + gradient overlay absolute 1440×640). 40 + 72 + 640 = 752, so the next section shows inside a 900px viewport.
+    Hero content 1216 = two 6-column halves (596 + 24 + 596); title column gap 24 (was 22).
+  - Sections: padding 64/112, radius 0, no gap between sections. About `8:1476` white (two halves of 596; image card
+    `8:1481` text 32 from the edges), Services `8:1500` neutral-50 (4 cards × 286 + 3 × 24 = 1216, equal heights),
+    FAQ `8:1516` white (gold 6% fill removed), Footer `8:1525` padding 112, fill = DGA Footer token `Background/background-SA-Flag`.
+  - Removed: gold pattern (1,133 vectors), #f8f7f5 dots, hidden pagination, hidden footer nav links, Swap Placeholders.
+  - Copy: استكشف خدماتنا · نظام نقل المصلين · منشآت · الأسئلة الشائعة · التزام بالأنظمة · «نقود مستقبل النقل» (no kashida/ellipsis)
+    · stats 98% / 100% / 24/7 · «جميع الحقوق محفوظة لمركز معلومات النقل © 2026». Crypto icon → `chart-increase`.
+  - Tokens: in the Platforms Code theme `Text/text-primary` is **brand green**. Neutral titles use `Text/text-display`, paragraphs
+    `Text/text-primary-paragraph`, neutral icons `Icon/icon-default` (`e041e3f2…`), image borders `Border/border-neutral-secondary`.
 
 ## Tokens (Nusuk Masar)
 
