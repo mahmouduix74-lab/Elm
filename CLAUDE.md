@@ -205,7 +205,9 @@ All four libraries are published and reachable through `search_design_system`.
     (title 60px worst 4.48, needs 3; body ≥ 7.2).
   - Board table «الفروقات بالترتيب — من أعلى الصفحة لأسفل» rebuilt in page order (14 numbered rows + one «عام» row);
     pins renumbered to match (1 stamp, 2 top bar, 3 nav, 4 hero, 5 hero title, 6 hero spacing, 7 stats, 8 grid, 9 icon,
-    10 services section, 11 services title, 12 cards, 13 FAQ, 14 footer). Useful tokens: Link/link-primary-visited `4d2b021f…`,
+    10 services section, 11 services title, 12 cards, 13 FAQ, 14 footer).
+  - **Header padding (user: «في بادينج كبير من الناحيتين»):** Digital Stamp, Second Nav Header and Nav Header are back to the
+    DGA component default padding 32 (all three aligned). Page sections stay on the 112/1216 grid; footer padding is still 112. Useful tokens: Link/link-primary-visited `4d2b021f…`,
     text-primary-sa-flag `b3519ee6…`, alpha-black-0 `32ccf4a8…`, alpha-black-80 `ffd636ba…`, icon-default `e041e3f2…`.
   - Removed: gold pattern (1,133 vectors), #f8f7f5 dots, hidden pagination, hidden footer nav links, Swap Placeholders.
   - Copy: استكشف خدماتنا · نظام نقل المصلين · منشآت · الأسئلة الشائعة · التزام بالأنظمة · «نقود مستقبل النقل» (no kashida/ellipsis)
