@@ -36,6 +36,191 @@ All four libraries are published and reachable through `search_design_system`.
 - **Rule:** this is the team's shared file. Put new designs in a new section or page; only touch existing
   screens when explicitly asked.
 
+## Notifications file
+
+- [Notifications](https://www.figma.com/design/T2j2zyxa8w6V2ZwknThcDq/Notifications) — key `T2j2zyxa8w6V2ZwknThcDq`, edit access confirmed.
+- Pages: `Notification - add role` · `Notifications (MOHU)` · `Notifications (Backoffice)` · `Notifications (UO and EA)` ·
+  `Notification General` · `Notification Management`. Brown screens are the old palette; the green **Notifications**
+  section on the Backoffice page (157033 / 157039, e.g. frame `4387:24000`) is the reference for the current system.
+- Page `إشعارات التحركات (Backoffice)` (`4461:6`) holds the **movement-notifications** work, built from a business HTML
+  prototype (NTF-01 rules, NTF-02 permissions, NTF-04 list, NTF-05 details, NTF-06 delivery log).
+  - Done: list screen, frame `4461:8`. Nav: الإشعارات › إشعارات التحركات › قائمة الإشعارات.
+  - Cards are clones of the reference: two `rating_card_first` donut cards (by criticality, by read state)
+    plus `statistics_card` for the total.
+  - Done: details screen (NTF-05) for NTF-2026-000412, cloned from the green Details frame `4393:18164`.
+    Tab «التفاصيل» is frame `4478:1113` with two info cards (بيانات المعتمر · البرنامج والتحرك; days shown as red
+    text, no bar). Tab «سجل التحديثات» is frame `4478:14096`: the table is hidden and replaced (user request) by DS `historyTimeline`
+    items (set key `c0af75b4…`, Type First/Middle/Last, «Show reason» for failures) — 000412 history: created by the system
+    06:04 → sent to شركة الرحاب للعمرة (نافذة + بريد) 06:04 → SMS failed after 3 attempts 06:49 (reason «رقم الجوال المسجّل غير صالح»)
+    → read by مهدي فاضل 09:12, all on 17/09/2026 · 06/04/1448; system rows use an initials avatar «ن».
+    User decision: no cards for reason, company read status or delivery channels.
+  - Done: delivery log (NTF-06), frame `4491:1446`, below the list. It is a clone of the list screen without cards,
+    filters or explanatory text. Each row is one delivery attempt on one channel. Number and case repeat on every
+    row with normal per-row zebra (user rejected grouping by notification).
+    Columns: القناة (chip) · الوجهة · النتيجة (chip) · تاريخ إرسال الإشعار (real «17/09/2026 06:49», date and time
+    in one cell, per HTML v6) · سبب الفشل · eye action. User removed المحاولة and kept سبب الفشل.
+    HTML v6 also has merged rows, internal send references, full IDs and per-column filters; the user did NOT adopt these.
+    Result chips: مُرسل `active`, ظهر `in_Progress`, قيد الإعادة `awaiting_Payment`, فشل نهائي `rejected`.
+  - Page layout (set up by the user): one section per screen group (قائمة · سجل الإرسال · قواعد إشعارات التحركات).
+    Put new frames inside the matching inner section.
+  - Rules (NTF-01): two options in the rules section, with no case codes (ح-1…) and no cards under the table.
+    - **A (table)** `4500:2233`: built from our table columns. Control cells are detached from the column
+      template and hold DS Switch, dropdown (label=no), checkbox and input instances.
+    - **B (cards)** `4502:2097`: accordion cards cloned from the add-role card `4204:40751`, with DS switch,
+      dropdowns (label=yes), checkboxes and an input with helper text. Each open card ends with a footer:
+      «حفظ» primary and «إلغاء» secondary on the bottom-left, and a tertiary «معاينة الإشعار» on the bottom-right.
+      «استعادة الافتراضي» was dropped in B. There are no
+      buttons in the title row (user decision).
+    - Convention in this file: save/submit buttons sit at the bottom (primary on the left, tertiary link on the
+      right). The title-row button slot is only for page actions such as «إنشاء إشعار».
+    - DS keys: Switch `4515a13b…`, checkbox `7e286833…`, dropdown `97f9a18b…`, input `75cbda2e…`.
+  - Rules: «N معلّقة» (pending count, `pend` in the HTML data) was removed from both options. Its meaning is unclear
+    (ح-2 is instant yet shows 1 pending), so it's an open question for the business before it returns.
+  - Delivery log: the user hid the actions column.
+  - Permissions (NTF-02), section `4507:14631` (inner `4507:14632`). The user picked option 5 (two-list modal) out of
+    three previews (`previews/mock-perm-option3/4/5.png`).
+    - Screen `4507:14633` is a clone of rules A. Columns: حالة التحرك · مدراء حسابات الشركات (checkbox) ·
+      شركة العمرة (checkbox) · مستخدم إضافي (DS Tag chips plus a secondary «+ إضافة» button).
+    - Row «الدخول خارج نطاق البرنامج» is disabled with the description «معطّلة في قواعد الإشعارات».
+    - «حفظ» and «إلغاء» sit at the bottom-left of the table card. There is no paginator or eye column.
+    - Modal screen `4507:43874` has a 30% black overlay. Its `modal_window` `4507:44077` is cloned from the cancel
+      modal `3573:57104`, and its two list panels are cloned from the add-receivers story `2056:114448/114514`
+      (MOHU page). The panels are recolored green and use DS checkbox/button and IBM fonts.
+    - Modal header/footer and the two panel headers are Nusuk Masar `modal_header` (`8b9e8bb8…`, title IBM Headline/M 22)
+      and `modal_footer` (`d879015e…`); the old-library header (Zarid 28) made titles too big.
+    - Data is realistic (users such as سارة العتيبي — وزارة الحج والعمرة, خالد الشهري — شركة دار الإيمان للعمرة, initials in avatars).
+  - Page titles measured: green screens Zarid Serif 36/54 (≈ IBM 30), old brown Zarid Sans 40 (Headline/XL),
+    Umrah Individuals list IBM Regular 28/54, details DS `Headline/XL` 32/56. DS `headerSection` uses Headline/L 24.
+  - Permissions flow (user: design every case and modal as its own frame, in order left → right in `4507:14632`):
+    1 default `4507:14633` (no save/cancel) · 2 after a change `4514:14906` (row الوفاة/شركة العمرة ticked, buttons shown)
+    · 3 modal `4507:43874` (background has no buttons) · 4 after adding a user `4514:15340` (tag «سارة العتيبي» in row 1,
+    buttons shown) · 5 saved `4514:15782` (buttons hidden, success `snackbar` at x24 y89, key `53c4f292…`,
+    copied from the green «تم ارسال الاشعار بنجاح» screen `4387:41697`).
+  - **Rule (user):** save/cancel appear only after the user changes something; every flow shows each state
+    (default, changed, modal, result, success) as a separate frame.
+  - Typography pass (user asked to fix all titles and fonts): every text on page `4461:6` is bound to a Nusuk Masar style.
+    Page titles → `Desktop/Headline/L` 24/40 (the DS `headerSection` page-header size). Card/accordion titles →
+    `Headline/S` 20. Modal titles → `Headline/M` 22 (from `modal_header`). Body text → matching `Body/*` or `Body/Bold/*`
+    by size and weight. Left unstyled: breadcrumbs and date placeholders at 14 (no desktop 14 style), and the
+    `statistics_card` number at 72. Style keys: Headline L `4459f615…`, S `0ca5b8a3…`, Body M `ed97eab3…`, Body S `0be595da…`,
+    Body XS `3dc3e710…`, Body XS+ `d2fea3bb…`, Body L `cfa902de…`, Body XL `e93c2f27…`, Bold M `15b50610…`, Bold XS `3a21407a…`.
+  - **Rule (user):** use real-looking data, not placeholders like «مستخدم 3» or «XX»; use DS components over old-library ones.
+  - **Rule (user):** ignore brown entirely; always use primary green (SA600) for anything cloned from old screens.
+    Tag set key `d0f3a464…`, icon/add `017f4710…`.
+  - Selected tab needs an SA600 override on its label and indicator; the library default is brown.
+  - Mapping: حرج → status_chip `rejected`, عالٍ → `awaiting_Payment`, متوسط → `active`,
+    غير مقروء → `in_Progress`, مقروء → `draft` (chip text overridden).
+- **UO side (company) of movement notifications**, from a second business HTML (`previews/uo/` renders). The user asked
+  to redesign only the first 3 screens (list, details, critical modal) and keep them separate from the Backoffice work:
+  outer section `4525:22509` «إشعارات التحركات — شركة العمرة (UO)» to the right of the Backoffice sections, inner `4525:22510`.
+  - Reference: page `Notifications (UO and EA)` (`2003:73196`), UO list «إشعارات الوزارة» `2277:63585` with tabs
+    التعاميم/الإنذارات/الاستدعاءات (brown, old). Movement notifications are a new 4th tab «إشعارات التحركات» (user agreed:
+    tab only, no separate side-menu item; no case codes ج-1…; classification حرج/عادي as in the HTML).
+  - Frames left → right: UO 1 list `4525:22511` (clone of our green list; page name «إشعارات التحركات» in title, breadcrumbs and nav —
+    user renamed it from the reference's «إشعارات الوزارة»; tabs cloned from UO
+    and the selected tab recolored SA600; cards follow the UO screens and the HTML: `statistics_card` total 12 + three DS `rating_card` gauges (key set `ed3d739e…`;
+    arc = Ellipse 8 arcData from 3.4203 by 2.5836×ratio; الحرجة 5/12 ruby100, المقروءة 7/12 green, غير المقروءة 5/12 straw100) — not donuts; columns
+    رقم · التصنيف · النوع · التاريخ (date+time) · الحالة · eye; unread rows use Body/Bold/M) · UO 2 details critical unread
+    `4527:5190` (DS `infobox` error, key `f6df6b50…`; البيانات الأساسية 10 fields; تفاصيل الإشعار with notice text,
+    pilgrims table built from request_no columns, «تم الاطلاع» primary + «تصدير قائمة المعتمرين») · UO 3 after
+    acknowledge `4528:4255` (chip مقروء, fields المطّلع/وقت الاطلاع, success snackbar) · UO 4 normal unread
+    `4528:4744` (2058, primary «تحديد كمقروء») · UO 5 locked critical modal `4528:5294` (no close X, «(1 من 2)»,
+    over the UO list because no UO home screen exists).
+  - Mapping: عادي → status_chip `active`; حرج → `rejected`; غير مقروء `in_Progress`; مقروء `draft`.
+  - Not built (user decision): home ticker strip, daily entry/exit report, ministry read-tracking screen and send modal.
+- **New shell (user, 2026-10-15):** all movement-notification frames (Backoffice + UO) now use the new library
+  `Nav Bar` (set key from instance `4557:5715`, main `bd13124e…`, State=Expanded, built with slots) and the new
+  `top_bar` (main `a06b2c4e…`, the user's reference instance `4556:80534`). Top bar breadcrumb product reads «العمرة»
+  (user: not «الحج»). Nav content: Section «عام» → «الصفحة الرئيسية» (home-01 icon) · «الإشعارات» (notification-02
+  icon, State=Selected, 2nd Level=Yes) → 2nd level «إشعارات التحركات» (3rd Level=Yes, Selected) with 3rd level
+  قائمة الإشعارات · سجل الإرسال · قواعد الإشعارات · صلاحيات الاستقبال (current page Selected) and 2nd level
+  «قائمة الإشعارات»; other sections hidden. UO frames: «الإشعارات» → «إشعارات التحركات» only (3rd Level=No, Selected).
+  Nav is resized to the frame height and kept under modal overlays. Slot children (2nd/3rd level items) are edited in place.
+  The `star` and `drag-drop-vertical` icons on nav items are hidden on every frame (user decision).
+- **Settings stepper flow (user, 2026-10-15):** entry is the button «اعدادات اشعارات التحركات» (`4579:88592`) on the
+  user's list frame `4579:87714`. Section `4582:9724` «إعدادات إشعارات التحركات — Stepper» (x4800 y2300). Built on the
+  user's stepper template `4572:17557` (green `stepper` panel on the right, `top_bar` version=stepper with headline
+  «إعدادات إشعارات التحركات», infobox, content, «Buttons» row). Two steps only (user): 1 قواعد الإشعارات `4586:12055`
+  = the rules A table `4500:2233` (no paginator, overflows left like other wide tables; «التالي» + «إلغاء» link) ·
+  2 صلاحيات الاستقبال `4586:13144` = the permissions table `4507:14633` (its footer hidden; «حفظ» + «السابق») ·
+  2b `4586:14015` «+ إضافة» opens the side window (Side Panel `4572:27907` from `4572:27643`, 800 wide from the left,
+  30% overlay, two-list picker, «إضافة» + «إلغاء») · 2c `4586:79602` user added (tag «سارة العتيبي» in row 1) ·
+  3 success `4583:12791` (list + snackbar «تم حفظ إعدادات إشعارات التحركات بنجاح»). No review step (user: save directly).
+- **Rule (user):** copy how the existing screens are built (clone their cards, table header, columns, and
+  placeholders such as YYYY/MM/DD dates). Don't invent new patterns straight from the design-system library.
+- Screen conventions: 1440 wide, `nav_bar` 268 on the right, `top_bar`, breadcrumbs + title, cards row, table card.
+  Wide tables are allowed to overflow to the left of the frame (the team's way of showing horizontal scroll).
+- Fonts: screens mix in **Gotham** (numbers, dates, paginator, `statistics_card`, `items_number`), **29LT Zarid**
+  (titles, some top-bar labels) and **Inter** (donut tooltips). None of them are available to the plugin API.
+  - **Rule (user):** convert any non-IBM text to IBM Plex Sans Arabic at a size that looks the same.
+  - Measured: Arabic IBM is about 22% larger than Zarid, so use ×0.82 (Zarid 20 → IBM 16, Zarid Serif title
+    36/54 → IBM Medium 30/54). Gotham digits and Latin text keep the same size in IBM.
+  - Book/Regular → `IBM Plex Sans Arabic` Regular; Medium → `IBM Plex Sans Arabic Medium` Regular.
+
+## Transport Information Center homepage (DGA review)
+
+- File `cAMY504gWaSItUzw4yJevl` («Untitled»), frame `1:16870` «homepage» 1440×2827 (the user's link said 1-18455): public site of مركز معلومات النقل
+  (النقابة العامة للسيارات). Built mostly with **Components Library - Platforms Code** (Nav Header, Header Menu Item,
+  Button, Card, Featured icon, Tag, Accordion, Pagination, Link) and its text styles (Display/Text …) and «Themes» variables.
+- User asked (2026-10-17) whether a 100% DGA-compliant version is possible and what to fix first. Audit findings:
+  no gov masthead (`Second Nav Header`) and a custom footer frame instead of the DGA `Footer` component; accessibility
+  tools text hidden; ~1,110 unbound colours (1,084 are the gold #9e925f decorative pattern; also #000/#1a1a1a text,
+  #074d31 footer, #f8f7f5); 4 fills bound to a «Delete» variable collection; 6 hidden stray layers at the frame root
+  (old hero, «نبذة وخبرات» in «The Year of The Camel»); hidden «12 reviews» ratings and «عنوان مجموعة» footer placeholders;
+  Swap Placeholder instances and a crypto icon (huobi-token) in cards; 44 groups; an image named «ChatGPT Image…»;
+  copy typos (خدامتنا، المصليين، منشأت، الاسئلة، kashida stretching) and mixed digits; footer «2026 © 2024».
+- **DGA v2 built (user: «خد بالك من الارقام»):** frame `8:315` «homepage — DGA v2», 1640 to the right of the original
+  (main column `8:316`, gap 0). Hidden layers deleted. Previews: `previews/dga-homepage/1-before.png`, `2-dga-v2.png`.
+  - Grid: DGA Foundations `Grid desktop` style (key `147991e9…`): 12 columns, gutter 24, margin 112, content 1216
+    (1 column ≈ 79.3; 3 columns = 286; 6 columns = 596).
+  - Stack: masthead `Second Nav Header` RTL=Yes Gray (40, instance `9:22863`, date «17-أكتوبر-2026») → Nav Header 1440×72
+    (padding 112) → **Hero `9:22936` 1440×640 full-bleed**, radius 0, padding 64/112, content aligned to the bottom
+    (image + gradient overlay absolute 1440×640). 40 + 72 + 640 = 752, so the next section shows inside a 900px viewport.
+    Hero content 1216 = two 6-column halves (596 + 24 + 596); title column gap 24 (was 22).
+  - Sections: padding 64/112, radius 0, no gap between sections. About `8:1476` white (two halves of 596; image card
+    `8:1481` text 32 from the edges), Services `8:1500` neutral-50 (4 cards × 286 + 3 × 24 = 1216, equal heights),
+    FAQ `8:1516` white (gold 6% fill removed).
+  - **Footer = DGA `Footer` instance** `12:6666` (set `aa4c5b3f…`, RTL=True, Dark green, 600+; fill `background-SA-Flag`),
+    padding 112, Content FILL 1216. Old custom footer deleted. Groups (right → left): روابط سريعة (nav items) · خدماتنا
+    (the 4 services) · تواصل معنا (phone, email, address) · المساعدة والدعم (الأسئلة الشائعة, الدعم الفني, خريطة الموقع);
+    5th placeholder group hidden. Social group renamed «تابعنا» with X / LinkedIn / YouTube / Instagram icons; accessibility
+    tools = view / zoom-in-area / zoom-out-area. Bottom links: تواصل معنا · الدعم الفني · الأسئلة الشائعة · خريطة الموقع.
+    Caption «جميع الحقوق محفوظة لمركز معلومات النقل © 2026».
+  - Footer logos: nested `Logo Placeholder` instances are locked at 98×42 (size can't be overridden), so the real lockup
+    was split into two local components on the page (`12:7117` مركز معلومات النقل, `12:7119` النقابة العامة للسيارات;
+    cropped image fills) and swapped in. Vision 2030 has no third slot, so it is not shown.
+  - Tip: set `figma.skipInvisibleInstanceChildren=false` before reaching hidden instance sublayers by id.
+- **Before/after board** (user asked for it): section `16:749` «قبل وبعد — توافق الصفحة الرئيسية مع DGA» at y3400 under both frames.
+  Snapshots of the original and v2 (after-snapshot `18:1743`, refresh it if v2 changes), 12 numbered pins (red = before, green = after)
+  and a 13-row table «الفروقات بالترتيب» (`16:2175`) with قبل/بعد per item. The user rearranged it (before on the left).
+  Preview `previews/dga-homepage/3-before-after.png`.
+- **2026-10-17 later:** the user deleted the standalone frames `1:16870` (original) and `8:315` (v2) from the page. The board copies
+  are now the working frames: «قبل» `16:754`, «بعد» `18:1743` (main column `18:1744`). Work on `18:1743` directly.
+  - Added DGA **`Digital Stamp`** (set `3ea85c5e…`, RTL=Yes Opened=no, 1440×32, padding 112) above the Second Nav Header —
+    this is the «موقع حكومي رسمي تابع لحكومة المملكة العربية السعودية — كيف تتحقق» bar. Its link was 4.32:1 on #f3f4f6, so it
+    is overridden to `Text/text-primary-sa-flag` (#14573a, 7.78:1). Second Nav Header padding set to 112 too.
+  - Colour audit: every solid fill/stroke is bound to DGA «Themes» variables (only the flag inside Digital Stamp keeps its own
+    colours). Gradient stops bound via `boundVariables.color` on stops: hero overlay alpha-black-0 → alpha-black-80; About
+    card overlay alpha-black-0 → background-primary at layer opacity 0.86. Contrast measured from pixels: all hero text ≥ AA
+    (title 60px worst 4.48, needs 3; body ≥ 7.2).
+  - Board table «الفروقات بالترتيب — من أعلى الصفحة لأسفل» rebuilt in page order (14 numbered rows + one «عام» row);
+    pins renumbered to match (1 stamp, 2 top bar, 3 nav, 4 hero, 5 hero title, 6 hero spacing, 7 stats, 8 grid, 9 icon,
+    10 services section, 11 services title, 12 cards, 13 FAQ, 14 footer).
+  - **Header padding (user: «في بادينج كبير من الناحيتين»):** Digital Stamp, Second Nav Header and Nav Header are back to the
+    DGA component default padding 32 (all three aligned). Page sections stay on the 112/1216 grid.
+  - User: «انا عايز زي الكمبوننت اللي موجود في dga» → all DGA instances (Digital Stamp, Second Nav Header, Nav Header, Footer)
+    use their main component's padding/spacing (32; footer Content max 1280). Only content overrides remain (real texts,
+    logos, icons) plus the «كيف تتحقق» link colour (text-primary-sa-flag, for AA contrast).
+  - The user deleted board items «عنوان الهيرو والزرار», «أيقونة كفاءة تشغيلية» and the «عام» row (with their pins). Remaining
+    12 items renumbered 1–12: stamp · top bar · nav · hero · hero spacing · hero stats · grid · services section ·
+    services title · cards · FAQ · footer. Useful tokens: Link/link-primary-visited `4d2b021f…`,
+    text-primary-sa-flag `b3519ee6…`, alpha-black-0 `32ccf4a8…`, alpha-black-80 `ffd636ba…`, icon-default `e041e3f2…`.
+  - Removed: gold pattern (1,133 vectors), #f8f7f5 dots, hidden pagination, hidden footer nav links, Swap Placeholders.
+  - Copy: استكشف خدماتنا · نظام نقل المصلين · منشآت · الأسئلة الشائعة · التزام بالأنظمة · «نقود مستقبل النقل» (no kashida/ellipsis)
+    · stats 98% / 100% / 24/7 · «جميع الحقوق محفوظة لمركز معلومات النقل © 2026». Crypto icon → `chart-increase`.
+  - Tokens: in the Platforms Code theme `Text/text-primary` is **brand green**. Neutral titles use `Text/text-display`, paragraphs
+    `Text/text-primary-paragraph`, neutral icons `Icon/icon-default` (`e041e3f2…`), image borders `Border/border-neutral-secondary`.
+
 ## Tokens (Nusuk Masar)
 
 ### Colors
