@@ -194,6 +194,19 @@ All four libraries are published and reachable through `search_design_system`.
   Snapshots of the original and v2 (after-snapshot `18:1743`, refresh it if v2 changes), 12 numbered pins (red = before, green = after)
   and a 13-row table «الفروقات بالترتيب» (`16:2175`) with قبل/بعد per item. The user rearranged it (before on the left).
   Preview `previews/dga-homepage/3-before-after.png`.
+- **2026-10-17 later:** the user deleted the standalone frames `1:16870` (original) and `8:315` (v2) from the page. The board copies
+  are now the working frames: «قبل» `16:754`, «بعد» `18:1743` (main column `18:1744`). Work on `18:1743` directly.
+  - Added DGA **`Digital Stamp`** (set `3ea85c5e…`, RTL=Yes Opened=no, 1440×32, padding 112) above the Second Nav Header —
+    this is the «موقع حكومي رسمي تابع لحكومة المملكة العربية السعودية — كيف تتحقق» bar. Its link was 4.32:1 on #f3f4f6, so it
+    is overridden to `Text/text-primary-sa-flag` (#14573a, 7.78:1). Second Nav Header padding set to 112 too.
+  - Colour audit: every solid fill/stroke is bound to DGA «Themes» variables (only the flag inside Digital Stamp keeps its own
+    colours). Gradient stops bound via `boundVariables.color` on stops: hero overlay alpha-black-0 → alpha-black-80; About
+    card overlay alpha-black-0 → background-primary at layer opacity 0.86. Contrast measured from pixels: all hero text ≥ AA
+    (title 60px worst 4.48, needs 3; body ≥ 7.2).
+  - Board table «الفروقات بالترتيب — من أعلى الصفحة لأسفل» rebuilt in page order (14 numbered rows + one «عام» row);
+    pins renumbered to match (1 stamp, 2 top bar, 3 nav, 4 hero, 5 hero title, 6 hero spacing, 7 stats, 8 grid, 9 icon,
+    10 services section, 11 services title, 12 cards, 13 FAQ, 14 footer). Useful tokens: Link/link-primary-visited `4d2b021f…`,
+    text-primary-sa-flag `b3519ee6…`, alpha-black-0 `32ccf4a8…`, alpha-black-80 `ffd636ba…`, icon-default `e041e3f2…`.
   - Removed: gold pattern (1,133 vectors), #f8f7f5 dots, hidden pagination, hidden footer nav links, Swap Placeholders.
   - Copy: استكشف خدماتنا · نظام نقل المصلين · منشآت · الأسئلة الشائعة · التزام بالأنظمة · «نقود مستقبل النقل» (no kashida/ellipsis)
     · stats 98% / 100% / 24/7 · «جميع الحقوق محفوظة لمركز معلومات النقل © 2026». Crypto icon → `chart-increase`.
