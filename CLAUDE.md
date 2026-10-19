@@ -166,6 +166,12 @@ All four libraries are published and reachable through `search_design_system`.
     القناة · المستلم · النتيجة · تاريخ إرسال الإشعار · سبب الفشل, 3 rows for 000412) / rows_rest; arrow-down-01 chevrons
     (row 1 rotated up) left of each send result. Previews `previews/merged-list/A-default.png`, `B-hover-tooltip.png`,
     `C-expanded-row.png`. The user edited the cards in v2 meanwhile (now total 7 + two donuts) — leave them.
+  - Cards (user, 2026-10-19): a 4th donut «الإشعارات حسب نتيجة الإرسال» was added first in the donut row of A/B/C
+    (A `4633:23152` in row `4614:84`, B `4635:23937`, C `4635:23962`; 4 × 269 + 3 × 16 = 1124, all cards 191 tall).
+    It is a clone of the importance donut with DonutChart Data Count=4. The legend reads مُرسل 4 (SA300 #88d8ad) · فشل جزئي 1
+    (straw60 #f6d9a6) · قيد الإعادة 1 (info200 #b2ddff) · فشل نهائي 1 (ruby40 #f1b7b7), which matches the 7 table rows.
+    The DS segment shapes stay fixed (like the other donuts); the largest one is green for مُرسل, and the tooltip
+    percents are 57.1/14.3/14.3/14.3. Preview `previews/merged-list/D-cards-send-result.png`.
   - Pattern search (user asked where hover/expand exist): tooltips exist only on charts (green «View List» `4387:24000`/`4393:15632`,
     «Reception / Company») and on a disabled checkbox in Umrah «Tafweej / Request Tafweej / step 135» (`176:60877`, DS tooltip
     direction=up, «لا يمكن التعديل في هذة الخطوة»). No expandable table row anywhere: not in the files, not in Nusuk Masar
