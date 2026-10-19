@@ -208,6 +208,21 @@ All four libraries are published and reachable through `search_design_system`.
     Open: list v2 shows 000412 as «غير مقروء» while details/timeline say read by مهدي فاضل 09:12 (pre-existing mismatch).
   - Next (not done): sub-status in حالة التحرك (needs the business list of sub-statuses), cards → pie charts (current cards
     contradict: totals 12 vs 7, critical 5/12 vs 2, read 7/12 vs 3).
+- **Page layout reorganised (user, 2026-10-19; preview `previews/page-layout/`).** Ministry column (x −1231, under the header
+  «مسؤول الوزارة» `4621:87151`) top → bottom, one flow per section, frames left → right every 2000 px, states joined by grey
+  4px elbowed connectors (start LEFT on the trigger element, end BOTTOM on the target frame — same as the existing ones).
+  Connectors can't attach to instance sublayers (`I…` ids), so they attach to the nearest real node:
+  1. قائمة إشعارات التحركات `4490:69440`/`4490:69441`. Row 1: v2 A `4614:18` → (send-result column) B hover `4616:18` → (eye)
+     details `4478:1113` → («رسالة نصية») details hover `4629:22024`; details (tab) → سجل التحديثات `4478:14096`.
+     Row 2 holds the old list v1 `4461:8` (renamed «… — v1 (قديم)») and C `4616:22196`.
+  2. إعدادات إشعارات التحركات `4579:93769`/`93770`: list `4579:98322` → (nav item إعدادات الإشعارات) step 1 `4579:94600` →
+     (التالي) step 2 `4579:94952`, with the dropdown states below it → (حفظ) success `4583:12791` · `4640:88105` is an identical copy
+     of step 2, renamed «(نسخة مكررة)», with no arrow.
+  3. قواعد `4490:73369` · 4. صلاحيات `4507:14631` (their own connectors unchanged).
+  - Archive under the grey header «أرشيف — نسخ قديمة» `4646:20745`: the old copies `4606:101048` (قائمة) · `4606:101396`
+    (سجل الإرسال — the only delivery-log frame left) · `4606:101486` (إعدادات), plus the old stepper section `4582:9724`
+    (1/2/2b side panel/2c, renamed «نسخة سابقة: نافذة جانبية»). Loose references (Nav Bar, top_bar, `4579:87714`, templates
+    `4579:88762`/`4572:27643`/`4572:17557`) were moved up to the bottom-left of the archive (y ≈ 29500).
 - **Rule (user):** copy how the existing screens are built (clone their cards, table header, columns, and
   placeholders such as YYYY/MM/DD dates). Don't invent new patterns straight from the design-system library.
 - Screen conventions: 1440 wide, `nav_bar` 268 on the right, `top_bar`, breadcrumbs + title, cards row, table card.
