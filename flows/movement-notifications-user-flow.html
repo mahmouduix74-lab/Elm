@@ -1,0 +1,94 @@
+<!doctype html><html dir="rtl"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--sa600:#1b8354;--sa800:#14573a;--sa50:#f3fcf6;--sa300:#88d8ad;--n10:#fafafa;--n20:#f0f0f1;--n30:#dadbdc;--n60:#7e8387;--n80:#484d51;--n200:#15181b;--straw20:#fef8f0;--straw100:#f0bd66;}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;font-family:"IBM Plex Sans Arabic";color:var(--n200)}
+#c{position:relative;width:1680px;height:960px;background:#fff}
+.title{position:absolute;right:40px;top:36px;font-weight:600;font-size:26px;line-height:36px}
+.sub{position:absolute;right:40px;top:74px;font-size:14px;color:var(--n60)}
+.lane{position:absolute;left:40px;width:1600px;background:var(--n10);border-radius:16px}
+.laneT{position:absolute;right:24px;top:18px;font-weight:600;font-size:15px;color:var(--sa800);display:flex;gap:8px;align-items:center}
+.laneT i{width:4px;height:16px;border-radius:2px;background:var(--sa600);display:inline-block}
+.card{position:absolute;width:220px;height:84px;background:#fff;border:1px solid var(--n30);border-radius:12px;padding:0 16px;display:flex;flex-direction:column;justify-content:center;box-shadow:0 4px 24px rgba(35,40,45,.04)}
+.card em{display:block;font-style:normal;font-size:11px;line-height:14px;color:var(--sa600);font-weight:500;margin-bottom:2px}
+.card b{display:block;white-space:nowrap;font-weight:500;font-size:15px;line-height:22px;padding-left:28px}
+.card span{display:block;font-size:12px;line-height:18px;color:var(--n60);margin-top:4px}
+.num{position:absolute;left:12px;top:50%;margin-top:-11px;width:22px;height:22px;border-radius:11px;background:var(--sa600);color:#fff;font-size:12px;font-weight:500;display:flex;align-items:center;justify-content:center}
+.pill{position:absolute;height:40px;border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:13px;white-space:nowrap}
+.state{background:var(--sa50);border:1px dashed var(--sa300);color:var(--sa800)}
+.start{background:var(--n20);color:var(--n80);font-weight:500}
+.endp{background:var(--sa600);color:#fff;font-weight:500;height:52px;border-radius:26px;flex-direction:column;line-height:18px}
+.endp small{font-size:11px;font-weight:400;opacity:.85}
+.dia{position:absolute;width:76px;height:76px;transform:rotate(45deg);background:var(--straw20);border:1.5px solid var(--straw100);border-radius:10px}
+.diaT{position:absolute;width:120px;text-align:center;font-size:13px;font-weight:500}
+.lbl{position:absolute;font-size:12px;color:var(--n60);line-height:18px;white-space:nowrap;transform:translate(50%,-100%);padding-bottom:4px}
+.lbl.g{color:var(--sa600);font-weight:500}
+svg{position:absolute;left:0;top:0}
+.legend{position:absolute;left:40px;top:44px;display:flex;gap:20px;font-size:12px;color:var(--n80);align-items:center}
+.legend div{display:flex;gap:8px;align-items:center}
+.lg-card{width:22px;height:14px;border:1px solid var(--n30);border-radius:4px;background:#fff}
+.lg-state{width:22px;height:14px;border:1px dashed var(--sa300);border-radius:7px;background:var(--sa50)}
+.lg-dia{width:11px;height:11px;transform:rotate(45deg);border:1.5px solid var(--straw100);background:var(--straw20);border-radius:2px}
+.lg-end{width:22px;height:14px;border-radius:7px;background:var(--sa600)}
+.notes{position:absolute;right:64px;top:892px;display:flex;gap:40px;font-size:12px;color:var(--n80)}
+.notes div{display:flex;gap:8px;align-items:center}
+.notes i{display:inline-block;width:6px;height:6px;border-radius:3px;background:var(--n60)}
+</style></head><body><div id="c">
+<div class="title">إشعارات التحركات — رحلة المستخدم</div>
+<div class="sub">مسؤول الوزارة · قائمة الإشعارات والإعدادات</div>
+<div class="legend"><div><span class="lg-card"></span>شاشة</div><div><span class="lg-state"></span>حالة على نفس الشاشة</div><div><span class="lg-dia"></span>قرار</div><div><span class="lg-end"></span>نهاية المسار</div></div>
+
+<div class="lane" style="top:136px;height:300px"><div class="laneT"><i></i>قائمة الإشعارات</div></div>
+<div class="lane" style="top:460px;height:420px"><div class="laneT"><i></i>إعدادات إشعارات التحركات</div></div>
+
+<svg width="1680" height="960" viewBox="0 0 1680 960" fill="none">
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" stroke="#7e8387" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" stroke="#1b8354" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<g stroke="#7e8387" stroke-width="1.5">
+<!-- lane 1 -->
+<path d="M1395 250H1314" marker-end="url(#a)"/>
+<path d="M1090 250H1034" marker-end="url(#a)"/>
+<path d="M810 250H754" marker-end="url(#a)"/>
+<path d="M1200 292V341" stroke-dasharray="4 4" marker-end="url(#a)"/>
+<path d="M920 292V341" stroke-dasharray="4 4" marker-end="url(#a)"/>
+<!-- lane 2 -->
+<path d="M1395 660H1258" marker-end="url(#a)"/>
+<path d="M1146 660H1080V580H1034" marker-end="url(#a)"/>
+<path d="M1080 660V740H1034"  marker-end="url(#a)"/>
+<path d="M810 580H780V660H754" marker-end="url(#a)"/>
+<path d="M810 740H780V660"/>
+<path d="M640 702V776" stroke-dasharray="4 4" marker-end="url(#a)" marker-start="url(#a)"/>
+</g>
+<path d="M530 660H444" stroke="#1b8354" stroke-width="2" marker-end="url(#ag)"/>
+</svg>
+
+<!-- lane 1 nodes -->
+<div class="pill start" style="left:1395px;top:230px;width:170px">القائمة الجانبية</div>
+<div class="card" style="left:1090px;top:208px"><div class="num">1</div><b>قائمة الإشعارات</b><span>الكروت والجدول</span></div>
+<div class="card" style="left:810px;top:208px"><div class="num">2</div><b>تفاصيل الإشعار</b><span>البيانات والكارت الجانبي</span></div>
+<div class="card" style="left:530px;top:208px"><div class="num">3</div><b>سجل التحديثات</b><span>كل محاولات الإرسال</span></div>
+<div class="pill state" style="left:1095px;top:345px;width:210px">Hover نتيجة الإرسال · القنوات</div>
+<div class="pill state" style="left:815px;top:345px;width:210px">Hover رسالة نصية · سبب الفشل</div>
+<div class="lbl g" style="right:calc(1680px - 1060px);top:250px">زر العين</div>
+<div class="lbl" style="right:calc(1680px - 780px);top:250px">تاب</div>
+
+<!-- lane 2 nodes -->
+<div class="pill start" style="left:1395px;top:640px;width:170px">القائمة الجانبية</div>
+<div class="dia" style="left:1162px;top:622px"></div>
+<div class="diaT" style="left:1140px;top:650px">أول مرة؟</div>
+<div class="lbl" style="right:calc(1680px - 1057px);top:580px">نعم</div>
+<div class="lbl" style="right:calc(1680px - 1057px);top:740px">لا</div>
+<div class="card" style="left:810px;top:538px"><div class="num">4</div><em>الخطوة 1</em><b>أول دخول</b><span>كل الحالات مقفولة بقيم افتراضية</span></div>
+<div class="card" style="left:810px;top:698px"><div class="num">5</div><em>الخطوة 1</em><b>قواعد الإشعارات</b><span>الأهمية والقنوات والتوقيت</span></div>
+<div class="lbl" style="right:calc(1680px - 800px);top:632px;transform:translate(50%,-50%);padding:0">التالي</div>
+<div class="card" style="left:530px;top:618px"><div class="num">6</div><em>الخطوة 2</em><b>صلاحيات الاستقبال</b><span>المستلمون لكل حالة</span></div>
+<div class="pill state" style="left:530px;top:780px;width:220px">قائمة المستخدمين · بحث واختيار</div>
+<div class="lbl" style="right:calc(1680px - 590px);top:748px;transform:translate(50%,-50%);padding:0">مستخدم إضافي</div>
+<div class="lbl g" style="right:calc(1680px - 487px);top:660px">حفظ</div>
+<div class="pill endp" style="left:244px;top:634px;width:196px">تم الحفظ<small>رجوع للقائمة مع رسالة نجاح</small></div>
+
+<div class="notes"><div><i></i>«السابق» في الخطوة 2 يرجع للخطوة 1</div><div><i></i>«إلغاء» من أي خطوة يرجع لقائمة الإشعارات بدون حفظ</div></div>
+</div></body></html>
