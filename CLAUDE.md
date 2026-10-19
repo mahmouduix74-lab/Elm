@@ -173,6 +173,16 @@ All four libraries are published and reachable through `search_design_system`.
     B `4616:18` renamed «List v2 — B (المعتمد)…»: row 1 cells + 01_data_button filled with Nusuk `Colors/Green/SA 50`
     (`2f5bf0c4…`) as the hovered row, Icons `touch-09` hand cursor on «فشل جزئي», tooltip kept on top. C renamed
     «(بديل غير معتمد)» and left in place.
+  - **Details tab reworked (comments «think about adding side section…», «move it down»; user-approved mock
+    `previews/details-side/mock-*`):** in `4478:1113` the cards sit in `details_row (70/30)` = side card
+    `notification_summary (side)` `4626:22085` (clone of the user's side box `4593:100919`, 340 wide, same height as
+    بيانات المعتمر 355) + `details_main` (cards 760, inner fixed 728 frames set to FILL). Side content: حالة التحرك «ثبوت التخلف»
+    · alert chip ruby20/ruby40 + circle_warning «تجاوز مدة البقاء النظامية بـ 7 أيام» (97 − 90) · pair (right → left)
+    نتيجة الإرسال «● فشل جزئي / وصل لـ 2 من 3 قنوات» and حالة القراءة «● مقروء / مهدي فاضل · 09:12» (dots straw100 /
+    neutral60, sub text Body/XS+ neutral60) · تاريخ الإشعار «06/04/1448هـ - 17/09/2026م» + «الساعة 06:04 ص» (same format as
+    the side box). Title keeps only the الأهمية chip «حرج»; the «مقروء» chip is hidden here and in the timeline tab
+    `4478:14096` (header kept identical). User: no side card on سجل التحديثات. Frame grown to 1117 (nav resized).
+    Open: list v2 shows 000412 as «غير مقروء» while details/timeline say read by مهدي فاضل 09:12 (pre-existing mismatch).
   - Next (not done): sub-status in حالة التحرك (needs the business list of sub-statuses), cards → pie charts (current cards
     contradict: totals 12 vs 7, critical 5/12 vs 2, read 7/12 vs 3).
 - **Rule (user):** copy how the existing screens are built (clone their cards, table header, columns, and
