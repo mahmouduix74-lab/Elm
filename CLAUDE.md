@@ -192,6 +192,7 @@ All four libraries are published and reachable through `search_design_system`.
     Follow-up: «وصل لـ 2 من 3 قنوات» replaced by a ruby100 line under the channels «فشلت الرسالة النصية: رقم الجوال غير صالح ·
     06:49» (`failure_reason`). The user hid the sub lines «مهدي فاضل · 09:12» and «06/04/1448هـ» in the pair to keep the card at 355;
     mirrored in the hover frame. Side card and بيانات المعتمر both 355 in both frames.
+    Side card label «تاريخ الإشعار» renamed «تاريخ الإرسال» (same name as the list column; value 17/09/2026م).
     Open: list v2 shows 000412 as «غير مقروء» while details/timeline say read by مهدي فاضل 09:12 (pre-existing mismatch).
   - Next (not done): sub-status in حالة التحرك (needs the business list of sub-statuses), cards → pie charts (current cards
     contradict: totals 12 vs 7, critical 5/12 vs 2, read 7/12 vs 3).
