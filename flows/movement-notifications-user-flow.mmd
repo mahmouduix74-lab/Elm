@@ -1,0 +1,52 @@
+flowchart LR
+    start(["الأدمن يفتح القائمة الجانبية"])
+
+    subgraph listFlow ["قائمة الإشعارات"]
+        listScreen["قائمة إشعارات التحركات"]
+        exportFile[\"ملف البيانات"\]
+        tipResult["Tooltip نتيجة الإرسال: وصل لمين وفشل لمين"]
+        details["تفاصيل الإشعار"]
+        tipSms["Tooltip القناة الفاشلة: السبب والمحاولات"]
+        timeline["سجل التحديثات"]
+    end
+
+    subgraph settingsFlow ["إعدادات إشعارات التحركات"]
+        firstTime{"أول مرة؟"}
+        firstView["الخطوة 1: أول دخول - كل الحالات مقفولة"]
+        step1["الخطوة 1: قواعد الإشعارات"]
+        configure[["تفعيل الحالة وضبط الأهمية والقنوات والتوقيت"]]
+        step2["الخطوة 2: صلاحيات الاستقبال"]
+        pickUsers[["اختيار مستخدم إضافي - بحث بالاسم أو الوظيفة"]]
+        success(["تم الحفظ: رجوع للقائمة مع رسالة نجاح"])
+    end
+
+    cancel(["إلغاء: رجوع للقائمة بدون حفظ"])
+
+    start -->|"قائمة الإشعارات"| listScreen
+    start -->|"إعدادات الإشعارات"| firstTime
+
+    listScreen -->|"تنزيل البيانات"| exportFile
+    listScreen -.->|"Hover على النتيجة"| tipResult
+    listScreen -->|"زر العين"| details
+    details -.->|"Hover على رسالة نصية"| tipSms
+    details -->|"تاب سجل التحديثات"| timeline
+
+    firstTime -->|"نعم"| firstView
+    firstTime -->|"لا"| step1
+    firstView -->|"تفعيل الحالات"| configure
+    step1 --> configure
+    configure -->|"التالي"| step2
+    step2 -->|"مستخدم إضافي"| pickUsers
+    pickUsers -->|"N تم اختيارهم"| step2
+    step2 -.->|"السابق"| step1
+    step2 ==>|"حفظ"| success
+    step1 -.->|"إلغاء"| cancel
+    step2 -.->|"إلغاء"| cancel
+    success -.-> listScreen
+    cancel -.-> listScreen
+
+    style listFlow fill:#C2E5FF,stroke:#3DADFF
+    style settingsFlow fill:#CDF4D3,stroke:#66D575
+    style firstTime fill:#FFECBD,stroke:#FFC943
+    style success fill:#CDF4D3,stroke:#3E9B4B
+    style cancel fill:#D9D9D9,stroke:#B3B3B3
