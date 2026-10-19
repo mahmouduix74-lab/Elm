@@ -226,6 +226,15 @@ All four libraries are published and reachable through `search_design_system`.
     texts are neutral40. Infobox: «لم تُفعَّل أي حالة تحرك بعد، لذلك لن تُرسل أي إشعارات…». Step 1's
     infobox now keeps only the column description (the first-visit sentence moved to the new frame).
     Preview `previews/settings-timing/step1-first-view.png`.
+- **Settings step 2 `4579:94952` — مستخدم إضافي (user: «use the examples under the frame»):** the column is the user's
+  `column` instance (`4594:16295`) with DS dropdown cells «N تم اختيارهم». The examples under the frame are DS dropdown
+  states: empty `4594:16990`, selected «3 تم اختيارهم» `4594:17080`, and open multi-select with checkboxes + scrollbar `4594:16540`.
+  - In step 2 and its copy, the value text of the disabled row «الدخول خارج نطاق البرنامج» is neutral40.
+  - The identical copy `4640:88105` is now «الإعدادات 2b — مستخدم إضافي (القائمة مفتوحة)». An absolute overlay `4655:20975`
+    (clone of the open example, label=no, search on — per the comment «search by name or position») sits on row 1's
+    dropdown at x177 y232, 184 wide. Search placeholder «الاسم أو الوظيفة». Items: سارة العتيبي ✓, خالد الشهري ✓, مهدي فاضل ✓,
+    نورة الدوسري, فهد القحطاني. Value «3 تم اختيارهم». The items and search were set to FILL so they fit 184.
+  - Open comment «check it» (ahmedsherif) is pinned near the column header. Preview `previews/settings-perm/step2b-dropdown-open.png`.
   Comments are read via REST using the token the user pasted earlier; it is kept only in the scratchpad, never in the repo.
   Preview `previews/settings-timing/step1-comments-fixed.png`.
 - **Rule (user):** copy how the existing screens are built (clone their cards, table header, columns, and
