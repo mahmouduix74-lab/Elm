@@ -168,8 +168,14 @@ All four libraries are published and reachable through `search_design_system`.
     `C-expanded-row.png`. The user edited the cards in v2 meanwhile (now total 7 + two donuts) — leave them.
   - Cards (user, 2026-10-19): a 4th donut «الإشعارات حسب نتيجة الإرسال» was added first in the donut row of A/B/C
     (A `4633:23152` in row `4614:84`, B `4635:23937`, C `4635:23962`; 4 × 269 + 3 × 16 = 1124, all cards 191 tall).
-    It is a clone of the importance donut with DonutChart Data Count=4. The legend reads مُرسل 4 (SA300 #88d8ad) · فشل جزئي 1
-    (straw60 #f6d9a6) · قيد الإعادة 1 (info200 #b2ddff) · فشل نهائي 1 (ruby40 #f1b7b7), which matches the 7 table rows.
+    It is a clone of the importance donut with DonutChart Data Count=4 and matches the 7 table rows (مُرسل 4 · فشل جزئي 1 ·
+    قيد الإعادة 1 · فشل نهائي 1).
+  - Donut colours (user picked option B of `previews/merged-list/G-donut-colors-new-hues.png`; the pastel traffic-light colours
+    clashed with importance): send result uses the dark sub-status dot colours bound to Nusuk variables (mint100 `719e1c7a…`,
+    straw100, Info500 `d2d2dd95…`, ruby100). Importance: حرج stays ruby40 (bound); عالٍ = DGA Foundations Lavender 400 `#a57bba`,
+    متوسط = Lavender 200 `#e1cce8`. These are hex only, because the Foundations primitives can't be imported into this file
+    (key not found). Precedent: the green reference donut «اجمالي انوع البرامج» (`4387:24071`) already uses an unbound purple `#baa5f8`.
+    Read donut unchanged. Table chips for الأهمية are unchanged (حرج red, عالٍ yellow, متوسط green); open question whether to align them.
     The DS segment shapes stay fixed (like the other donuts); the largest one is green for مُرسل, and the tooltip
     percents are 57.1/14.3/14.3/14.3. Preview `previews/merged-list/D-cards-send-result.png`.
   - Pattern search (user asked where hover/expand exist): tooltips exist only on charts (green «View List» `4387:24000`/`4393:15632`,
