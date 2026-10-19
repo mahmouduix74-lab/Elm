@@ -146,6 +146,19 @@ All four libraries are published and reachable through `search_design_system`.
   2b `4586:14015` «+ إضافة» opens the side window (Side Panel `4572:27907` from `4572:27643`, 800 wide from the left,
   30% overlay, two-list picker, «إضافة» + «إلغاء») · 2c `4586:79602` user added (tag «سارة العتيبي» in row 1) ·
   3 success `4583:12791` (list + snackbar «تم حفظ إعدادات إشعارات التحركات بنجاح»). No review step (user: save directly).
+- **Review comments (ahmedsherif, 2026-10-18) on the list `4579:98322`** (now in section `4579:93770`, page renamed
+  «إشعارات التحركات-Movement Notifications»). Comments are read through the Figma REST API (`api.figma.com` is allowed in the
+  environment; header `X-Figma-Token`). Open items: merge the list with سجل الإرسال + «prioritize the columns» (a reply on the
+  same thread, region comment under the frame), «use pie charts to gather all data» (cards), «sub-status» (حالة التحرك column).
+  - Done steps 1+2 (user: result, reason and date stay in the main table): new frame `4614:18`
+    «Movement Notifications / List — v2 (دمج سجل الإرسال)» at x699 y1700 in `4579:93770` (section height extended).
+    Columns right → left: رقم الإشعار 110 · الأهمية 100 · حالة التحرك 240 · المعتمر 220 · شركة العمرة 240 · قنوات الإرسال 150
+    · نتيجة الإرسال 130 (status_chip: مُرسل active, فشل جزئي awaiting_Payment, قيد الإعادة in_Progress, فشل نهائي rejected)
+    · سبب الفشل 250 · تاريخ الإرسال 180 · حالة القراءة 120 (renamed from حالة الإشعار) · eye. Removed البرنامج, الجنسية and the
+    hidden وقت/تاريخ الإشعار columns. New columns are clones of the delivery-log columns (`4491:2489/2602/2528`) with
+    08–10_data turned off. Table overflows left (team convention). Preview `previews/merged-list/list-v2-merged.png`.
+  - Next (not done): sub-status in حالة التحرك (needs the business list of sub-statuses), cards → pie charts (current cards
+    contradict: totals 12 vs 7, critical 5/12 vs 2, read 7/12 vs 3).
 - **Rule (user):** copy how the existing screens are built (clone their cards, table header, columns, and
   placeholders such as YYYY/MM/DD dates). Don't invent new patterns straight from the design-system library.
 - Screen conventions: 1440 wide, `nav_bar` 268 on the right, `top_bar`, breadcrumbs + title, cards row, table card.
