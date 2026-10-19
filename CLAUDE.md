@@ -219,6 +219,11 @@ All four libraries are published and reachable through `search_design_system`.
     before/after/instant, fixed channels for critical cases). The infobox grew to 90 tall.
   - «read-only» (pin on row الوفاة, رسالة نصية): الوفاة channel checkboxes are now state=disabled, selected, like ثبوت التخلف.
   - «leave spacing between the list and control bar» was already done by the user; «ديسبلد» was resolved.
+  - First view (user: «first view اعمل دي»): new frame `4652:20156` «الإعدادات 1 — أول دخول (القيم الافتراضية)», a clone of step 1
+    placed directly under it in `4579:93770` (x5205 y1480). It has the same default values, and its infobox explains that the
+    recommended defaults are pre-filled, to review and press «التالي», and that nothing applies before the final save. Step 1's
+    infobox now keeps only the column description (the first-visit sentence moved to the new frame).
+    Preview `previews/settings-timing/step1-first-view.png`.
   Comments are read via REST using the token the user pasted earlier; it is kept only in the scratchpad, never in the repo.
   Preview `previews/settings-timing/step1-comments-fixed.png`.
 - **Rule (user):** copy how the existing screens are built (clone their cards, table header, columns, and
