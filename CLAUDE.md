@@ -208,6 +208,12 @@ All four libraries are published and reachable through `search_design_system`.
     Open: list v2 shows 000412 as «غير مقروء» while details/timeline say read by مهدي فاضل 09:12 (pre-existing mismatch).
   - Next (not done): sub-status in حالة التحرك (needs the business list of sub-statuses), cards → pie charts (current cards
     contradict: totals 12 vs 7, critical 5/12 vs 2, read 7/12 vs 3).
+- **Settings step 1 `4579:94600` — توقيت الإشعار (comment «editable (before/after)», reply «select after or before»):**
+  the static «قبل»/«بعد» texts in rows 1 and 3 are now clones of the table's own DS dropdown (label=no, `4579:94815`),
+  88 wide, values «قبل» `4650:20055` and «بعد» `4650:20064`. Number inputs are 64 wide so the cell fits 230 (padding 16).
+  Rows «فور وقوعه» and the disabled «هامش» row are unchanged. Preview `previews/settings-timing/step1-timing-editable.png`.
+  Other comments on this frame (from 18/10): «first view / empty status» (reply «default values»), «حاله التفعيل» (done),
+  «read-only», «leave spacing between the list and control bar», plus the user's own notes «rewrite it by deeply desc» and «ديسبلد».
 - **Rule (user):** copy how the existing screens are built (clone their cards, table header, columns, and
   placeholders such as YYYY/MM/DD dates). Don't invent new patterns straight from the design-system library.
 - Screen conventions: 1440 wide, `nav_bar` 268 on the right, `top_bar`, breadcrumbs + title, cards row, table card.
