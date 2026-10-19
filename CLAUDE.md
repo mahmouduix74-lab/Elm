@@ -182,6 +182,13 @@ All four libraries are published and reachable through `search_design_system`.
     neutral60, sub text Body/XS+ neutral60) · تاريخ الإشعار «06/04/1448هـ - 17/09/2026م» + «الساعة 06:04 ص» (same format as
     the side box). Title keeps only the الأهمية chip «حرج»; the «مقروء» chip is hidden here and in the timeline tab
     `4478:14096` (header kept identical). User: no side card on سجل التحديثات. Frame grown to 1117 (nav resized).
+    Send result made explicit (user picked option B of `mock-3-send-result-options.png`; A tooltip-only, C extra card):
+    side card now = حالة التحرك · alert · نتيجة الإرسال full width [DS `subtatus_chip` «فشل جزئي» (dot = status_dots frame
+    fill straw100) + «وصل لـ 2 من 3 قنوات»] + `channels` row (Icons `checkmark-circle-02` SA600 «نافذة» «بريد», `circle_warning`
+    ruby100 «رسالة نصية» in ruby text — both icons already used in the side box) · pair حالة القراءة (DS `subtatus_chip` «مقروء»,
+    dot neutral60, «مهدي فاضل · 09:12») | تاريخ الإشعار «17/09/2026م» + «06/04/1448هـ». The manual dots were replaced by the DS
+    chip (same one the title used). Height still 355 = بيانات المعتمر. Hover state = separate frame `4629:22024` below the
+    details frame: DS tooltip (desktop/arabic/down) «رسالة نصية — لم تصل» + recipient, reason, attempts, `touch-09` cursor.
     Open: list v2 shows 000412 as «غير مقروء» while details/timeline say read by مهدي فاضل 09:12 (pre-existing mismatch).
   - Next (not done): sub-status in حالة التحرك (needs the business list of sub-statuses), cards → pie charts (current cards
     contradict: totals 12 vs 7, critical 5/12 vs 2, read 7/12 vs 3).
