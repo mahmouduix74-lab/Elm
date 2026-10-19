@@ -189,6 +189,9 @@ All four libraries are published and reachable through `search_design_system`.
     dot neutral60, «مهدي فاضل · 09:12») | تاريخ الإشعار «17/09/2026م» + «06/04/1448هـ». The manual dots were replaced by the DS
     chip (same one the title used). Height still 355 = بيانات المعتمر. Hover state = separate frame `4629:22024` below the
     details frame: DS tooltip (desktop/arabic/down) «رسالة نصية — لم تصل» + recipient, reason, attempts, `touch-09` cursor.
+    Follow-up: «وصل لـ 2 من 3 قنوات» replaced by a ruby100 line under the channels «فشلت الرسالة النصية: رقم الجوال غير صالح ·
+    06:49» (`failure_reason`). The user hid the sub lines «مهدي فاضل · 09:12» and «06/04/1448هـ» in the pair to keep the card at 355;
+    mirrored in the hover frame. Side card and بيانات المعتمر both 355 in both frames.
     Open: list v2 shows 000412 as «غير مقروء» while details/timeline say read by مهدي فاضل 09:12 (pre-existing mismatch).
   - Next (not done): sub-status in حالة التحرك (needs the business list of sub-statuses), cards → pie charts (current cards
     contradict: totals 12 vs 7, critical 5/12 vs 2, read 7/12 vs 3).
