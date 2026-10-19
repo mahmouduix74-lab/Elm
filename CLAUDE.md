@@ -171,9 +171,11 @@ All four libraries are published and reachable through `search_design_system`.
     It is a clone of the importance donut with DonutChart Data Count=4 and matches the 7 table rows (مُرسل 4 · فشل جزئي 1 ·
     قيد الإعادة 1 · فشل نهائي 1).
   - Donut colours: the user tried new colours (dark send-result colours + lavender عالٍ/متوسط, previews `E/F/G-donut-*.png`)
-    and then asked to revert both cards. Then (user: «other colours but close»), only importance عالٍ/متوسط changed to Nusuk
-    variables: حرج #f1b7b7 · عالٍ straw80 #f3c880 · متوسط mint60 #8ed4c2 (bound). Send result stays pastel: مُرسل #88d8ad ·
-    فشل جزئي #f6d9a6 · قيد الإعادة #b2ddff · فشل نهائي #f1b7b7.
+    and then asked to revert both cards. Close colours (straw80/mint60) were also rejected («different colours»). Final (user
+    picked option 1 of `previews/merged-list/H-importance-different-hues.png`): importance حرج #f1b7b7 · عالٍ purple #baa5f8
+    (same unbound purple as the reference donut «اجمالي انوع البرامج» `4387:24071`) · متوسط DGA Foundations Gold 300 #fae996
+    (hex; Foundations variables can't be imported into this file). Send result stays pastel: مُرسل #88d8ad · فشل جزئي #f6d9a6
+    · قيد الإعادة #b2ddff · فشل نهائي #f1b7b7. Read donut unchanged. Table الأهمية chips unchanged (red/yellow/green).
     The DS segment shapes stay fixed (like the other donuts); the largest one is green for مُرسل, and the tooltip
     percents are 57.1/14.3/14.3/14.3. Preview `previews/merged-list/D-cards-send-result.png`.
   - Pattern search (user asked where hover/expand exist): tooltips exist only on charts (green «View List» `4387:24000`/`4393:15632`,
