@@ -156,7 +156,16 @@ All four libraries are published and reachable through `search_design_system`.
     · نتيجة الإرسال 130 (status_chip: مُرسل active, فشل جزئي awaiting_Payment, قيد الإعادة in_Progress, فشل نهائي rejected)
     · سبب الفشل 250 · تاريخ الإرسال 180 · حالة القراءة 120 (renamed from حالة الإشعار) · eye. Removed البرنامج, الجنسية and the
     hidden وقت/تاريخ الإشعار columns. New columns are clones of the delivery-log columns (`4491:2489/2602/2528`) with
-    08–10_data turned off. Table overflows left (team convention). Preview `previews/merged-list/list-v2-merged.png`.
+    08–10_data turned off. Table overflows left (team convention). Preview `previews/merged-list/A-default.png`.
+  - Follow-up (user): removed قنوات الإرسال; الأهمية is the only main status (status_chip); نتيجة الإرسال and حالة القراءة
+    use the DS data_item `type=sub-status` (text + dot; dot colours: مُرسل mint100, فشل جزئي straw100, قيد الإعادة info500,
+    فشل نهائي ruby100, غير مقروء info500, مقروء neutral60). Per-channel detail shown two ways (user: build both):
+    A default `4614:18` · B hover `4616:18` (x2539): DS `tooltip` (set `1ff8f7cb…`, desktop/arabic/down, width locked 200) over
+    row 000412 «فشل جزئي — 2 من 3 قنوات», وصل إلى نافذة/بريد, لم يصل إلى SMS + reason · C expanded `4616:22196` (x4379):
+    table_body split into row_expanded_top / expanded_details panel (SA25 fill, mini table cloned from delivery-log columns:
+    القناة · المستلم · النتيجة · تاريخ إرسال الإشعار · سبب الفشل, 3 rows for 000412) / rows_rest; arrow-down-01 chevrons
+    (row 1 rotated up) left of each send result. Previews `previews/merged-list/A-default.png`, `B-hover-tooltip.png`,
+    `C-expanded-row.png`. The user edited the cards in v2 meanwhile (now total 7 + two donuts) — leave them.
   - Next (not done): sub-status in حالة التحرك (needs the business list of sub-statuses), cards → pie charts (current cards
     contradict: totals 12 vs 7, critical 5/12 vs 2, read 7/12 vs 3).
 - **Rule (user):** copy how the existing screens are built (clone their cards, table header, columns, and
