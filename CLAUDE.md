@@ -166,6 +166,13 @@ All four libraries are published and reachable through `search_design_system`.
     القناة · المستلم · النتيجة · تاريخ إرسال الإشعار · سبب الفشل, 3 rows for 000412) / rows_rest; arrow-down-01 chevrons
     (row 1 rotated up) left of each send result. Previews `previews/merged-list/A-default.png`, `B-hover-tooltip.png`,
     `C-expanded-row.png`. The user edited the cards in v2 meanwhile (now total 7 + two donuts) — leave them.
+  - Pattern search (user asked where hover/expand exist): tooltips exist only on charts (green «View List» `4387:24000`/`4393:15632`,
+    «Reception / Company») and on a disabled checkbox in Umrah «Tafweej / Request Tafweej / step 135» (`176:60877`, DS tooltip
+    direction=up, «لا يمكن التعديل في هذة الخطوة»). No expandable table row anywhere: not in the files, not in Nusuk Masar
+    (`columns`/`column`), not in Platforms Code (`Table Row` has only Hovered/Selected). **User chose B (hover).**
+    B `4616:18` renamed «List v2 — B (المعتمد)…»: row 1 cells + 01_data_button filled with Nusuk `Colors/Green/SA 50`
+    (`2f5bf0c4…`) as the hovered row, Icons `touch-09` hand cursor on «فشل جزئي», tooltip kept on top. C renamed
+    «(بديل غير معتمد)» and left in place.
   - Next (not done): sub-status in حالة التحرك (needs the business list of sub-statuses), cards → pie charts (current cards
     contradict: totals 12 vs 7, critical 5/12 vs 2, read 7/12 vs 3).
 - **Rule (user):** copy how the existing screens are built (clone their cards, table header, columns, and
