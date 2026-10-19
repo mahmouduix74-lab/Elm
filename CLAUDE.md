@@ -212,8 +212,15 @@ All four libraries are published and reachable through `search_design_system`.
   the static «قبل»/«بعد» texts in rows 1 and 3 are now clones of the table's own DS dropdown (label=no, `4579:94815`),
   88 wide, values «قبل» `4650:20055` and «بعد» `4650:20064`. Number inputs are 64 wide so the cell fits 230 (padding 16).
   Rows «فور وقوعه» and the disabled «هامش» row are unchanged. Preview `previews/settings-timing/step1-timing-editable.png`.
-  Other comments on this frame (from 18/10): «first view / empty status» (reply «default values»), «حاله التفعيل» (done),
-  «read-only», «leave spacing between the list and control bar», plus the user's own notes «rewrite it by deeply desc» and «ديسبلد».
+  Comment fixes (user: «read the comments and fix them»):
+  - «حاله التفعيل» → header `4579:94928` reads «حالة التفعيل».
+  - «rewrite it by deeply desc» + «first view / empty status → default values»: the infobox `4579:94758` label now says the
+    values shown are the first-visit defaults, and explains each column (enable, importance, channels, popup type, timing
+    before/after/instant, fixed channels for critical cases). The infobox grew to 90 tall.
+  - «read-only» (pin on row الوفاة, رسالة نصية): الوفاة channel checkboxes are now state=disabled, selected, like ثبوت التخلف.
+  - «leave spacing between the list and control bar» was already done by the user; «ديسبلد» was resolved.
+  Comments are read via REST using the token the user pasted earlier; it is kept only in the scratchpad, never in the repo.
+  Preview `previews/settings-timing/step1-comments-fixed.png`.
 - **Rule (user):** copy how the existing screens are built (clone their cards, table header, columns, and
   placeholders such as YYYY/MM/DD dates). Don't invent new patterns straight from the design-system library.
 - Screen conventions: 1440 wide, `nav_bar` 268 on the right, `top_bar`, breadcrumbs + title, cards row, table card.
