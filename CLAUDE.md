@@ -205,6 +205,10 @@ All four libraries are published and reachable through `search_design_system`.
     The expanded row in C now uses the same approved pattern: `send_history — 000412 (approved pattern)` `4669:20795`
     (06:49 SMS failure + reason block · 06:04 email · 06:04 window, all actor «النظام»). The historyTimeline version
     `4663:20867` is hidden. Previews `previews/timeline-approved/`.
+    Info icon on «فشل جزئي» (user, 2026-10-20: users won't know to hover): Nusuk `icon/info` (key `f591b76e…`), 16 px,
+    neutral60 strokes and no fills, placed absolute in each table's `columns` frame just left of the chip. Added in 4461:8
+    (`4670:20747`), B (`4670:20756`) and C (`4670:20765`). B's hover cursor `4661:96753` now points at the icon.
+    Preview `previews/merged-list/I-info-icon-partial-failure.png`.
     **C is now the approved option** (user, 2026-10-20): renamed «List v2 — C (المعتمد): صف مفتوح — تفاصيل الإرسال». B was moved
     by the user into the list section as `4661:96595` (new id) and renamed «List v2 — B (بديل): Hover على نتيجة الإرسال».
   - **Details tab reworked (comments «think about adding side section…», «move it down»; user-approved mock
