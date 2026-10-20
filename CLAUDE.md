@@ -135,6 +135,19 @@ All four libraries are published and reachable through `search_design_system`.
     over the UO list because no UO home screen exists).
   - Mapping: عادي → status_chip `active`; حرج → `rejected`; غير مقروء `in_Progress`; مقروء `draft`.
   - Not built (user decision): home ticker strip, daily entry/exit report, ministry read-tracking screen and send modal.
+  - **2026-10-20 update (user: apply the Backoffice decisions to UO):** UO 3 `4528:4255` no longer exists (deleted by the user).
+    The flow is now UO1 list → UO2 critical `4527:5190` → UO4 normal `4528:4744` → UO5 modal.
+    - UO1: the three gauges were replaced by two donut cards cloned from the Backoffice read donut, FILL width
+      (3 × 364 + 2 × 16 = 1124):
+      - `4673:20405` «الإشعارات حسب التصنيف»: حرج 5 #f1b7b7 · عادي 7 #fae996.
+      - `4673:20376` «الإشعارات حسب حالة القراءة»: غير مقروء 5 #b2ddff · مقروء 7 #dadbdc.
+      The larger DS segment carries the 7, and the tooltips read 58.3/41.7. The table column «تصنيف الإشعار» (`4525:22632`)
+      is now data_item `type=sub-status` with dots: حرج ruby100 #c41a1a, عادي DGA Gold 500 #f5bd02 (hex). «حالة الإشعار» stays
+      the main status_chip (غير مقروء in_Progress, مقروء draft).
+    - UO2/UO4: the title chip was «مقروء» on straw and is now «غير مقروء» `in_Progress`, matching the field. The classification
+      sub-status reads حرج (ruby dot) in UO2, and عادي (gold dot) in UO4, which was wrongly «حرج».
+    - UO4 attachments `4664:23099`: «خطاب إشعار انتهاء البرنامج» PDF 312 KB and «قائمة المعتمرين — المجموعة 480901037528»
+      XLSX 48 KB. The Zarid texts were converted to Body/S and Body/XS. Previews `previews/uo-update/`.
 - **New shell (user, 2026-10-15):** all movement-notification frames (Backoffice + UO) now use the new library
   `Nav Bar` (set key from instance `4557:5715`, main `bd13124e…`, State=Expanded, built with slots) and the new
   `top_bar` (main `a06b2c4e…`, the user's reference instance `4556:80534`). Top bar breadcrumb product reads «العمرة»
