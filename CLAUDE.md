@@ -57,7 +57,8 @@ All four libraries are published and reachable through `search_design_system`.
     **Approved timeline pattern (user, 2026-10-20: «date first», sample pasted under the old items as `container` `4661:97699`):**
     the history is now `history_000412 (approved pattern)` `4668:20990`, built from the sample's `info` rows. Each row reads
     right to left: date (Body/M) + time (Body/XS+ neutral60), then the DS `avatar` (photo for مهدي فاضل, initials «ن» for the
-    system), then the actor (Body/S neutral60) over the action (Body/Bold/S). The failure row adds «السبب: …» in Body/S ruby100.
+    system), then the actor (Body/S neutral60) over the action (Body/Bold/S). The failure row keeps the original reason block
+    (user: «keep the failure reason as it was»): the label «سبب الفشل» plus a grey box, cloned from the old item (`4669:20791`).
     Absolute vertical lines join the avatars. The sample's Zarid/Gotham texts were converted to IBM/Nusuk styles. The old
     historyTimeline frames and the sample are hidden, not deleted. Preview `previews/timeline-approved/timeline-tab.png`.
   - Done: delivery log (NTF-06), frame `4491:1446`, below the list. It is a clone of the list screen without cards,
@@ -201,6 +202,9 @@ All four libraries are published and reachable through `search_design_system`.
     Show reason «رقم الجوال المسجّل غير صالح.». Middle: «وصل الإشعار إلى البريد الإلكتروني o•••@alrahab.sa», 06:04. Last: «وصل
     الإشعار إلى نافذة شركة الرحاب للعمرة — مدير الحساب», 06:04. All are dated 17/09/2026 · 06/04/1448 with avatar «ن». Panel title
     «تفاصيل الإرسال — وصل لـ 2 من 3 قنوات». Preview `previews/expanded-row/C-applied-in-figma.png`.
+    The expanded row in C now uses the same approved pattern: `send_history — 000412 (approved pattern)` `4669:20795`
+    (06:49 SMS failure + reason block · 06:04 email · 06:04 window, all actor «النظام»). The historyTimeline version
+    `4663:20867` is hidden. Previews `previews/timeline-approved/`.
     **C is now the approved option** (user, 2026-10-20): renamed «List v2 — C (المعتمد): صف مفتوح — تفاصيل الإرسال». B was moved
     by the user into the list section as `4661:96595` (new id) and renamed «List v2 — B (بديل): Hover على نتيجة الإرسال».
   - **Details tab reworked (comments «think about adding side section…», «move it down»; user-approved mock
