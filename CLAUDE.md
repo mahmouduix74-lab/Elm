@@ -54,6 +54,12 @@ All four libraries are published and reachable through `search_design_system`.
     06:04 → sent to شركة الرحاب للعمرة (نافذة + بريد) 06:04 → SMS failed after 3 attempts 06:49 (reason «رقم الجوال المسجّل غير صالح»)
     → read by مهدي فاضل 09:12, all on 17/09/2026 · 06/04/1448; system rows use an initials avatar «ن».
     User decision: no cards for reason, company read status or delivery channels.
+    **Approved timeline pattern (user, 2026-10-20: «date first», sample pasted under the old items as `container` `4661:97699`):**
+    the history is now `history_000412 (approved pattern)` `4668:20990`, built from the sample's `info` rows. Each row reads
+    right to left: date (Body/M) + time (Body/XS+ neutral60), then the DS `avatar` (photo for مهدي فاضل, initials «ن» for the
+    system), then the actor (Body/S neutral60) over the action (Body/Bold/S). The failure row adds «السبب: …» in Body/S ruby100.
+    Absolute vertical lines join the avatars. The sample's Zarid/Gotham texts were converted to IBM/Nusuk styles. The old
+    historyTimeline frames and the sample are hidden, not deleted. Preview `previews/timeline-approved/timeline-tab.png`.
   - Done: delivery log (NTF-06), frame `4491:1446`, below the list. It is a clone of the list screen without cards,
     filters or explanatory text. Each row is one delivery attempt on one channel. Number and case repeat on every
     row with normal per-row zebra (user rejected grouping by notification).
