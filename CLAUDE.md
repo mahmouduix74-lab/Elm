@@ -190,11 +190,13 @@ All four libraries are published and reachable through `search_design_system`.
     (`2f5bf0c4…`) as the hovered row, Icons `touch-09` hand cursor on «فشل جزئي», tooltip kept on top. C renamed
     «(بديل غير معتمد)» and left in place.
     Expanded content in C (user, 2026-10-20: «not a table inside a table»; picked option C of `previews/expanded-row/A/B/C-*.png`):
-    the mini table `4616:24298` is hidden, and `send_timeline — 000412` `4663:20867` now holds three DS `historyTimeline`
+    the mini table was deleted, and `send_timeline — 000412` `4663:20867` now holds three DS `historyTimeline`
     items cloned from the timeline tab (newest first). First: «تعذّر إرسال الرسالة النصية إلى +9665••••62 بعد 3 محاولات», 06:49,
     Show reason «رقم الجوال المسجّل غير صالح.». Middle: «وصل الإشعار إلى البريد الإلكتروني o•••@alrahab.sa», 06:04. Last: «وصل
     الإشعار إلى نافذة شركة الرحاب للعمرة — مدير الحساب», 06:04. All are dated 17/09/2026 · 06/04/1448 with avatar «ن». Panel title
     «تفاصيل الإرسال — وصل لـ 2 من 3 قنوات». Preview `previews/expanded-row/C-applied-in-figma.png`.
+    **C is now the approved option** (user, 2026-10-20): renamed «List v2 — C (المعتمد): صف مفتوح — تفاصيل الإرسال». B was moved
+    by the user into the list section as `4661:96595` (new id) and renamed «List v2 — B (بديل): Hover على نتيجة الإرسال».
   - **Details tab reworked (comments «think about adding side section…», «move it down»; user-approved mock
     `previews/details-side/mock-*`):** in `4478:1113` the cards sit in `details_row (70/30)` = side card
     `notification_summary (side)` `4626:22085` (clone of the user's side box `4593:100919`, 340 wide, same height as
