@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>US 189761 — تأكيد بيانات قائد المجموعة</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--sa25:#f7fdf9;--sa50:#f3fcf6;--sa100:#dff6e7;--sa600:#1b8354;--sa700:#166a45;--sa800:#14573a;
+--n10:#fafafa;--n20:#f0f0f1;--n30:#dadbdc;--n40:#bfc2c4;--n60:#7e8387;--n80:#484d51;--n100:#23282d;
+--mint20:#ecf8f5;--mint40:#afe0d4;--mint100:#3cb496;--mint250:#256e5c;
+--ruby20:#fceded;--ruby40:#f1b7b7;--ruby100:#c41a1a;
+--straw20:#fef8f0;--straw60:#f6d9a6;--straw250:#92733e}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"IBM Plex Sans Arabic",Tahoma,sans-serif;background:#e9eaeb;color:var(--n100);min-width:1440px;padding:24px 0 48px}
+.fname{width:1440px;margin:0 auto 8px;font-size:13px;color:var(--n60)}
+.screen{width:1440px;margin:0 auto 40px;background:#fff;box-shadow:0 8px 32px rgba(0,0,0,.10)}
+.app{display:flex}
+.side{width:268px;flex-shrink:0;background:#fff;border-left:1px solid var(--n20);padding:16px 12px}
+.brand{display:flex;align-items:center;gap:10px;padding:4px 8px 20px;border-bottom:1px solid var(--n20);margin-bottom:12px;font-size:14px;font-weight:500}
+.brand .lg{width:36px;height:36px;border-radius:8px;background:linear-gradient(45deg,var(--sa800),var(--sa600));color:#fff;display:grid;place-items:center;font-size:12px}
+.mi{font-size:14px;padding:10px 12px;border-radius:8px;display:flex;align-items:center;gap:10px}
+.mi.on{background:var(--sa50);color:var(--sa700);font-weight:500}
+.mi.l2{font-size:13px;padding-right:34px}.mi.l2.on{background:var(--sa100)}
+.ic{width:18px;height:18px;border:1.6px solid currentColor;border-radius:5px;opacity:.8}
+.main{flex:1;background:var(--n10)}
+.top{height:72px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 24px;border-bottom:1px solid var(--n20)}
+.crumb{font-size:13px;color:var(--n60)}.crumb b{color:var(--n100);font-weight:500}
+.user{display:flex;align-items:center;gap:10px;font-size:14px}
+.av{width:36px;height:36px;border-radius:50%;background:var(--sa100);color:var(--sa700);display:grid;place-items:center;font-size:13px;font-weight:500}
+.page{padding:24px;display:flex;flex-direction:column;gap:20px}
+.ttl{font-size:24px;line-height:40px;font-weight:500}
+.card{background:#fff;border:1px solid var(--n20);border-radius:12px;box-shadow:0 4px 24px rgba(35,40,45,.04)}
+.ch{display:flex;align-items:center;gap:12px;padding:16px 24px;border-bottom:1px solid var(--n20)}
+.ch h3{font-size:20px;line-height:28px;font-weight:500}
+.cb{padding:20px 24px;display:flex;flex-direction:column;gap:20px}
+.chip{font-size:13px;border-radius:200px;padding:3px 12px;border:1px solid;font-weight:500;display:inline-flex;align-items:center;gap:6px}
+.chip i{width:6px;height:6px;border-radius:50%;background:currentColor}
+.st-not{background:var(--n20);border-color:var(--n30);color:var(--n80)}
+.st-part{background:var(--straw20);border-color:var(--straw60);color:var(--straw250)}
+.st-ok{background:var(--mint20);border-color:var(--mint40);color:var(--mint250)}
+.ib{display:flex;gap:10px;align-items:flex-start;border-radius:8px;padding:12px 16px;font-size:14px;line-height:22px;border:1px solid}
+.ib .dot{width:20px;height:20px;border-radius:50%;flex-shrink:0;display:grid;place-items:center;color:#fff;font-size:12px;font-weight:600;margin-top:1px}
+.ib.ok{background:var(--mint20);border-color:var(--mint40)}.ib.ok .dot{background:var(--mint100)}
+.ib.err{background:var(--ruby20);border-color:var(--ruby40)}.ib.err .dot{background:var(--ruby100)}
+.sum{background:var(--n10);border:1px solid var(--n20);border-radius:8px;padding:16px 20px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px 24px}
+.di label{display:block;font-size:13px;color:var(--n60);margin-bottom:2px}
+.di div{font-size:15px;font-weight:500}
+.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+.chs{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.chn{border:1px solid var(--n30);border-radius:12px;padding:16px 20px;background:#fff}
+.chn.done{border-color:var(--mint40);background:var(--sa25)}
+.chn .hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;font-size:15px;font-weight:500}
+.otp{display:flex;gap:8px;direction:ltr;justify-content:flex-end}
+.otp span{width:48px;height:52px;border:1px solid var(--n40);border-radius:8px;display:grid;place-items:center;font-size:20px;font-weight:500;background:#fff}
+.otp span.f{border-color:var(--sa600)}
+.otp.err span{border-color:var(--ruby100);color:var(--ruby100);background:var(--ruby20)}
+.otp.ok span{border-color:var(--mint40);color:var(--mint250);background:var(--mint20)}
+.otp.dis span{background:var(--n20);border-color:var(--n30);color:var(--n40)}
+.row2{display:flex;align-items:center;justify-content:space-between;margin-top:12px;font-size:13px}
+.att b{font-weight:600}.att.low b{color:var(--ruby100)}
+.rs{background:none;border:none;font-family:inherit;color:var(--sa600);font-size:13px;font-weight:500;text-decoration:underline;cursor:pointer}
+.rs[disabled]{color:var(--n40);text-decoration:none;cursor:not-allowed}
+.msg{margin-top:12px;font-size:13px;line-height:20px;color:var(--ruby100)}
+.msg.warn{color:var(--straw250)}
+.edit{display:flex;gap:8px;align-items:flex-end;margin-top:12px;padding-top:12px;border-top:1px dashed var(--n30)}
+.edit label{display:block;font-size:13px;color:var(--n80);margin-bottom:6px}
+.inp{height:44px;border:1px solid var(--ruby100);border-radius:8px;padding:0 12px;font-size:15px;display:flex;align-items:center;direction:ltr;justify-content:flex-end}
+.btn{height:44px;border-radius:8px;padding:0 16px;font-family:inherit;font-size:14px;font-weight:500;background:#fff;color:var(--sa600);border:1px solid var(--sa600);cursor:pointer}
+</style></head>
+<body>
+<div id="frames"></div>
+<script>
+const L={name:'أحمد سوكارنو بن عبدالله',pass:'C••••567',nat:'إندونيسيا',group:'مجموعة النور — جاكرتا 12',period:'05/12/2026 – 19/12/2026',mobile:'+62 812 3456 7821',email:'ahmad.sukarno@gmail.com'};
+const P=(o={})=>Object.assign({code:'',state:'open',att:3,cd:0,msg:null},o);
+const F=[
+ {n:'1 — إرسال الرمزين',st:'not',ib:['ok','أُرسل رمز تحقق إلى جوال قائد المجموعة ••••7821 ورمز آخر إلى بريده الإلكتروني. كل رمز صالح لخمس دقائق.'],m:P({cd:60}),e:P({cd:60})},
+ {n:'2 — إعادة الإرسال قبل ستين ثانية',st:'not',m:P({code:'48',cd:42,msg:'يمكن إعادة الإرسال بعد 42 ثانية.',warn:true}),e:P({cd:42})},
+ {n:'3 — رمز غير صحيح',st:'not',m:P({code:'481920',state:'err',att:2,msg:'رمز الجوال غير صحيح. المحاولات المتبقية: 2.'}),e:P()},
+ {n:'4 — تأكيد قناة واحدة',st:'part',ib:['ok','تم تأكيد رمز الجوال. أدخل الرمز الآخر لاكتمال التأكيد.'],m:P({code:'482913',state:'done'}),e:P({code:'73'})},
+ {n:'5 — رمز منتهي الصلاحية',st:'part',m:P({code:'482913',state:'done'}),e:P({code:'730155',state:'err',msg:'انتهت صلاحية رمز البريد. اطلب رمزاً جديداً.'})},
+ {n:'6 — تجاوز حد المحاولات',st:'part',m:P({code:'482913',state:'done'}),e:P({code:'111111',state:'lock',att:0,msg:'تجاوزت عدد المحاولات لرمز البريد. يمكن طلب رمز جديد بعد ساعة.'})},
+ {n:'7 — تجاوز حد الإرسال اليومي',st:'part',m:P({code:'482913',state:'done'}),e:P({state:'lock',msg:'تجاوزت حد الإرسال اليومي لهذه القناة. حاول غداً.'})},
+ {n:'8 — تعذّر تسليم أحد الرمزين',st:'not',m:P({state:'fail',msg:'تعذّر إرسال رمز الجوال. تحقق من البيانات وأعد الإرسال.',val:'+62 812 3456 782'}),e:P()},
+ {n:'9 — تعطّل قناة الرسائل',st:'not',m:P({state:'down',msg:'تعذّر إرسال رمز الجوال. تحقق من البيانات وأعد الإرسال.'}),e:P()},
+ {n:'10 — اكتمال التأكيد',st:'ok',ib:['ok','تم تأكيد بيانات قائد المجموعة (الجوال والبريد) بنجاح.'],m:P({code:'482913',state:'done'}),e:P({code:'730155',state:'done'})},
+ {n:'11 — قائد بلا بريد',st:'not',noEmail:true,m:P({state:'off'}),e:P({state:'off'})},
+ {n:'12 — مستخدم بلا صلاحية',st:'not',ib:['err','ليس لديك صلاحية تأكيد بيانات قائد المجموعة.'],noPerm:true}
+];
+const chip={not:'<span class="chip st-not"><i></i>غير مؤكد</span>',part:'<span class="chip st-part"><i></i>مؤكد جزئياً</span>',ok:'<span class="chip st-ok"><i></i>مؤكد</span>'};
+const otp=(c,cls)=>`<div class="otp ${cls}">${[...Array(6)].map((_,i)=>`<span class="${c.code[i]?'f':''}">${c.code[i]||''}</span>`).join('')}</div>`;
+function channel(isM,c){
+  const t=isM?'رمز تحقق الجوال':'رمز تحقق البريد';
+  if(c.state==='done') return `<div class="chn done"><div class="hd">${t}${chip.ok}</div>${otp(c,'ok')}</div>`;
+  const dis=['lock','fail','down','off'].includes(c.state);
+  const rsDis=c.cd>0||c.state==='lock'||c.state==='fail'||c.state==='off';
+  const rs=`<button class="rs" ${rsDis?'disabled':''}>إعادة إرسال الرمز${c.cd?` (0:${String(c.cd).padStart(2,'0')})`:''}</button>`;
+  const edit=c.state==='fail'?`<div class="edit"><div style="flex:1"><label>جوال المعتمر</label><div class="inp">${c.val}</div></div><button class="btn">إعادة الإرسال</button></div>`:'';
+  return `<div class="chn"><div class="hd">${t}</div>${otp(c,c.state==='err'?'err':dis?'dis':'')}
+    <div class="row2"><span class="att ${c.att<=1?'low':''}">المحاولات المتبقية: <b>${c.att}</b></span>${rs}</div>
+    ${c.msg?`<div class="msg ${c.warn?'warn':''}">${c.msg}</div>`:''}${edit}</div>`;
+}
+document.getElementById('frames').innerHTML=F.map(f=>{
+  const mob=f.m&&f.m.val?f.m.val:L.mobile;
+  return `<div class="fname">${f.n}</div><div class="screen"><div class="app">
+  <div class="side"><div class="brand"><span class="lg">نسك</span>الوكيل الخارجي</div>
+    <div class="mi"><span class="ic"></span>الصفحة الرئيسية</div><div class="mi on"><span class="ic"></span>المجموعات</div><div class="mi l2 on">تفاصيل المجموعة</div></div>
+  <div class="main"><div class="top"><div class="crumb">الرئيسية › المجموعات › <b>تفاصيل المجموعة</b></div><div class="user"><span class="av">ر ب</span>ريزكي براتاما</div></div>
+  <div class="page"><div class="ttl">${L.group}</div>
+  <div class="card"><div class="ch"><h3>تأكيد بيانات قائد المجموعة</h3>${chip[f.st]}</div><div class="cb">
+    ${f.ib?`<div class="ib ${f.ib[0]}"><span class="dot">${f.ib[0]==='ok'?'✓':'!'}</span><div>${f.ib[1]}</div></div>`:''}
+    <div class="sum">
+      <div class="di"><label>الاسم</label><div>${L.name}</div></div>
+      <div class="di"><label>رقم الجواز</label><div class="ltr">${L.pass}</div></div>
+      <div class="di"><label>الجنسية</label><div>${L.nat}</div></div>
+      <div class="di"><label>اسم المجموعة</label><div>${L.group}</div></div>
+      <div class="di"><label>فترة البرنامج</label><div class="ltr">${L.period}</div></div>
+      <div class="di"><label>جوال المعتمر</label><div class="ltr">${mob}</div></div>
+      <div class="di"><label>بريد المعتمر الإلكتروني</label><div class="ltr">${f.noEmail?'—':L.email}</div></div>
+    </div>
+    ${f.noPerm?'':`<div class="chs">${channel(true,f.m)}${channel(false,f.e)}</div>`}
+  </div></div></div></div></div></div>`;}).join('');
+</script>
+</body></html>

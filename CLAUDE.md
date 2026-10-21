@@ -307,6 +307,11 @@ All four libraries are published and reachable through `search_design_system`.
   a coverage table mapping every BR/AC/E/field to a state, and open questions (Expired undefined, E6/E7 same text,
   BR-10 vs edge case, verify button is an assumption). Data: leader أحمد سوكارنو بن عبدالله (Indonesia), group 480901037528,
   agent user ريزكي براتاما. PNGs `previews/us-189761/1-3*.png`.
+- Clean version (user: «only what is required, no explanatory additions»): `previews/us-189761/leader-otp-clean.html`,
+  12 stacked frames named 1–12 (sent, resend <60 s, wrong code, one confirmed, expired, attempts exceeded, daily limit,
+  delivery failed + correct number, SMS service down, both confirmed, leader without email, no permission). Card only:
+  title + status tag, summary (7 fields), two 6-box code fields with remaining attempts and per-channel resend. No English
+  labels, notes, verify button, audit table, members table or SMS/email preview.
 
 ## Transport Information Center homepage (DGA review)
 
