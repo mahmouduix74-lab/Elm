@@ -328,6 +328,11 @@ All four libraries are published and reachable through `search_design_system`.
   - Frames (4 per row, 1640 apart): 1 `4683:85733` · 2 `4686:1797` · 3 `4686:2105` · 4 `4686:2422` · 5 `4686:2764` ·
     6 `4686:3087` · 7 `4686:3407` · 8 `4686:3727` · 9 `4686:4114` · 10 `4686:4428` · 11 `4686:4772` · 12 `4686:5089`.
     Previews `previews/us-189761/figma/`.
+  - Page layout (user: «same style as the previous page» + persona name in a thick green bar): green persona banner
+    `4687:22700` «الوكيل الخارجي» (clone of the «مسؤول شركة العمرة» banner `4628:87419`, SA600, 14576 wide) above the
+    outer section `4687:22696` (#323232) with the green title card `4687:22698` (clone of `4525:22999`) and the inner
+    section `4687:22697` (#1e1e1e). Frames sit inside the inner section in two rows of six (1–6, 7–12, left → right,
+    gap 400, padding 645/188). `otp_digit` is below the sections. Preview `previews/us-189761/figma/00-page-layout.png`.
 
 ## Transport Information Center homepage (DGA review)
 
