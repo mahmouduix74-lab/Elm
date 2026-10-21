@@ -287,6 +287,22 @@ All four libraries are published and reachable through `search_design_system`.
     36/54 → IBM Medium 30/54). Gotham digits and Latin text keep the same size in IBM.
   - Book/Regular → `IBM Plex Sans Arabic` Regular; Medium → `IBM Plex Sans Arabic Medium` Regular.
 
+## US 189761 — group leader OTP confirmation (External Agent, T-009)
+
+- Story: the External Agent confirms the group leader's mobile and email with two separate 6-digit codes, entered on
+  the agent's own Group Screen. Design = one card «تأكيد بيانات قائد المجموعة» in group details: read-only leader
+  summary (name, masked passport, nationality, mobile, email), two code inputs, per-channel resend with 60 s countdown
+  and remaining attempts, status tag (غير مؤكد · مؤكد جزئياً · مؤكد · منتهٍ). States: sent, one confirmed, both
+  confirmed, wrong code, expired, delivery failed, channel locked 1 h, plus small cases (countdown, daily limit, no permission).
+- Search (2026-10-21): **no External Agent group screens** in Umrah Individuals, Notifications or Screen Template.
+  The EA group-details screen lives in a file we don't have yet; ask the user for its link.
+- Reusable references found:
+  - Screen Template `QMNkPGMP7rBgkvSDNT7oOZ`, page Others › Login page › Create account: OTP screens
+    `27:222443` (email) and `27:222585` (phone). They have digit boxes, «Didn't receive a code? Resend 1:59», and the
+    phone number with an edit pencil. These are old brown/English, 4 boxes; the story needs 6.
+  - Nusuk Masar `timer` component set (`95189a31…`) for the resend countdown; `phone input` (`816eb75e…`).
+- Without a Figma REST token we can't list team projects; the earlier token was not kept (scratchpad was reset).
+
 ## Transport Information Center homepage (DGA review)
 
 - File `cAMY504gWaSItUzw4yJevl` («Untitled»), frame `1:16870` «homepage» 1440×2827 (the user's link said 1-18455): public site of مركز معلومات النقل
