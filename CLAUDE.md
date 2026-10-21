@@ -312,6 +312,22 @@ All four libraries are published and reachable through `search_design_system`.
   delivery failed + correct number, SMS service down, both confirmed, leader without email, no permission). Card only:
   title + status tag, summary (7 fields), two 6-box code fields with remaining attempts and per-channel resend. No English
   labels, notes, verify button, audit table, members table or SMS/email preview.
+- **Figma build (user: «build them in a new page»):** Notifications file, page `4683:20365`
+  «US 189761 — تأكيد بيانات قائد المجموعة». Base = clone of UO details `4527:5190` (new Nav Bar + top_bar kept; nav
+  «المجموعات» with Icons `user-multiple-02`, 2nd level «قائمة المجموعات»; breadcrumbs الرئيسية / المجموعات / تفاصيل
+  المجموعة; title «مجموعة النور — جاكرتا 12»; old cards removed). Card `leader_confirmation`: header (Headline/S title +
+  DS `status_chip`: غير مؤكد `draft`, مؤكد جزئياً `awaiting_Payment`, مؤكد `active`, text overridden) · DS `infobox`
+  (success/error, button+dismiss off) · summary items cloned from the UO details info item `4527:5269` (7 fields, 2 rows
+  of 4) · `channels` = two frames (mobile right, email left) with label (Body/Bold/M), six `otp_digit` instances,
+  `meta` (DS `button` tertiary «إعادة إرسال الرمز (0:60)» + «المحاولات المتبقية: N» Body/S), hidden `message`
+  (Body/XS+ ruby100). Confirmed channel: mint40 stroke, SA25 fill, DS chip «مؤكد». Delivery failure adds DS `input`
+  (error, «جوال المعتمر») + DS secondary button «إعادة الإرسال».
+  - Local component set `otp_digit` `4683:86185` (state=empty/focus/filled/error/success/disabled, text prop
+    `digit#4683:0`, Body/XL, radius_S, Nusuk colour variables) — Nusuk Masar has no OTP input. DS `timer` is a
+    days/hours/minutes countdown, so it is not used for the 60 s resend.
+  - Frames (4 per row, 1640 apart): 1 `4683:85733` · 2 `4686:1797` · 3 `4686:2105` · 4 `4686:2422` · 5 `4686:2764` ·
+    6 `4686:3087` · 7 `4686:3407` · 8 `4686:3727` · 9 `4686:4114` · 10 `4686:4428` · 11 `4686:4772` · 12 `4686:5089`.
+    Previews `previews/us-189761/figma/`.
 
 ## Transport Information Center homepage (DGA review)
 
