@@ -333,6 +333,12 @@ All four libraries are published and reachable through `search_design_system`.
     outer section `4687:22696` (#323232) with the green title card `4687:22698` (clone of `4525:22999`) and the inner
     section `4687:22697` (#1e1e1e). Frames sit inside the inner section in two rows of six (1–6, 7–12, left → right,
     gap 400, padding 645/188). `otp_digit` is below the sections. Preview `previews/us-189761/figma/00-page-layout.png`.
+  - **Now only frame 1 is shown (user, 2026-10-21: «hide them, I'll ask to bring them back — don't delete»).** Frames 2–12
+    are hidden and stacked behind frame 1 at (645, 188) inside the inner section (shrinking a section moves children that
+    fall outside it to the parent, so they had to sit inside). Sections shrunk to one screen: inner 2730×1276, outer
+    5376×1805, banner 5376 wide. To restore: unhide, put them back in the 2×6 grid (x = 645 + col×1840, y = 188 + row×1200),
+    then resize inner to 11930×2476 and outer/banner to 14576 (outer height 2972). The side title card now shows the
+    story number «189761» under the title (white, 120, opacity 85%).
 
 ## Transport Information Center homepage (DGA review)
 
