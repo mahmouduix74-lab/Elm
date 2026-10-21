@@ -301,7 +301,12 @@ All four libraries are published and reachable through `search_design_system`.
     `27:222443` (email) and `27:222585` (phone). They have digit boxes, «Didn't receive a code? Resend 1:59», and the
     phone number with an edit pencil. These are old brown/English, 4 boxes; the story needs 6.
   - Nusuk Masar `timer` component set (`95189a31…`) for the resend countdown; `phone input` (`816eb75e…`).
-- Without a Figma REST token we can't list team projects; the earlier token was not kept (scratchpad was reset).
+- Without a Figma REST token we can't list team projects; the user's new token lacks `projects:read` (not offered to them), so file discovery via REST failed (teams 1551576394345182218, 1410170693908329559).
+- HTML concept (user: «follow the story to the letter»): `previews/us-189761/leader-otp-mock.html`, 14 switchable states
+  (trigger, AC-01…AC-08, E4, E5, E8, alt path 3, missing email), «what the leader receives» SMS/email preview, status legend,
+  a coverage table mapping every BR/AC/E/field to a state, and open questions (Expired undefined, E6/E7 same text,
+  BR-10 vs edge case, verify button is an assumption). Data: leader أحمد سوكارنو بن عبدالله (Indonesia), group 480901037528,
+  agent user ريزكي براتاما. PNGs `previews/us-189761/1-3*.png`.
 
 ## Transport Information Center homepage (DGA review)
 

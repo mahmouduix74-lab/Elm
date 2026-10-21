@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="ar" dir="rtl"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>US 189761 — تأكيد بيانات قائد المجموعة</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--sa25:#f7fdf9;--sa50:#f3fcf6;--sa100:#dff6e7;--sa200:#b8eacb;--sa600:#1b8354;--sa700:#166a45;--sa800:#14573a;
+--n10:#fafafa;--n20:#f0f0f1;--n30:#dadbdc;--n40:#bfc2c4;--n60:#7e8387;--n80:#484d51;--n100:#23282d;--n200:#15181b;
+--mint20:#ecf8f5;--mint40:#afe0d4;--mint100:#3cb496;--mint250:#256e5c;
+--ruby20:#fceded;--ruby40:#f1b7b7;--ruby100:#c41a1a;--ruby250:#873030;
+--straw20:#fef8f0;--straw60:#f6d9a6;--straw100:#f0bd66;--straw250:#92733e;
+--info50:#eff8ff;--info200:#b2ddff;--info500:#2e90fa;--info700:#175cd3}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"IBM Plex Sans Arabic",Tahoma,sans-serif;background:#e9eaeb;color:var(--n100);min-width:1440px}
+button{font-family:inherit;cursor:pointer}
+/* ---------- scenario bar ---------- */
+.bar{position:relative;background:var(--n200);color:#fff;padding:14px 24px 12px}
+.bar h1{font-size:16px;font-weight:500;margin-bottom:10px}
+.bar h1 span{color:var(--n40);font-weight:400;font-size:13px;margin-right:8px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.sc{border:1px solid #3a3f44;background:#23282d;color:#dadbdc;border-radius:200px;padding:5px 12px;font-size:12px}
+.sc b{color:#88d8ad;font-weight:500;margin-left:4px}
+.sc.on{background:var(--sa600);border-color:var(--sa600);color:#fff}
+.sc.on b{color:#fff}
+.note{margin-top:10px;background:#2c3237;border-radius:8px;padding:10px 14px;font-size:12.5px;line-height:1.8;color:#dadbdc;display:flex;gap:24px}
+.note .col{flex:1}
+.note .k{color:#88d8ad;font-weight:500}
+.note .en{direction:ltr;text-align:left;color:#b2ddff}
+.note .q{color:#f6d9a6}
+/* ---------- app shell ---------- */
+.screen{width:1440px;margin:24px auto;box-shadow:0 8px 32px rgba(0,0,0,.12);background:#fff}
+.app{display:flex;min-height:900px}
+.side{width:268px;flex-shrink:0;background:#fff;border-left:1px solid var(--n20);padding:16px 12px}
+.brand{display:flex;align-items:center;gap:10px;padding:4px 8px 20px;border-bottom:1px solid var(--n20);margin-bottom:12px}
+.brand .lg{width:36px;height:36px;border-radius:8px;background:linear-gradient(45deg,var(--sa800),var(--sa600));color:#fff;display:grid;place-items:center;font-size:12px;font-weight:600}
+.brand div{font-size:14px;font-weight:500}.brand small{display:block;font-size:11px;color:var(--n60);font-weight:400}
+.sec{font-size:11px;color:var(--n60);padding:8px 10px 4px}
+.mi{font-size:14px;padding:10px 12px;border-radius:8px;display:flex;align-items:center;gap:10px;color:var(--n100)}
+.mi.sel{background:var(--sa50);color:var(--sa700);font-weight:500}
+.mi.l2{font-size:13px;padding-right:34px}
+.mi.l2.sel{background:var(--sa100)}
+.ic{width:18px;height:18px;border:1.6px solid currentColor;border-radius:5px;opacity:.8}
+.main{flex:1;background:var(--n10);display:flex;flex-direction:column}
+.top{height:72px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 24px;border-bottom:1px solid var(--n20)}
+.crumb{font-size:13px;color:var(--n60)}.crumb b{color:var(--n100);font-weight:500}
+.user{display:flex;align-items:center;gap:10px;font-size:14px}
+.av{width:36px;height:36px;border-radius:50%;background:var(--sa100);color:var(--sa700);display:grid;place-items:center;font-size:13px;font-weight:500}
+.user small{display:block;font-size:11px;color:var(--n60)}
+.page{padding:24px;display:flex;flex-direction:column;gap:20px}
+.ttl{display:flex;align-items:center;gap:12px}
+.ttl h2{font-size:24px;line-height:40px;font-weight:500}
+.ttl .num{font-size:14px;color:var(--n60)}
+/* ---------- cards ---------- */
+.card{background:#fff;border:1px solid var(--n20);border-radius:12px;box-shadow:0 4px 24px rgba(35,40,45,.04)}
+.ch{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;border-bottom:1px solid var(--n20)}
+.ch h3{font-size:20px;line-height:28px;font-weight:500;display:flex;align-items:center;gap:12px}
+.cb{padding:20px 24px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px 24px}
+.di label{display:block;font-size:13px;color:var(--n60);margin-bottom:2px}
+.di div{font-size:15px;font-weight:500}
+.di .en{font-size:11px;color:var(--n40);font-weight:400}
+.ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+td.ltr{display:table-cell;text-align:right}
+/* leader assign row */
+.assign{display:flex;align-items:flex-end;gap:16px;margin-top:20px;padding-top:20px;border-top:1px dashed var(--n30)}
+.fld label{display:block;font-size:13px;color:var(--n80);margin-bottom:6px}
+.dd{width:380px;height:48px;border:1px solid var(--n40);border-radius:8px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;font-size:15px;background:#fff}
+.dd.dis{background:var(--n20);color:var(--n60);border-color:var(--n30)}
+.help{font-size:12px;color:var(--n60);margin-top:4px}
+.btn{height:48px;border-radius:8px;padding:0 20px;font-size:15px;font-weight:500;border:1px solid transparent;display:inline-flex;align-items:center;gap:8px}
+.btn.pri{background:var(--sa600);color:#fff}
+.btn.sec{background:#fff;color:var(--sa600);border-color:var(--sa600)}
+.btn.sm{height:36px;font-size:14px;padding:0 14px}
+.btn[disabled]{background:var(--n20);color:var(--n40);border-color:var(--n20);cursor:not-allowed}
+.saved{font-size:13px;color:var(--mint250);display:flex;align-items:center;gap:6px;height:48px}
+/* chip */
+.chip{font-size:13px;border-radius:200px;padding:3px 12px;border:1px solid;font-weight:500;display:inline-flex;align-items:center;gap:6px}
+.chip i{width:6px;height:6px;border-radius:50%;background:currentColor}
+.st-not{background:var(--n20);border-color:var(--n30);color:var(--n80)}
+.st-part{background:var(--straw20);border-color:var(--straw60);color:var(--straw250)}
+.st-ok{background:var(--mint20);border-color:var(--mint40);color:var(--mint250)}
+.st-exp{background:var(--ruby20);border-color:var(--ruby40);color:var(--ruby250)}
+/* infobox */
+.ib{display:flex;gap:10px;align-items:flex-start;border-radius:8px;padding:12px 16px;font-size:14px;line-height:22px;border:1px solid}
+.ib .dot{width:20px;height:20px;border-radius:50%;flex-shrink:0;display:grid;place-items:center;color:#fff;font-size:12px;font-weight:600;margin-top:1px}
+.ib.ok{background:var(--mint20);border-color:var(--mint40)}.ib.ok .dot{background:var(--mint100)}
+.ib.err{background:var(--ruby20);border-color:var(--ruby40)}.ib.err .dot{background:var(--ruby100)}
+.ib.warn{background:var(--straw20);border-color:var(--straw60)}.ib.warn .dot{background:var(--straw100)}
+.ib.info{background:var(--info50);border-color:var(--info200)}.ib.info .dot{background:var(--info500)}
+/* confirmation card */
+.sub{font-size:16px;font-weight:500;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.sub small{font-size:12px;color:var(--n60);font-weight:400}
+.sum{background:var(--n10);border:1px solid var(--n20);border-radius:8px;padding:16px 20px}
+.sum .grid{grid-template-columns:repeat(5,1fr)}
+.sum .grid .di.wide{grid-column:span 1}
+.chs{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+.chn{border:1px solid var(--n30);border-radius:12px;padding:16px 20px;background:#fff}
+.chn.done{border-color:var(--mint40);background:var(--sa25)}
+.chn.off{background:var(--n10)}
+.chn .hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
+.chn .hd b{font-size:15px;font-weight:500}
+.chn .hd small{font-size:11px;color:var(--n60);font-weight:400;margin-right:6px}
+.chn .to{font-size:13px;color:var(--n60);margin-bottom:14px}
+.otp{display:flex;gap:8px;direction:ltr;justify-content:flex-end}
+.otp span{width:48px;height:52px;border:1px solid var(--n40);border-radius:8px;display:grid;place-items:center;font-size:20px;font-weight:500;background:#fff}
+.otp span.f{border-color:var(--sa600)}
+.otp span.cur{border:2px solid var(--sa700)}
+.otp.err span{border-color:var(--ruby100);color:var(--ruby100);background:var(--ruby20)}
+.otp.ok span{border-color:var(--mint40);color:var(--mint250);background:var(--mint20)}
+.otp.dis span{background:var(--n20);border-color:var(--n30);color:var(--n40)}
+.row2{display:flex;align-items:center;justify-content:space-between;margin-top:12px;font-size:13px}
+.att{color:var(--n80)}.att b{font-weight:600}
+.att.low b{color:var(--ruby100)}
+.rs{background:none;border:none;color:var(--sa600);font-size:13px;font-weight:500;text-decoration:underline}
+.rs[disabled]{color:var(--n40);text-decoration:none;cursor:not-allowed}
+.rs .cd{font-variant-numeric:tabular-nums;margin-right:4px}
+.msg{margin-top:12px;font-size:13px;line-height:20px;display:flex;gap:6px}
+.msg.err{color:var(--ruby100)}.msg.ok{color:var(--mint250)}.msg.warn{color:var(--straw250)}.msg.info{color:var(--info700)}
+.cfm{display:flex;align-items:center;gap:8px;margin-top:12px;font-size:13px;color:var(--mint250)}
+.act{display:flex;justify-content:flex-end;margin-top:14px;gap:8px}
+.edit{display:flex;gap:8px;align-items:flex-end;margin-top:12px;padding-top:12px;border-top:1px dashed var(--n30)}
+.inp{height:44px;border:1px solid var(--ruby100);border-radius:8px;padding:0 12px;font-size:15px;display:flex;align-items:center;flex:1;direction:ltr;justify-content:flex-end}
+.inp.ok{border-color:var(--n40)}
+.lockline{margin-top:10px;font-size:12px;color:var(--n60)}
+/* log table */
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{background:var(--n10);color:var(--n80);font-weight:500;text-align:right;padding:10px 14px;border-bottom:1px solid var(--n30);font-size:13px}
+th small{display:block;font-size:10.5px;color:var(--n40);font-weight:400}
+td{padding:12px 14px;border-bottom:1px solid var(--n20)}
+/* members */
+.lead{font-size:11px;background:var(--sa100);color:var(--sa700);border-radius:200px;padding:2px 8px;margin-right:6px}
+/* below-screen sections */
+.below{width:1440px;margin:0 auto 40px;display:flex;flex-direction:column;gap:20px}
+.below .card{border-radius:12px}
+.pv{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.sms{background:var(--n20);border-radius:16px;padding:16px;font-size:14px;line-height:22px}
+.sms .from{font-size:12px;color:var(--n60);margin-bottom:6px}
+.sms .bub{background:#fff;border-radius:14px;padding:12px 14px}
+.mail{border:1px solid var(--n30);border-radius:8px;overflow:hidden;font-size:14px;line-height:22px}
+.mail .mh{background:var(--n10);padding:10px 14px;font-size:12px;color:var(--n60);border-bottom:1px solid var(--n30)}
+.mail .mb{padding:14px}
+.code{font-size:22px;letter-spacing:6px;font-weight:600;color:var(--sa700);direction:ltr;display:inline-block}
+.en-blk{direction:ltr;text-align:left;border-top:1px dashed var(--n30);margin-top:10px;padding-top:10px}
+.cov td,.cov th{font-size:13px;padding:8px 12px;vertical-align:top}
+.cov .go{color:var(--sa600);text-decoration:underline;cursor:pointer;white-space:nowrap}
+.tag-q{font-size:11px;background:var(--straw20);color:var(--straw250);border:1px solid var(--straw60);border-radius:200px;padding:1px 8px;margin-right:4px;white-space:nowrap}
+.tag-a{font-size:11px;background:var(--info50);color:var(--info700);border:1px solid var(--info200);border-radius:200px;padding:1px 8px;margin-right:4px;white-space:nowrap}
+.qs li{font-size:14px;line-height:1.9;margin-right:20px}
+.legend{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+</style></head>
+<body>
+
+<div class="bar">
+  <h1>US 189761 — إرسال رمزَي تحقق مستقلّين إلى جوال قائد المجموعة وبريده وتأكيدهما من شاشة الوكيل <span>تصوّر تصميم · الوكيل الخارجي · شاشة المجموعة (Group Screen)</span></h1>
+  <div class="chips" id="chips"></div>
+  <div class="note" id="note"></div>
+</div>
+
+<div class="screen" id="screen"></div>
+
+<div class="below">
+  <div class="card">
+    <div class="ch"><h3>ما يصل إلى قائد المجموعة <small style="font-size:13px;color:var(--n60);font-weight:400">BR-05 · BR-08 · اللغة والتوطين: ثنائي اللغة ويحمل اسم المنصة</small></h3></div>
+    <div class="cb pv">
+      <div>
+        <div class="sub">الرسالة النصية — إلى «جوال المعتمر (Mutamer Mobile Number)» فقط</div>
+        <div class="sms"><div class="from">من: Nusuk · إلى <span class="ltr">+62 812 3456 7821</span></div>
+          <div class="bub">نسك: مرحباً أحمد، رمز تحقق جوال قائد المجموعة 480901037528 هو <span class="code" style="font-size:16px;letter-spacing:2px">482913</span>. صالح لخمس دقائق.
+            <div class="en-blk">Nusuk: Hello Ahmad, the group leader mobile verification code for group 480901037528 is 482913. Valid for five minutes.</div></div></div>
+      </div>
+      <div>
+        <div class="sub">البريد الإلكتروني — إلى «بريد المعتمر الإلكتروني (Mutamer Email)» فقط، برمز مختلف</div>
+        <div class="mail"><div class="mh">من: no-reply@nusuk.sa · إلى: <span class="ltr">ahmad.sukarno@gmail.com</span> · الموضوع: نسك — رمز تحقق بريد قائد المجموعة / Nusuk — Group leader email verification code</div>
+          <div class="mb">مرحباً أحمد،<br>رمز تحقق البريد الإلكتروني لقائد المجموعة 480901037528:<br><span class="code">730155</span><br>الرمز صالح لخمس دقائق. يُرجى إبلاغه لوكيلك.
+            <div class="en-blk">Hello Ahmad,<br>The group leader email verification code for group 480901037528:<br><span class="code">730155</span><br>The code is valid for five minutes. Please share it with your agent.</div></div></div>
+      </div>
+    </div>
+    <div class="cb" style="padding-top:0;font-size:12.5px;color:var(--n60)">لا تحمل الرسالتان من البيانات الشخصية إلا الاسم الأول ورقم المجموعة (BR-08). نص الرسالتين مقترح؛ القصة تحدد المحتوى المسموح فقط.</div>
+  </div>
+
+  <div class="card">
+    <div class="ch"><h3>قيم «حالة تأكيد القائد (Leader Confirmation Status)» — BR-11</h3></div>
+    <div class="cb legend">
+      <span class="chip st-not"><i></i>غير مؤكد (Not Confirmed)</span>
+      <span class="chip st-part"><i></i>مؤكد جزئياً (Partially Confirmed)</span>
+      <span class="chip st-ok"><i></i>مؤكد (Confirmed)</span>
+      <span class="chip st-exp"><i></i>منتهٍ (Expired)</span>
+      <span style="font-size:13px;color:var(--n60)">حقل يملؤه النظام ولا يُحرَّر يدوياً، لذلك يظهر وسماً للقراءة فقط وليس قائمة.</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ch"><h3>تغطية القصة — كل بند وأين يظهر</h3></div>
+    <div class="cb"><table class="cov" id="cov"></table></div>
+  </div>
+
+  <div class="card">
+    <div class="ch"><h3>نقاط مفتوحة للبزنس <small style="font-size:13px;color:var(--n60);font-weight:400">تعارضات أو أشياء لم تحددها القصة</small></h3></div>
+    <div class="cb"><ol class="qs">
+      <li><b>«منتهٍ (Expired)»</b> من قيم الحالة الأربع (BR-11) لكن لا يوجد مسار يذكر متى تصل الحالة إليها؛ انتهاء الرمز (E2) لا يغيّر الحالة.</li>
+      <li><b>E6 وE7 لهما الرسالة نفسها</b> «تحقق من البيانات وأعد الإرسال»، لكن في E7 (تعطّل الخدمة) البيانات صحيحة والنظام يعيد الإرسال آلياً؛ الرسالة تطلب من الوكيل فعلاً لا يلزمه.</li>
+      <li><b>غياب الجوال أو البريد:</b> BR-10 تقول «غياب أيهما يمنع إرسال رمز <u>قناته</u>»، والحالات الحدية تقول «لا يُرسل <u>أي</u> رمز». التصوّر يتبع الحالات الحدية (لا يُرسل أي رمز). ولا توجد رسالة نظام لهذه الحالة؛ النص في الشاشة مقترح.</li>
+      <li><b>رسالة الإرسال:</b> نص AC-01 فيه «••••آخر أربع خانات» ونص جدول الرسائل بدونها. التصوّر يستخدم نص AC-01.</li>
+      <li><b>طريقة التحقق من الرمز:</b> القصة لا تحدد هل يُتحقق تلقائياً بعد الخانة السادسة أم بزر. التصوّر يضع زر «تحقق» لكل قناة (افتراض تصميمي).</li>
+      <li><b>تصحيح بيانات القناة بعد فشل التسليم (AC-07):</b> القصة تقول إن الوكيل يصحّح البيانات، ولا تحدد هل التصحيح من داخل البطاقة أم من بيانات المعتمر. التصوّر يضع حقلاً للتصحيح داخل البطاقة.</li>
+      <li><b>رسالة تغيير البيانات بعد التأكيد (المسار البديل 3)</b> غير موجودة هنا؛ القصة تحيلها إلى القصة 2.</li>
+    </ol></div>
+  </div>
+</div>
+
+<script>
+const L = {name:'أحمد سوكارنو بن عبدالله', first:'أحمد', pass:'C••••567', nat:'إندونيسيا', group:'مجموعة النور — جاكرتا 12',
+  gno:'480901037528', period:'05/12/2026 – 19/12/2026', mobile:'+62 812 3456 7821', email:'ahmad.sukarno@gmail.com'};
+const AGENT = 'ريزكي براتاما';
+const MSG = {
+  sent:{ar:'أُرسل رمز تحقق إلى جوال قائد المجموعة ••••7821 ورمز آخر إلى بريده الإلكتروني. كل رمز صالح لخمس دقائق.',
+        en:"A verification code was sent to the group leader's mobile (••••7821) and a different code to their email. Each code is valid for five minutes."},
+  one:(c,ce)=>({ar:`تم تأكيد رمز ${c}. أدخل الرمز الآخر لاكتمال التأكيد.`, en:`The ${ce} code was confirmed. Enter the other code to complete confirmation.`}),
+  both:{ar:'تم تأكيد بيانات قائد المجموعة (الجوال والبريد) بنجاح.', en:"The group leader's details (mobile and email) were confirmed successfully."},
+  wrong:(c,ce,n)=>({ar:`رمز ${c} غير صحيح. المحاولات المتبقية: ${n}.`, en:`The ${ce} code is incorrect. Remaining attempts: ${n}.`}),
+  exp:(c,ce)=>({ar:`انتهت صلاحية رمز ${c}. اطلب رمزاً جديداً.`, en:`The ${ce} code has expired. Request a new one.`}),
+  lock:(c,ce)=>({ar:`تجاوزت عدد المحاولات لرمز ${c}. يمكن طلب رمز جديد بعد ساعة.`, en:`Attempt limit exceeded for the ${ce} code. A new code can be requested after one hour.`}),
+  daily:{ar:'تجاوزت حد الإرسال اليومي لهذه القناة. حاول غداً.', en:'The daily send limit for this channel has been exceeded. Try again tomorrow.'},
+  early:n=>({ar:`يمكن إعادة الإرسال بعد ${n} ثانية.`, en:`You can resend after ${n} seconds.`}),
+  fail:(c,ce)=>({ar:`تعذّر إرسال رمز ${c}. تحقق من البيانات وأعد الإرسال.`, en:`The ${ce} code could not be delivered. Check the details and resend.`}),
+  perm:{ar:'ليس لديك صلاحية تأكيد بيانات قائد المجموعة.', en:"You do not have permission to confirm the group leader's details."}
+};
+const CH = {mobile:{ar:'الجوال',en:'mobile'}, email:{ar:'البريد',en:'email'}};
+// channel defaults
+const P = (o={}) => Object.assign({code:'', state:'open', att:3, cd:0, msg:null, msgType:'err', confirmedAt:null}, o);
+
+const S = [
+ {id:'s0', tag:'المحفّز', title:'قبل حفظ تعيين القائد', status:null, assign:'edit', card:false,
+  covers:'المسار الرئيسي 1 · BR-01 · المحفّز (حفظ تعيين القائد)', note:'الوكيل يختار معتمراً من المجموعة نفسها (18 سنة فأكثر) قائداً ثم يحفظ. بطاقة التأكيد لا تظهر قبل الحفظ.'},
+ {id:'s1', tag:'AC-01', title:'إرسال الرمزين', status:'not', banner:['ok',MSG.sent], live:true,
+  m:P({cd:60}), e:P({cd:60}),
+  covers:'AC-01 · المسار الرئيسي 2–6 · BR-02 · BR-03 · BR-04 · BR-05 · BR-11', note:'رمزان مختلفان، كل رمز 6 أرقام صالح 5 دقائق. حقلا الإدخال داخل شاشة المجموعة فقط، بلا رابط خارجي. العدّاد يعمل الآن (60 ثانية لكل قناة).'},
+ {id:'s2', tag:'E5', title:'إعادة الإرسال قبل 60 ثانية', status:'not',
+  m:P({code:'48', cd:42, msg:MSG.early(42), msgType:'warn'}), e:P({cd:42}),
+  covers:'E5 · BR-03 · المسار البديل 1 (الشرط: بعد مضي ستين ثانية)', note:'لا يُرسل رمز جديد ويستمر العدّاد.'},
+ {id:'s3', tag:'AC-04', title:'رمز خاطئ', status:'not',
+  m:P({code:'481920', state:'err', att:2, msg:MSG.wrong('الجوال','mobile',2)}), e:P(),
+  covers:'AC-04 · E1 · BR-03 · BR-12', note:'لا تتغير الحالة، وينقص عدّاد المحاولات، وتُسجَّل المحاولة على الخادم. الحقل يقبل أرقاماً فقط (BR-12).'},
+ {id:'s4', tag:'AC-02', title:'تأكيد قناة واحدة', status:'part', banner:['ok',MSG.one('الجوال','mobile')],
+  m:P({code:'482913', state:'done', confirmedAt:'21/10/2026 10:33'}), e:P({code:'73'}),
+  covers:'AC-02 · المسار الرئيسي 7–8 · BR-07 · الشرط اللاحق 2', note:'الحالة «مؤكد جزئياً»، وقناة البريد تبقى مفتوحة بانتظار الإدخال. كل رمز يُتحقق منه على حدة.'},
+ {id:'s5', tag:'AC-05', title:'رمز منتهي الصلاحية', status:'part',
+  m:P({code:'482913', state:'done', confirmedAt:'21/10/2026 10:33'}), e:P({code:'730155', state:'err', msg:MSG.exp('البريد','email')}),
+  covers:'AC-05 · E2 · BR-03', note:'يُرفض الرمز بعد 5 دقائق، ويُتاح طلب رمز جديد للقناة نفسها وحدها.'},
+ {id:'s6', tag:'AC-06', title:'تجاوز حد المحاولات', status:'part',
+  m:P({code:'482913', state:'done', confirmedAt:'21/10/2026 10:33'}), e:P({code:'111111', state:'lock', att:0, msg:MSG.lock('البريد','email'), lockUntil:'11:42'}),
+  covers:'AC-06 · E3 · BR-03 · الحالات الحدية «أخرى»', note:'ثلاث محاولات خاطئة → تُقفل القناة ساعة: لا إدخال ولا طلب رمز جديد خلالها.'},
+ {id:'s7', tag:'E4', title:'تجاوز حد الإرسال اليومي', status:'part',
+  m:P({code:'482913', state:'done', confirmedAt:'21/10/2026 10:33'}), e:P({state:'daily', msg:MSG.daily}),
+  covers:'E4 · BR-03 (خمس إرسالات في اليوم لكل قناة) · الحالات الحدية «تكرار الإجراء»', note:'لا يُرسل رمز جديد للبريد حتى اليوم التالي. قناة الجوال لا تتأثر.'},
+ {id:'s8', tag:'AC-07', title:'تعذّر تسليم أحد الرمزين', status:'not',
+  m:P({state:'fail', msg:MSG.fail('الجوال','mobile'), wrongVal:'+62 812 3456 782'}), e:P(),
+  covers:'AC-07 · E6 · المسار البديل 2 · BR-07', note:'يُسجَّل فشل التسليم. الوكيل يصحّح بيانات الجوال ويعيد الإرسال له وحده؛ البريد لا يتأثر، والحالة تبقى دون «مؤكد».'},
+ {id:'s9', tag:'AC-08', title:'تعطّل قناة الرسائل', status:'not', assign:'saved',
+  m:P({state:'down', msg:MSG.fail('الجوال','mobile')}), e:P(),
+  covers:'AC-08 · E7 · الحالات الحدية «تعطل التكامل»', note:'المجموعة وتعيين القائد محفوظان (لا منع). النظام يعيد محاولة الإرسال آلياً عند عودة القناة.', q:'الرسالة نفسها تطلب «تحقق من البيانات» رغم أن البيانات سليمة — انظر النقاط المفتوحة.'},
+ {id:'s10', tag:'AC-03', title:'اكتمال التأكيد', status:'ok', banner:['ok',MSG.both], log:true,
+  m:P({code:'482913', state:'done', confirmedAt:'21/10/2026 10:33'}), e:P({code:'730155', state:'done', confirmedAt:'21/10/2026 10:36'}),
+  covers:'AC-03 · المسار الرئيسي 9–10 · BR-07 · BR-09 · الشرط اللاحق 1', note:'الحالة «مؤكد» ويُحفظ سجل تأكيد لكل قناة. الوكيل يكمل عمله على المجموعة دون توقف (البطاقة جزء من الشاشة، لا نافذة منبثقة).'},
+ {id:'s11', tag:'بديل 3', title:'تغيير البيانات بعد التأكيد', status:'not', banner:['ok',MSG.sent], changed:true,
+  m:P({cd:60}), e:P({cd:60}),
+  covers:'المسار البديل 3 · القصة 2 / US-4', note:'تعديل جوال القائد أو بريده بعد «مؤكد» يُسقط التأكيد ويُعاد إرسال الرمزين. تفصيل دورة الحالة في القصة 2.'},
+ {id:'s12', tag:'حدّية', title:'قائد بلا بريد', status:'not', missing:'email',
+  m:P({state:'blocked'}), e:P({state:'missing'}),
+  covers:'BR-10 · الحالات الحدية «لا بيانات» · الشرط المسبق 2', note:'لا يُرسل أي رمز، ويبقى التعيين ممكناً والحالة «غير مؤكد».', q:'BR-10 تمنع رمز القناة الناقصة فقط، والحالات الحدية تمنع الرمزين. النص الظاهر مقترح.'},
+ {id:'s13', tag:'E8', title:'مستخدم بلا صلاحية', status:'not', perm:false, assign:'ro',
+  covers:'E8 · الشرط المسبق 3 · الحالات الحدية «عدم الصلاحية»', note:'لا تُعرض حقول الرمزين ولا زر إعادة الإرسال، ويُسجَّل الاستدعاء.'}
+];
+
+const chip = s => s==null ? '' : ({not:'<span class="chip st-not"><i></i>غير مؤكد</span>',part:'<span class="chip st-part"><i></i>مؤكد جزئياً</span>',ok:'<span class="chip st-ok"><i></i>مؤكد</span>',exp:'<span class="chip st-exp"><i></i>منتهٍ</span>'})[s];
+const ib = (t,m) => `<div class="ib ${t}"><span class="dot">${t==='ok'?'✓':t==='err'?'!':'i'}</span><div>${m.ar}</div></div>`;
+const fmt = n => `0:${String(n).padStart(2,'0')}`;
+
+function otp(c, cls){ const a=[]; for(let i=0;i<6;i++){ const d=c.code[i]||''; a.push(`<span class="${d?'f':''} ${(!d && i===c.code.length && c.state==='open')?'cur':''}">${d}</span>`);} return `<div class="otp ${cls||''}">${a.join('')}</div>`; }
+
+function channel(k, c, sc){
+  const isM = k==='mobile', name = isM?'رمز تحقق الجوال':'رمز تحقق البريد', en = isM?'Mobile Verification Code':'Email Verification Code';
+  const val = isM ? `<span class="ltr">${c.wrongVal||(sc.changed?'+62 813 9001 4410':L.mobile)}</span>` : `<span class="ltr">${L.email}</span>`;
+  let body='', foot='', box='';
+  const resend = (dis, cd) => `<button class="rs" ${dis?'disabled':''} data-cd="${k}">إعادة إرسال الرمز${cd?`<span class="cd">(${fmt(cd)})</span>`:''}</button>`;
+  const att = `<span class="att ${c.att<=1?'low':''}">المحاولات المتبقية: <b>${c.att}</b></span>`;
+  const msg = c.msg ? `<div class="msg ${c.msgType||'err'}">${c.msgType==='warn'?'⏱':'⚠'} ${c.msg.ar}</div>` : '';
+  if (c.state==='done'){
+    box='done';
+    body = otp(c,'ok') + `<div class="cfm">✓ تم التأكيد · <span class="ltr">${c.confirmedAt}</span> · ${AGENT}</div>`;
+  } else if (c.state==='missing'){
+    box='off';
+    body = `<div class="msg warn" style="margin-top:0">⚠ لا يوجد «بريد المعتمر الإلكتروني (Mutamer Email)» للقائد، لذلك لم يُرسل أي رمز. أكمل بيانات المعتمر ثم أعد الإرسال. <span class="tag-q">نص مقترح</span></div>` + otp(c,'dis');
+  } else if (c.state==='blocked'){
+    box='off';
+    body = `<div class="msg warn" style="margin-top:0">⚠ لم يُرسل رمز الجوال لأن بيانات تواصل القائد غير مكتملة. <span class="tag-q">نص مقترح</span></div>` + otp(c,'dis');
+  } else if (c.state==='lock'){
+    body = otp(c,'dis') + `<div class="row2"><span class="att low">المحاولات المتبقية: <b>0</b></span>${resend(true)}</div>${msg}<div class="lockline">القناة مقفلة حتى الساعة ${c.lockUntil}.</div>`;
+  } else if (c.state==='daily'){
+    body = otp(c,'dis') + `<div class="row2">${att}${resend(true)}</div>${msg}`;
+  } else if (c.state==='fail'){
+    body = otp(c,'dis') + `<div class="row2">${att}${resend(true)}</div>${msg}
+      <div class="edit"><div style="flex:1"><div style="font-size:13px;color:var(--n80);margin-bottom:6px">جوال المعتمر (Mutamer Mobile Number) — بالصيغة الدولية مع رمز الدولة</div><div class="inp">${c.wrongVal}</div></div><button class="btn sec sm" style="height:44px">إعادة الإرسال للجوال</button></div>`;
+  } else if (c.state==='down'){
+    body = otp(c,'dis') + `<div class="row2">${att}${resend(false)}</div>${msg}<div class="msg info">↻ ستُعاد محاولة الإرسال آلياً عند عودة خدمة الرسائل. <span class="tag-a">من AC-08 — سلوك نظام</span></div>`;
+  } else {
+    body = otp(c, c.state==='err'?'err':'') + `<div class="row2">${att}${resend(c.cd>0, c.cd)}</div>${msg}
+      <div class="act"><button class="btn pri sm" ${c.code.length<6?'disabled':''}>تحقق</button></div>`;
+  }
+  const head = c.state==='done' ? '<span class="chip st-ok" style="font-size:12px;padding:2px 10px"><i></i>مؤكد</span>' : '';
+  const to = c.state==='missing' ? 'لا يوجد بريد مسجّل' : (c.state==='blocked' ? `إلى ${val}` : (c.state==='fail'||c.state==='down') ? `تعذّر الإرسال إلى ${val}` : `أُرسل إلى ${val}`);
+  return `<div class="chn ${box}" id="ch-${k}"><div class="hd"><b>${name}<small>${en}</small></b>${head}</div><div class="to">${to}</div>${body}</div>`;
+}
+
+function render(i){
+  const sc = S[i];
+  document.querySelectorAll('.sc').forEach((b,j)=>b.classList.toggle('on', j===i));
+  const bm = sc.banner ? sc.banner[1] : (sc.perm===false ? MSG.perm : null);
+  document.getElementById('note').innerHTML = `
+    <div class="col"><span class="k">${sc.tag} — ${sc.title}</span><br>${sc.note}${sc.q?`<br><span class="q">⚑ ${sc.q}</span>`:''}</div>
+    <div class="col"><span class="k">يغطي:</span> ${sc.covers}${bm?`<div class="en">EN: ${bm.en}</div>`:''}${(sc.m&&sc.m.msg)?`<div class="en">EN: ${sc.m.msg.en}</div>`:''}${(sc.e&&sc.e.msg)?`<div class="en">EN: ${sc.e.msg.en}</div>`:''}</div>`;
+
+  const assign = sc.assign || (sc.card===false ? 'edit' : 'saved');
+  const assignHtml = `<div class="assign">
+      <div class="fld"><label>قائد المجموعة (Group Leader)</label>
+        <div class="dd ${assign==='ro'?'dis':''}"><span>${L.name} — <span class="ltr">C••••567</span></span><span style="color:var(--n60)">⌄</span></div>
+        <div class="help">معتمر من المجموعة نفسها، واحد لكل مجموعة، عمره 18 سنة فأكثر (BR-01).</div></div>
+      ${assign==='edit' ? '<button class="btn pri">حفظ التعيين</button>' : assign==='saved' ? '<div class="saved">✓ تم حفظ التعيين</div>' : '<div class="saved" style="color:var(--n60)">للعرض فقط</div>'}
+    </div>`;
+
+  let card = '';
+  if (sc.card !== false){
+    const banner = sc.perm===false ? ib('err', MSG.perm) : (sc.banner ? ib(sc.banner[0], sc.banner[1]) : '');
+    const sumMobile = (sc.m&&sc.m.wrongVal) ? `<span class="ltr" style="color:var(--ruby100)">${sc.m.wrongVal}</span>` : sc.changed ? `<span class="ltr" style="background:var(--straw20);padding:0 4px;border-radius:4px">+62 813 9001 4410</span>` : `<span class="ltr">${L.mobile}</span>`;
+    const sumEmail = sc.missing==='email' ? '<span style="color:var(--ruby100)">غير مُدخل</span>' : `<span class="ltr">${L.email}</span>`;
+    card = `<div class="card">
+      <div class="ch"><h3>تأكيد بيانات قائد المجموعة ${chip(sc.status)}</h3>
+        <span style="font-size:13px;color:var(--n60)">حالة تأكيد القائد (Leader Confirmation Status)</span></div>
+      <div class="cb" style="display:flex;flex-direction:column;gap:20px">
+        ${banner}
+        ${sc.changed ? `<div class="ib info"><span class="dot">i</span><div>عُدِّل «جوال المعتمر» بعد اكتمال التأكيد، فسقطت حالة التأكيد وأُعيد إرسال الرمزين. <span class="tag-q">نص مقترح — التفصيل في القصة 2</span></div></div>` : ''}
+        <div class="sum">
+          <div class="sub">ملخص بيانات القائد <small>للمراجعة قبل التأكيد — للعرض فقط</small></div>
+          <div class="grid">
+            <div class="di"><label>الاسم <span class="en">Full Name</span></label><div>${L.name}</div></div>
+            <div class="di"><label>رقم الجواز <span class="en">Passport No.</span></label><div class="ltr">${L.pass}</div></div>
+            <div class="di"><label>الجنسية <span class="en">Nationality</span></label><div>${L.nat}</div></div>
+            <div class="di"><label>اسم المجموعة <span class="en">Group Name</span></label><div>${L.group}</div></div>
+            <div class="di"><label>فترة البرنامج <span class="en">Programme Period</span></label><div class="ltr">${L.period}</div></div>
+          </div>
+          <div class="sub" style="margin:18px 0 12px">قناتا التواصل محل التأكيد</div>
+          <div class="grid" style="grid-template-columns:repeat(2,1fr)">
+            <div class="di"><label>جوال المعتمر <span class="en">Mutamer Mobile Number</span></label><div>${sumMobile}</div></div>
+            <div class="di"><label>بريد المعتمر الإلكتروني <span class="en">Mutamer Email</span></label><div>${sumEmail}</div></div>
+          </div>
+        </div>
+        ${sc.perm===false ? '' : `<div><div class="sub">أدخل الرمزين كما أبلغك بهما القائد <small>رمزان مختلفان · كل رمز 6 أرقام · صالح 5 دقائق · 3 محاولات · إعادة الإرسال بعد 60 ثانية · 5 إرسالات يومياً لكل قناة</small></div>
+          <div class="chs" style="margin-top:0">${channel('mobile', sc.m, sc)}${channel('email', sc.e, sc)}</div></div>`}
+        ${sc.log ? `<div><div class="sub">سجل التأكيد <small>يُحفظ لكل قناة (BR-09) — الرقم والبريد مُقنَّعان</small></div>
+          <table><thead><tr><th>القناة<small>Channel</small></th><th>وقت إرسال الرمز<small>Code Sent At</small></th><th>وقت التأكيد<small>Confirmed At</small></th><th>الرقم أو البريد مُقنَّعاً<small>Masked Channel Value</small></th><th>المستخدم المؤكِّد<small>Confirming User</small></th><th>حالة تأكيد القائد<small>Leader Confirmation Status</small></th></tr></thead>
+          <tbody><tr><td>جوال (Mobile)</td><td class="ltr">21/10/2026 10:30</td><td class="ltr">21/10/2026 10:33</td><td class="ltr">+62 ••• •••• 7821</td><td>${AGENT}</td><td rowspan="2">${chip('ok')}</td></tr>
+          <tr><td>بريد (Email)</td><td class="ltr">21/10/2026 10:30</td><td class="ltr">21/10/2026 10:36</td><td class="ltr">a•••••@gmail.com</td><td>${AGENT}</td></tr></tbody></table></div>` : ''}
+      </div></div>`;
+  }
+
+  const members = [
+    [L.name,'إندونيسيا','C••••567','34', true],
+    ['سيتي نورحليزة','إندونيسيا','C••••902','29'],
+    ['محمد فخر الدين','إندونيسيا','C••••118','52'],
+    ['نور العين رحمة','إندونيسيا','C••••440','16']];
+  document.getElementById('screen').innerHTML = `<div class="app">
+    <div class="side">
+      <div class="brand"><span class="lg">نسك</span><div>بوابة الوكيل الخارجي<small>وكالة أمانة للسفر — إندونيسيا</small></div></div>
+      <div class="sec">عام</div>
+      <div class="mi"><span class="ic"></span>الصفحة الرئيسية</div>
+      <div class="mi sel"><span class="ic"></span>المجموعات</div>
+      <div class="mi l2 sel">تفاصيل المجموعة</div>
+      <div class="mi"><span class="ic"></span>المعتمرون</div>
+      <div class="mi"><span class="ic"></span>الحجوزات</div>
+    </div>
+    <div class="main">
+      <div class="top"><div class="crumb">الرئيسية › المجموعات › <b>تفاصيل المجموعة</b></div>
+        <div class="user"><span class="av">ر ب</span><div>${AGENT}<small>${sc.perm===false?'مستخدم فرعي — عرض فقط':'مستخدم رئيسي'}</small></div></div></div>
+      <div class="page">
+        <div class="ttl"><h2>${L.group}</h2><span class="num">رقم المجموعة ${L.gno}</span></div>
+        <div class="card"><div class="ch"><h3>بيانات المجموعة</h3><span class="chip st-ok" style="font-weight:400"><i></i>محفوظة</span></div>
+          <div class="cb"><div class="grid">
+            <div class="di"><label>رقم المجموعة</label><div class="ltr">${L.gno}</div></div>
+            <div class="di"><label>اسم المجموعة</label><div>${L.group}</div></div>
+            <div class="di"><label>عدد المعتمرين</label><div>4</div></div>
+            <div class="di"><label>فترة البرنامج</label><div class="ltr">${L.period}</div></div>
+          </div>${assignHtml}</div></div>
+        ${card}
+        <div class="card"><div class="ch"><h3>معتمرو المجموعة</h3></div>
+          <table><thead><tr><th>الاسم</th><th>الجنسية</th><th>رقم الجواز</th><th>العمر</th></tr></thead><tbody>
+          ${members.map(r=>`<tr><td>${r[0]}${r[4]&&sc.card!==false?'<span class="lead">قائد المجموعة</span>':''}</td><td>${r[1]}</td><td class="ltr">${r[2]}</td><td>${r[3]}</td></tr>`).join('')}
+          </tbody></table></div>
+      </div>
+    </div></div>`;
+  startTimer(sc);
+  try{ history.replaceState(null,'','#'+sc.id) }catch(e){}
+}
+
+let timer=null;
+function startTimer(sc){
+  clearInterval(timer); if(!sc.live) return;
+  let n=60;
+  timer=setInterval(()=>{ n--; document.querySelectorAll('.rs .cd').forEach(e=>e.textContent=`(${fmt(n)})`);
+    if(n<=0){ clearInterval(timer); document.querySelectorAll('.rs').forEach(b=>{b.disabled=false; const c=b.querySelector('.cd'); if(c) c.remove();}); } },1000);
+}
+
+const COV = [
+ ['المحفّز: حفظ تعيين القائد أو ضغط «إعادة إرسال الرمز»','s0','s1'],
+ ['الشرط المسبق 1: مجموعة محفوظة ولها قائد من معتمريها','s0'],
+ ['الشرط المسبق 2: الجوال والبريد مستوفيان','s1','s12'],
+ ['الشرط المسبق 3: صلاحية تعديل المجموعة','s13'],
+ ['الشرط المسبق 4: الخدمة والقناتان متاحة','s1','s9'],
+ ['الشروط اللاحقة 1 / 2 / 3','s10','s4','s3'],
+ ['المسار الرئيسي 1–10','s0','s1','s4','s10'],
+ ['المسار البديل 1: إعادة إرسال رمز قناة واحدة بعد 60 ثانية','s1','s2','s5'],
+ ['المسار البديل 2: تعذّر التسليم وتصحيح بيانات القناة','s8'],
+ ['المسار البديل 3: تغيير البيانات بعد التأكيد','s11'],
+ ['BR-01 القائد معتمر من المجموعة، واحد، 18+','s0'],
+ ['BR-02 رمزان مختلفان مستقلان','s1'],
+ ['BR-03 6 أرقام · 5 دقائق · 3 محاولات · 60 ثانية · 5 يومياً · بلا شاشة إعدادات','s1','s3','s2','s7'],
+ ['BR-04 الإدخال من شاشة المجموعة فقط بلا رابط خارجي','s1'],
+ ['BR-05 رمز كل قناة لقناته','s1','pv'],
+ ['BR-06 تخزين التجزئة وتسجيل كل محاولة','—'],
+ ['BR-07 «مؤكد» بالرمزين معاً و«مؤكد جزئياً» برمز واحد','s4','s10'],
+ ['BR-08 الرسالتان: الاسم الأول ورقم المجموعة فقط','pv'],
+ ['BR-09 سجل تأكيد لكل قناة','s10'],
+ ['BR-10 الحقلان إلزاميان لإتمام التأكيد','s12'],
+ ['BR-11 الحالة يملؤها النظام بأربع قيم','lg'],
+ ['BR-12 حقلا الرمزين بستة أرقام فقط','s3'],
+ ['حقول ملخص القائد: الاسم · الجواز مُقنَّعاً · الجنسية · اسم المجموعة · فترة البرنامج · الجوال · البريد','s1'],
+ ['حقول الإدخال: رمز الجوال · رمز البريد · المحاولات المتبقية · مهلة إعادة الإرسال','s1'],
+ ['حقول السجل: القناة · وقت الإرسال · وقت التأكيد · القيمة مُقنَّعة · المستخدم المؤكِّد · الحالة','s10'],
+ ['رسالة إرسال الرمزين','s1'],['رسالة نجاح قناة واحدة','s4'],['رسالة نجاح الرمزين','s10'],
+ ['E1 رمز غير صحيح','s3'],['E2 رمز منتهٍ','s5'],['E3 استنفاد المحاولات','s6'],['E4 حد الإرسال اليومي','s7'],
+ ['E5 إعادة الإرسال قبل 60 ثانية','s2'],['E6 تعذّر التسليم','s8'],['E7 تعطّل القناة','s9'],['E8 بلا صلاحية','s13'],
+ ['AC-01 … AC-08','s1','s4','s10','s3','s5','s6','s8','s9'],
+ ['الحالات الحدية: لا بيانات · بيانات غير صحيحة · تكرار · عدم صلاحية · تعطل · قفل ساعة','s12','s3','s7','s13','s9','s6'],
+ ['غير وظيفي — الأمن: الجواز مُقنَّع في أي شاشة تأكيد','s1'],
+ ['غير وظيفي — التوطين: الرسالة والبريد ثنائيا اللغة ويحملان اسم المنصة','pv'],
+ ['غير وظيفي — الأداء والتدقيق (أزمنة الوصول، تسجيل كل إرسال ومحاولة)','—'],
+ ['الواجهة: بطاقة داخل تفاصيل المجموعة · ملخص · حقلان منفصلان · زر إعادة إرسال وعدّاد لكل قناة · وسم الحالة','s1'],
+ ['خارج النطاق: رابط خارجي للقائد · شاشة إعدادات · منع الإرسال (US-2) · رمز لكل معتمر · ضوابط صيغة الجوال والبريد','x']
+];
+const label = {pv:'«ما يصل إلى القائد»', lg:'«قيم الحالة»', '—':'خلفي — لا واجهة', x:'غير مصمَّم عمداً'};
+document.getElementById('cov').innerHTML = '<thead><tr><th style="width:55%">البند في القصة</th><th>أين يظهر في التصوّر</th></tr></thead><tbody>' +
+  COV.map(([t,...refs])=>`<tr><td>${t}</td><td>${refs.map(r=>{const k=S.findIndex(s=>s.id===r); return k>=0?`<span class="go" data-i="${k}">${S[k].tag} ${S[k].title}</span>`:`<span style="color:var(--n60)">${label[r]}</span>`}).join(' · ')}</td></tr>`).join('') + '</tbody>';
+document.getElementById('cov').addEventListener('click', e=>{const g=e.target.closest('.go'); if(g){render(+g.dataset.i); window.scrollTo({top:0,behavior:'smooth'});}});
+
+document.getElementById('chips').innerHTML = S.map((s,i)=>`<button class="sc" data-i="${i}"><b>${s.tag}</b>${s.title}</button>`).join('');
+document.getElementById('chips').addEventListener('click', e=>{const b=e.target.closest('.sc'); if(b) render(+b.dataset.i);});
+const start = Math.max(0, S.findIndex(s=>'#'+s.id===location.hash));
+render(start);
+</script>
+</body></html>
