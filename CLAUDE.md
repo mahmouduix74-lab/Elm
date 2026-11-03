@@ -381,6 +381,15 @@ All four libraries are published and reachable through `search_design_system`.
   rule «export any table into an excel sheet»). Wording from the story: menu «إضافة موظف/موظفين للمدينة» + «إلغاء تفعيل»,
   labels «اسم المدينة (AR)/(EN)», «اسم المنطقة (AR)/(EN)». Page chrome kept: top_bar, nav (المواقع الجغرافية › المدن),
   breadcrumbs, persona banner/sections.
+- **Naming + toolbar like the reference screenshots (user: «names like the screenshots; filters as there; no search»):**
+  nav item «الاعدادات الجغرافية» › المدن; breadcrumbs الرئيسية / الرقابة و الامتثال / الاعدادات الجغرافية / المدن (+ تفاصيل);
+  cards اجمالي المدن 35 · المدن المفعلة 34/35 · المدن غير المفعلة 1/35; list columns الرقم التعريفي · الاسم (عربي) · الاسم
+  (انجليزي) · المناطق · الحالة · الإجراءات. Details: title «التفاصيل» + back + chip «فعال» + primary «الإجراءات» (Icons
+  more-vertical); tabs بيانات المدينة · معلومات الموظفين · سجل العمليات; card «البيانات الأساسية» (الرقم التعريفي, الاسم
+  (عربي), الاسم (انجليزي), عدد المناطق); areas columns رقم المنطقة · الاسم (عربي) · الاسم (انجليزي) · عدد نقاط الخدمة · الحالة.
+  Every table: DS table_header hidden and wrapped in `table_card` with a `toolbar` of four DS primary single-icon buttons
+  (left → right menu-01, filter-remove, refresh, download-04; «المناطق» title on the right for areas), no search;
+  sort + filter icons on every column header.
 - Previews `previews/imtithal-cities/`.
 
 ## Transport Information Center homepage (DGA review)
