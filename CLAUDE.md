@@ -390,6 +390,12 @@ All four libraries are published and reachable through `search_design_system`.
   Every table: DS table_header hidden and wrapped in `table_card` with a `toolbar` of four DS primary single-icon buttons
   (left → right menu-01, filter-remove, refresh, download-04; «المناطق» title on the right for areas), no search;
   sort + filter icons on every column header.
+- **Follow-up (user: «4 cities only, check colours, header cells like the screenshot»):** list shows 4 cities (602 جدة 8 ·
+  601 مكة المكرمة 12 · 603 المدينة المنورة 9 · 615 شقراء 0 غير فعال); cards اجمالي المدن 4 · المدن المفعلة 3/4 · غير المفعلة 1/4
+  (arcs updated). Zebra fixed: every data cell set to FILL so the grey row band spans the whole row (white gaps came from
+  FILL columns with fixed-width cells). Header labels in every table → Body/M neutral100 (the {label}_name header text sits
+  in a nested `label` frame). Icon order in header cells is fixed by the DS column (label · filter · sort); the reference
+  has label · sort · filter — instance children can't be reordered.
 - Previews `previews/imtithal-cities/`.
 
 ## Transport Information Center homepage (DGA review)
