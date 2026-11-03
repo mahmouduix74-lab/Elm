@@ -340,6 +340,37 @@ All four libraries are published and reachable through `search_design_system`.
     then resize inner to 11930×2476 and outer/banner to 14576 (outer height 2972). The side title card now shows the
     story number «189761» under the title (white, 120, opacity 85%).
 
+## Nusuk Imtithal — Cities (US 193517)
+
+- New file (user-created, in the Umrah project): [Untitled → rename to «Nusuk Imtithal — Cities»](https://www.figma.com/design/pYFBLW0BmLwUn8H8ZCvPBv/Untitled)
+  — key `pYFBLW0BmLwUn8H8ZCvPBv`. The plugin API can't rename files; the user renames it.
+- Story 193517 (actor: Nusuk Imtithal Admin – Data Management): View Cities List + View City Details (3 tabs). The user's
+  screenshots of the live product were reference only; build = the story with Nusuk Masar components.
+- Cover page `0:1`, frame `5:48`: green identity (SA950→SA600 gradient + the wave artwork cloned from the DS
+  `statistics_card`, white at 30%), IBM Plex Sans Arabic (Displace/Gotham unavailable), title «Nusuk Imtithal»,
+  UX/UI Designer **Mahmoud Ali**, Business **Asrar A. Alqarni**, Nusuk Masar white logo. The user then edited it
+  (removed the subtitle, footer «Umrah») — leave it.
+- Page «المدن — Cities» `3:124`: green persona banner `28:6015` «مستخدم نسك امتثال (إدارة البيانات)», outer section
+  `28:6010` with title card `28:6012` («المدن — عرض القائمة والتفاصيل» + 193517), inner section `28:6011`, frames
+  left → right (x = 645 + i×1840):
+  1 قائمة المدن `14:10595` · 2 + city actions menu `19:1808` · 3 details / المعلومات الأساسية للمدينة `20:2731` ·
+  4 details / قائمة موظفي المدينة `24:3480` · 5 + employee actions menu `25:6125` · 6 details / سجلّ الإجراءات `27:5435`.
+- Built only from library components: `Nav Bar` (sections الزيارات / إعدادات الرقابة / إدارة المستخدمين; «المواقع
+  الجغرافية» selected with Icons `location-01`, 2nd level المدن (selected) · المناطق · نقاط الخدمة — third item is a
+  clone; star/drag icons hidden), `top_bar` (product «الرقابة و الامتثال», user عبدالله الحربي), `breadcrumbs`
+  (`852838ba…`, 4/5 pages), `statistics_card` (إجمالي المدن 35) + two `rating_card` gauges (`ed3d739e…`; المفعلة 34 من 35
+  → 97%, غير المفعلة 1 من 35 → 3%; Ellipse 8 arc 3.4203 + 2.5836×ratio; number restyled Headline/S), DS `table`
+  (`8f7c293c…`: table_header 3_filters/2_filters with Arabic search + dropdowns, export + refresh icon (Icons `refresh`),
+  items count; table_body columns swapped to `commercial_registration_number` / `{label}_name` / `name` / `Phone Number`
+  / `status`; 01 checkbox column hidden; `data_button` two_buttons eye_show + icon/more, one_button more for employees;
+  paginator), `headerMain` (`41f149eb…`: back, «تفاصيل المدينة», status «فعال», primary «إضافة موظف» with user-add-01),
+  `tab` (`3190b523…`), `context_menu` (`11796bf2…`: city menu إضافة موظف للمدينة / إلغاء تفعيل المدينة; employee menu
+  إعادة تعيين مدينة الموظف / إلغاء تعيين الموظف من المدينة). Status chips: فعال = `active`, غير فعال = `deactivated`.
+- Font gotcha: many DS texts use Zarid/Gotham (unavailable). `setProperties` on such text props throws; fallback =
+  find the TEXT whose `componentPropertyReferences.characters` is the prop, apply a Nusuk IBM style, then set characters.
+- Column widths inside the DS table are fixed by the `columns` instance (972); long values were shortened to fit.
+- Previews `previews/imtithal-cities/`.
+
 ## Transport Information Center homepage (DGA review)
 
 - File `cAMY504gWaSItUzw4yJevl` («Untitled»), frame `1:16870` «homepage» 1440×2827 (the user's link said 1-18455): public site of مركز معلومات النقل
