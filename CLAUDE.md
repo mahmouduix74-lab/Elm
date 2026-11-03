@@ -369,6 +369,10 @@ All four libraries are published and reachable through `search_design_system`.
 - Font gotcha: many DS texts use Zarid/Gotham (unavailable). `setProperties` on such text props throws; fallback =
   find the TEXT whose `componentPropertyReferences.characters` is the prop, apply a Nusuk IBM style, then set characters.
 - Column widths inside the DS table are fixed by the `columns` instance (972); long values were shortened to fit.
+- **Story-only pass (user: «sidebar = المواقع الجغرافية › المدن only; are you following the story?»):** in all 6 frames the
+  nav shows only «المواقع الجغرافية» with the single 2nd-level «المدن» (other sections, items, section titles and the
+  المناطق/نقاط الخدمة items are hidden, not deleted); breadcrumbs are الرئيسية / المواقع الجغرافية / المدن (+ تفاصيل
+  المدينة on details); the header status chip in details is hidden (the story's header lists only «إضافة موظف»).
 - Previews `previews/imtithal-cities/`.
 
 ## Transport Information Center homepage (DGA review)
