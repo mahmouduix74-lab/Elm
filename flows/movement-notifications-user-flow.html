@@ -1,0 +1,113 @@
+<!doctype html><html dir="rtl"><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--sa600:#1b8354;--sa800:#14573a;--sa50:#f3fcf6;--sa300:#88d8ad;--n10:#fafafa;--n20:#f0f0f1;--n30:#dadbdc;--n60:#7e8387;--n80:#484d51;--n200:#15181b;--straw20:#fef8f0;--straw100:#f0bd66;}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;font-family:"IBM Plex Sans Arabic";color:var(--n200)}
+#c{position:relative;width:1520px;height:1160px;background:#fff}
+.title{position:absolute;right:40px;top:36px;font-weight:600;font-size:26px;line-height:36px}
+.sub{position:absolute;right:40px;top:74px;font-size:14px;color:var(--n60)}
+.lane{position:absolute;width:700px;top:360px;height:700px;background:var(--n10);border-radius:16px}
+.chip{position:absolute;width:280px;height:36px;top:384px;border-radius:18px;background:#fff;border:1px solid var(--sa300);color:var(--sa800);font-weight:600;font-size:14px;display:flex;align-items:center;justify-content:center}
+.card{position:absolute;width:280px;height:92px;background:#fff;border:1px solid var(--n30);border-radius:12px;padding:0 16px 0 46px;display:flex;flex-direction:column;justify-content:center;box-shadow:0 4px 24px rgba(35,40,45,.04)}
+.card em{font-style:normal;font-size:11px;line-height:16px;color:var(--sa600);font-weight:500;white-space:nowrap}
+.card b{font-weight:500;font-size:15px;line-height:22px;white-space:nowrap}
+.card span{font-size:12px;line-height:18px;color:var(--n60);white-space:nowrap}
+.num{position:absolute;left:12px;top:50%;margin-top:-11px;width:22px;height:22px;border-radius:11px;background:var(--sa600);color:#fff;font-size:12px;font-weight:500;display:flex;align-items:center;justify-content:center}
+.card.home .num{background:var(--n80)}
+.pill{position:absolute;height:40px;border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:13px;white-space:nowrap}
+.state{background:var(--sa50);border:1px dashed var(--sa300);color:var(--sa800)}
+.endp{background:var(--sa600);color:#fff;font-weight:500;height:60px;border-radius:30px;flex-direction:column;line-height:20px}
+.endp small{font-size:11px;font-weight:400;opacity:.9}
+.dia{position:absolute;width:56px;height:56px;transform:rotate(45deg);background:var(--straw20);border:1.5px solid var(--straw100);border-radius:8px}
+.diaQ{position:absolute;font-size:18px;font-weight:600;color:#a88447;width:40px;text-align:center}
+.diaT{position:absolute;width:200px;text-align:center;font-size:13px;font-weight:500;line-height:18px}
+.lbl{position:absolute;font-size:12px;color:var(--n60);line-height:18px;white-space:nowrap}
+.lbl.g{color:var(--sa600);font-weight:500}
+.start{position:absolute;width:24px;height:24px;border-radius:12px;background:var(--sa600);box-shadow:0 0 0 6px var(--sa50)}
+.startT{position:absolute;font-size:13px;line-height:18px;white-space:nowrap}
+.startT b{font-weight:600;color:var(--sa800)}
+.startT span{color:var(--n60)}
+svg{position:absolute;left:0;top:0}
+.legend{position:absolute;left:40px;top:44px;display:flex;gap:20px;font-size:12px;color:var(--n80);align-items:center}
+.legend div{display:flex;gap:8px;align-items:center}
+.lg-start{width:12px;height:12px;border-radius:6px;background:var(--sa600)}
+.lg-card{width:22px;height:14px;border:1px solid var(--n30);border-radius:4px;background:#fff}
+.lg-state{width:22px;height:14px;border:1px dashed var(--sa300);border-radius:7px;background:var(--sa50)}
+.lg-dia{width:11px;height:11px;transform:rotate(45deg);border:1.5px solid var(--straw100);background:var(--straw20);border-radius:2px}
+.lg-end{width:22px;height:14px;border-radius:7px;background:var(--sa600)}
+.notes{position:absolute;right:40px;top:1090px;display:flex;gap:40px;font-size:12px;color:var(--n80)}
+.notes div{display:flex;gap:8px;align-items:center}
+.notes i{display:inline-block;width:6px;height:6px;border-radius:3px;background:var(--n60)}
+</style></head><body><div id="c">
+<div class="title">إشعارات التحركات — رحلة المستخدم</div>
+<div class="sub">المستخدم: مسؤول الوزارة · المنصة: نسك مسار (العمرة) · النطاق: قائمة الإشعارات والإعدادات</div>
+<div class="legend"><div><span class="lg-start"></span>البداية</div><div><span class="lg-card"></span>شاشة</div><div><span class="lg-state"></span>حالة على نفس الشاشة</div><div><span class="lg-dia"></span>قرار</div><div><span class="lg-end"></span>النهاية</div></div>
+
+<div class="lane" style="left:780px"></div>
+<div class="lane" style="left:40px"></div>
+
+<svg width="1520" height="1160" viewBox="0 0 1520 1160" fill="none">
+<defs>
+<marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" stroke="#7e8387" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></marker>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" stroke="#1b8354" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<g stroke="#7e8387" stroke-width="1.5">
+<path d="M760 172V200" marker-end="url(#a)"/>
+<path d="M760 296V330H1250V380" marker-end="url(#a)"/>
+<path d="M760 330H390V380" />
+<path d="M390 330V380" marker-end="url(#a)"/>
+<!-- lane 1 -->
+<path d="M1250 420V460" marker-end="url(#a)"/>
+<path d="M1250 556V620" marker-end="url(#a)"/>
+<path d="M1250 716V780" marker-end="url(#a)"/>
+<path d="M1110 510H1054" stroke-dasharray="4 4" marker-end="url(#a)"/>
+<path d="M1110 670H1054" stroke-dasharray="4 4" marker-end="url(#a)"/>
+<!-- lane 2 -->
+<path d="M390 420V462" marker-end="url(#a)"/>
+<path d="M430 502H570V600" marker-end="url(#a)"/>
+<path d="M350 502H210V600" marker-end="url(#a)"/>
+<path d="M570 696V740H300"/>
+<path d="M210 696V740H300V770" marker-end="url(#a)"/>
+<path d="M444 820H506" stroke-dasharray="4 4" marker-end="url(#a)" marker-start="url(#a)"/>
+</g>
+<path d="M300 866V956" stroke="#1b8354" stroke-width="2" marker-end="url(#ag)"/>
+</svg>
+
+<!-- entry -->
+<div class="start" style="left:748px;top:140px"></div>
+<div class="startT" style="right:calc(1520px - 736px);top:143px"><b>البداية</b> <span>· مسؤول الوزارة يسجّل الدخول</span></div>
+<div class="card home" style="left:620px;top:204px"><div class="num">0</div><em>بعد تسجيل الدخول</em><b>الصفحة الرئيسية</b><span>يختار «الإشعارات» من القائمة الجانبية</span></div>
+
+<!-- lane 1 -->
+<div class="chip" style="left:1110px">المسار 1 · متابعة الإشعارات</div>
+<div class="lbl" style="left:1262px;top:431px">قائمة الإشعارات</div>
+<div class="card" style="left:1110px;top:464px"><div class="num">1</div><em>أول شاشة في المسار 1</em><b>قائمة إشعارات التحركات</b><span>الكروت + جدول الإشعارات</span></div>
+<div class="lbl g" style="left:1262px;top:579px">زر العين</div>
+<div class="card" style="left:1110px;top:624px"><div class="num">2</div><em>تبويب «التفاصيل»</em><b>تفاصيل الإشعار</b><span>بيانات المعتمر + ملخص الإرسال</span></div>
+<div class="lbl" style="left:1262px;top:739px">تبويب سجل التحديثات</div>
+<div class="card" style="left:1110px;top:784px"><div class="num">3</div><em>تبويب «سجل التحديثات»</em><b>تفاصيل الإشعار</b><span>كل محاولات الإرسال بالترتيب</span></div>
+<div class="pill state" style="left:814px;top:490px;width:236px">Tooltip · تفاصيل نتيجة الإرسال</div>
+<div class="pill state" style="left:814px;top:650px;width:236px">Tooltip · سبب فشل الرسالة النصية</div>
+<div class="lbl" style="left:1064px;top:486px">Hover</div>
+<div class="lbl" style="left:1064px;top:646px">Hover</div>
+
+<!-- lane 2 -->
+<div class="chip" style="left:250px">المسار 2 · ضبط الإعدادات</div>
+<div class="lbl" style="left:402px;top:431px">إعدادات الإشعارات</div>
+<div class="dia" style="left:362px;top:474px"></div>
+<div class="diaQ" style="left:370px;top:488px">؟</div>
+<div class="diaT" style="left:290px;top:540px">أول مرة يضبط الإعدادات؟</div>
+<div class="lbl" style="left:495px;top:480px">نعم</div>
+<div class="lbl" style="left:268px;top:480px">لا</div>
+<div class="card" style="left:430px;top:604px"><div class="num">4</div><em>الخطوة 1 من 2 · أول دخول</em><b>قواعد الإشعارات</b><span>كل الحالات مقفولة بقيم افتراضية</span></div>
+<div class="card" style="left:70px;top:604px"><div class="num">5</div><em>الخطوة 1 من 2</em><b>قواعد الإشعارات</b><span>التفعيل والأهمية والقنوات والتوقيت</span></div>
+<div class="lbl" style="left:312px;top:744px">التالي</div>
+<div class="card" style="left:160px;top:774px"><div class="num">6</div><em>الخطوة 2 من 2</em><b>صلاحيات الاستقبال</b><span>المستلمون لكل حالة تحرك</span></div>
+<div class="pill state" style="left:510px;top:800px;width:220px">قائمة المستخدمين · بحث واختيار</div>
+<div class="lbl" style="left:442px;top:792px;font-size:11px">مستخدم إضافي</div>
+<div class="lbl g" style="left:312px;top:900px">حفظ</div>
+<div class="pill endp" style="left:180px;top:960px;width:240px">قائمة إشعارات التحركات<small>رسالة «تم حفظ الإعدادات بنجاح»</small></div>
+
+<div class="notes"><div><i></i>«السابق» في الخطوة 2 يرجع للخطوة 1</div><div><i></i>«إلغاء» في أي خطوة يرجع لقائمة إشعارات التحركات بدون حفظ</div></div>
+</div></body></html>
