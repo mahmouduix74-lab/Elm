@@ -396,6 +396,13 @@ All four libraries are published and reachable through `search_design_system`.
   FILL columns with fixed-width cells). Header labels in every table → Body/M neutral100 (the {label}_name header text sits
   in a nested `label` frame). Icon order in header cells is fixed by the DS column (label · filter · sort); the reference
   has label · sort · filter — instance children can't be reordered.
+- **2026-11-03 (user edits + header icon order):** the user rebuilt the page (frames are now 1 `26:6758` · 2 `26:6817` ·
+  3 `26:6877` · 4 `26:6956` · 5 `26:7015` · 6 `26:7075`, section `26:6756`/`26:6757`, the city menu `26:6876` sits outside
+  frame 2 with a connector; frames 4–6 hidden by the user), made toolbar icons white and renamed «الرقابة و الامتثال» →
+  «نسك امتثال» — leave these. Header icon order (user: «swap them, first becomes last» = label · sort · filter): the DS
+  column can't be reordered as an instance, so every table was detached table → table_body → columns → each column
+  (cells, chips and data_buttons stay DS instances) and the filter icon moved to index 0 of each header `label` frame.
+  Tables now: المدن `46:4324`, `46:15282` · المناطق `46:18255` · موظفو المدينة `46:21154`, `46:24295` · السجل `46:27436`.
 - Previews `previews/imtithal-cities/`.
 
 ## Transport Information Center homepage (DGA review)
