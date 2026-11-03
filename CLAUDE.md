@@ -402,6 +402,8 @@ All four libraries are published and reachable through `search_design_system`.
   «نسك امتثال» — leave these. Header icon order (user: «swap them, first becomes last» = label · sort · filter): the DS
   column can't be reordered as an instance, so every table was detached table → table_body → columns → each column
   (cells, chips and data_buttons stay DS instances) and the filter icon moved to index 0 of each header `label` frame.
+  Frames 4–6 still had dark icons on green buttons (toolbar menu-01/filter-remove/refresh/download-04 and the header
+  «الإجراءات» more-vertical); recoloured to the white variable. A scan of all 6 frames finds no dark icon on green now.
   Tables now: المدن `46:4324`, `46:15282` · المناطق `46:18255` · موظفو المدينة `46:21154`, `46:24295` · السجل `46:27436`.
 - Previews `previews/imtithal-cities/`.
 
