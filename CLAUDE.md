@@ -373,6 +373,14 @@ All four libraries are published and reachable through `search_design_system`.
   nav shows only «المواقع الجغرافية» with the single 2nd-level «المدن» (other sections, items, section titles and the
   المناطق/نقاط الخدمة items are hidden, not deleted); breadcrumbs are الرئيسية / المواقع الجغرافية / المدن (+ تفاصيل
   المدينة on details); the header status chip in details is hidden (the story's header lists only «إضافة موظف»).
+- **Strict story pass (user: «apply everything in the stories, add nothing, remove nothing»):** removed what the stories don't
+  name — paginators, table item counts, column sorting, dropdown filters, header back button, header status chip, avatars
+  in name columns (`name` → `{label}_name`). Kept per story: list = search (search_only header) + per-column filter icons
+  («filter for all fields») + «تصدير» + refresh; cards = total / active / inactive with number (title «34 من 35») and
+  percentage («97%», the DS «%» text hidden and the % appended to the number). Detail tables keep only «تصدير» (list-story
+  rule «export any table into an excel sheet»). Wording from the story: menu «إضافة موظف/موظفين للمدينة» + «إلغاء تفعيل»,
+  labels «اسم المدينة (AR)/(EN)», «اسم المنطقة (AR)/(EN)». Page chrome kept: top_bar, nav (المواقع الجغرافية › المدن),
+  breadcrumbs, persona banner/sections.
 - Previews `previews/imtithal-cities/`.
 
 ## Transport Information Center homepage (DGA review)
