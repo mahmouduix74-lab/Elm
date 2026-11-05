@@ -85,3 +85,75 @@ Tablet and Mobile have their own scales (`RWD/Tablet/...`, `RWD/Mobile/...`), e.
 - Atoms: icons, radio, checkbox, tabs, chip (status), switch, tooltip, scrollbar, breadcrumbs, avatar, tag, content_switcher
 - Molecules: button, input, text area, dropdown, IBAN, stepper, date picker, time selection, infobox, snackbar, timer, pagination, timeline, cards, rating
 - Organisms: top_bar, nav_bar, header, context_menu, attachment, modal, sidebar, table
+
+---
+
+# Working with this user: Nusuk Imtithal / مركز الرصد (learned from stories 1–3)
+
+The user writes in Egyptian Arabic. Reply in short, simple Arabic; when they say «مش فاهم» or «براحه», drop the
+detail and explain in a few plain lines. Pay close attention to naming («ركز في المسميات»): use the story's exact
+Arabic labels.
+
+## How work is handed to me
+- Input is an Arabic **user story `.docx`** (sections: عنوان القصة، المسار الرئيسي، الحقول والبيانات، مسارات الخطأ،
+  قواعد العمل، معايير القبول، الواجهة). Extract text with python/zipfile (pandoc tables are unreadable).
+- The story's UI/UX section may point to an **interactive prototype** (`تصور_N_….html`). If the user sends it, it is the
+  source of truth for layout and behaviour: follow it, styled with Nusuk Masar. Screenshots they send are visual references to copy.
+- The target is usually a Figma URL. Main file so far: **Nusuk Imtithal** `pYFBLW0BmLwUn8H8ZCvPBv`, page
+  «المدن — Cities» (`3:124`).
+
+## Required order of work (do not skip)
+1. Read the story fully.
+2. **Search existing screens first** (this file, Umrah Individuals `NqiN77UdmU29qbrcIADqHl` pages «مفوض الوزارة»
+   and «شركات العمرة», Screen Template) for the same pattern (list, details, create with stepper, review step,
+   approve/reject, operations log). Tell the user what you found and follow it. Do not invent a pattern when one exists.
+3. **Send preview images before touching Figma**: HTML mockup → Playwright screenshot → `previews/` → SendUserFile.
+   Explain each screen in a few lines and ask only the questions that block. Wait for «نفّذ».
+4. Build in Figma with **the same components the existing screens use** (clone the closest existing screen and
+   edit it). If something needs a new or changed component, say so and decide it together. Don't decide alone.
+5. Screenshot, self-check, commit screenshots to `previews/`, push, and send the images.
+6. The user often edits Figma right after. When asked «راجع التعديلات», diff what changed, list it, flag
+   inconsistencies, and change nothing until asked. **Before every write, re-read the current node**; never revert their edits.
+
+## File conventions in Nusuk Imtithal («المدن — Cities»)
+- Persona header frame (clone of `79:3506`, big text) above each persona's stories, e.g. «مسؤول إدارة رضا المستفيدين»,
+  «مسؤول مركز الرصد والتحكم».
+- Each story = a top-level SECTION «<feature> — <flow> (US N)» containing a **title card** (clone of the green card
+  `26:7134`: title + «US N») and an inner SECTION with 1440-wide screens spaced ~1840 apart, named «N — وصف».
+- The user splits stories **by path** (e.g. one section for «تأكيد إرسال…» and one for «رفض إرسال…»). Each path goes
+  list → details → modal → back to list with snackbar → سجل التحديثات, joined with connectors.
+- Product name in top bar and breadcrumb: «العمرة» (not «نسك امتثال»). Nav: group + item for the feature.
+
+## Design decisions the user wants (apply by default)
+- **Lists**: clone the Cities/notifications list table (data_item, status_chip, header cells with sort/filter, eye
+  action, paginator). No search box unless asked. Stats cards on top (statistics_card total + rating_card per status).
+  **Columns keep their natural width; let the table overflow the page with the scrollbar. Never shrink columns or
+  truncate text.** Date and time on one line. Add a first-visit empty state when relevant.
+- Secondary statuses such as read/unread use the **sub-status** (subtatus_chip dot) and are named «حالة القراءة».
+- **Create flows**: two steps with the green Nusuk Masar `stepper` (step 1 data, step 2 «مراجعة البيانات»), following the
+  existing review pattern: read-only cards with a chevron, plain paragraph text, primary action + «السابق» + «إلغاء».
+  Action labels must be specific (e.g. «إرسال إلى مركز الرصد»). Merge closely related fields when asked
+  (e.g. «اسم الفندق ورقم التصريح»). Keep every mandatory field from the story.
+- **Details**: built from «تفاصيل المدينة» (headerMain, tabs, cards). Action buttons sit **in the header (top-left)**,
+  not in a bottom bar. Tabs: «البيانات الأساسية» + «سجل التحديثات».
+- **Every action (approve, reject, read, comment) is recorded in «سجل التحديثات»**: never as a new section or card
+  like «القرار». Timeline look (local component «item — سجل التحديثات»): bold date with grey time on the right,
+  avatar with a connecting line, «الاسم · الجهة» in grey, the action in bold, and an optional label plus a grey box for the
+  rejection reason or company comment. Phrase actions as past-tense sentences («أنشأ الإشعار وأرسله…», «أكّد إرسال
+  الإشعار إلى…», «اطّلع على الإشعار», «رفض الإشعار»).
+- After approve or reject: **go back to the list with a success snackbar**, and the row's status must change.
+- Modals: Nusuk Masar `modal_window`; reject uses the `input` text_area with a required reason (500-character counter) and a red
+  «تأكيد الرفض».
+- status_chip mapping used: قيد المراجعة→to_review, غير مقروء→awaiting_Approval, مقروء/مرسل→active, مرفوض→rejected.
+
+## Delivery
+- Branch `story2-beneficiary-notifications-preview`, draft PR #2 (mahmouduix74-lab/Elm). Previews and Figma screenshots
+  go in `previews/` (`preview_storyN_*.png` = before Figma, `figma_storyN_*.png` = built).
+- Images taller than 8000px get downscaled when sent: split long previews into parts.
+
+## Figma gotchas seen here
+- `historyTimeline` and avatar «initials» use the Gotham font, which is unavailable: text overrides fail. Use the local timeline
+  component and the photo avatar.
+- Text set inside a fixed-width headerMain title can clip (e.g. «N-1030»): check the width after editing.
+- Cloned Cities screens carry «الاعدادات الجغرافية / المدن / نسك امتثال» in breadcrumb, nav and top bar. Replace them by node ID.
+- Read-only nodes on another page need `setCurrentPageAsync` first, or `getNodeByIdAsync` returns null.
