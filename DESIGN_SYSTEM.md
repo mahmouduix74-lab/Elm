@@ -1,17 +1,8 @@
 # ELM - HUIC — Design System Reference (Nusuk Masar)
 
-> Sections 1–4 are copied word for word from `CLAUDE.md`. Section 5 lists the component, style and icon keys and the usage patterns used in the Nusuk Imtithal work.
+Reference for the Nusuk Masar design system (ELM - HUIC): library files, tokens, components, and the screen patterns used across the Nusuk Imtithal screens.
 
-## 1. Figma access
-
-- The Figma connector must be signed in as **mabdalkhalek** (mabdalkhalek@ntgclarity.com), who is a guest
-  in the **ELM - HUIC** organization. Check with `whoami` at the start of a session.
-- The Figma MCP needs **edit** access to a file even to read it — view-only sharing is not enough.
-- `get_variable_defs` needs a frame/node ID, not a page ID. Page-level `get_metadata` on large pages
-  overflows; list top-level children instead, or read tokens with a read-only `use_figma` script.
-- Before any `use_figma` call, load the figma-use skill (`skill://figma/figma-use/SKILL.md` resource).
-
-## 2. Design system files (team: ELM - HUIC / Unified Design system / Design System)
+## 1. Design system files (team: ELM - HUIC / Unified Design system / Design System)
 
 | File | Key | Role |
 |---|---|---|
@@ -21,11 +12,9 @@
 | [Icons](https://www.figma.com/design/STj7RkIfx1VZYgh5Uw0yyr/Icons) | `STj7RkIfx1VZYgh5Uw0yyr` | Icon library, searchable by keywords |
 | [Screen Template](https://www.figma.com/design/QMNkPGMP7rBgkvSDNT7oOZ/Screen-Template) | `QMNkPGMP7rBgkvSDNT7oOZ` | Screen templates: List, Details, Form/Create, Pop-ups |
 
-All four libraries are published and reachable through `search_design_system`.
-
 **Rule:** use Nusuk Masar components first; fall back to Platforms Code only for what Nusuk Masar lacks.
 
-## 3. Tokens (Nusuk Masar)
+## 2. Tokens (Nusuk Masar)
 
 ### Colors
 | Group | Values |
@@ -70,14 +59,12 @@ Tablet and Mobile have their own scales (`RWD/Tablet/...`, `RWD/Mobile/...`), e.
 - `neutral10` and `surface` share the same value (`#fafafa`).
 - Effect style is misspelled `shadow_wraning`.
 
-## 4. Nusuk Masar component inventory
+## 3. Nusuk Masar component inventory
 - Atoms: icons, radio, checkbox, tabs, chip (status), switch, tooltip, scrollbar, breadcrumbs, avatar, tag, content_switcher
 - Molecules: button, input, text area, dropdown, IBAN, stepper, date picker, time selection, infobox, snackbar, timer, pagination, timeline, cards, rating
 - Organisms: top_bar, nav_bar, header, context_menu, attachment, modal, sidebar, table
 
-## 5. Component keys & usage patterns (from the Nusuk Imtithal work)
-
-Import with `figma.importComponentSetByKeyAsync(key)` (sets) / `importComponentByKeyAsync(key)` (single components) / `importStyleByKeyAsync(key)` (styles).
+## 4. Component keys & usage patterns
 
 ### Components
 | Component | Key | Notes |
